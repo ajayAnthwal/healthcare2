@@ -11,6 +11,7 @@ import search from "@/assets/images/header/search.svg";
 import shopping_cart from "@/assets/images/header/shopping_cart.svg";
 import profile from "@/assets/images/header/profile.svg";
 import logo from "@/assets/images/homepage/logo.svg";
+import logohealth from "@/assets/images/homepage/logohealth.svg";
 import shoppingCart from "@/assets/images/homepage/shoppingCart.svg";
 import account from "@/assets/images/homepage/account.svg";
 
@@ -63,7 +64,7 @@ const Header = () => {
               width={174}
               height={74}
               decoding="async"
-              src={logo}
+              src={logohealth}
               className="absolute top-[16px] p-3 hidden sm:block"
             />
 

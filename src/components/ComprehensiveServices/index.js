@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import nurseAtHome from "@/assets/images/homepage/nurseAtHome.png";
 import longTermCare from "@/assets/images/homepage/longTermCare.png";
 import rehab from "@/assets/images/homepage/rehab.png";
@@ -122,11 +122,13 @@ const ComprehensiveServices = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [direction, setDirection] = useState("next");
   const itemsPerSlide = 6;
   const itemsPerRow = 5; // Number of items per row
   const rowsPerSlide = 2; // Number of rows per slide
   const totalItemsPerSlide = itemsPerRow * rowsPerSlide; // Total items per slide
   const totalSlides = Math.ceil(services.length / totalItemsPerSlide); // Total slides
+  const intervalRef = useRef(null);
 
   // Get visible services for the current slide
   const getServicesForSlide = () => {
@@ -163,16 +165,20 @@ const ComprehensiveServices = () => {
     return services.slice(start, end);
   };
 
-  const handleScroll = (direction) => {
-    const container = document.querySelector(".overflow-x-auto");
-    const scrollAmount = 500; // Adjust based on the card size + gap
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      if (direction === "next") {
+        goToNextSlide();
+        setDirection("previous");
+      } else {
+        goToPreviousSlide();
+        setDirection("next");
+      }
+    }, 5000); // Change slide every 5 seconds
 
-    if (direction === "prev") {
-      container.scrollLeft -= scrollAmount;
-    } else {
-      container.scrollLeft += scrollAmount;
-    }
-  };
+    // Cleanup the interval when the component unmounts
+    return () => clearInterval(intervalRef.current);
+  }, [direction]);
 
   return (
     <div>
@@ -244,23 +250,6 @@ const ComprehensiveServices = () => {
           ></button>
         </div>
       </div>
-      {/* <div className="relative mt-11 mb-11 font-poppins">
-  <div className="overflow-x-auto">
-    <div
-      className="grid grid-rows-2 gap-5"
-      style={{
-        gridTemplateColumns: "repeat(10, minmax(200px, 1fr))", 
-        width: "1198px", 
-      }}
-    >
-      {services.map((service, index) => (
-        <div key={index} className="min-w-[200px]">
-          <Card title={service.title} image={service.image} />
-        </div>
-      ))}
-    </div>
-  </div>
-</div> */}
     </div>
   );
 };
