@@ -15,11 +15,14 @@ import shoppingCart from "@/assets/images/homepage/shoppingCart.svg";
 import account from "@/assets/images/homepage/account.svg";
 
 const Header = () => {
+  const activePage = "/";
+
   return (
     <div className="bg-[#e6f5f5]">
       {/* Top Header */}
-      <div className="sticky top-0 inset-x-0 z-50">
-        <header className="h-16 bg-[#e6f5f5] hidden md:block relative">
+      <div className="fixed top-0 inset-x-0 z-50 bg-[#e6f5f5]">
+        {/* Top Header Section */}
+        <header className="h-16 hidden md:block relative">
           <nav className="container flex items-end justify-end w-full h-full px-4 mx-auto">
             <div className="flex items-center gap-x-6 h-full">
               <div className="flex items-center text-[#FF784B] font-medium text-sm">
@@ -47,12 +50,13 @@ const Header = () => {
           </nav>
 
           {/* Border above the navigation */}
-          <div className="relative w-[70%]  left-[9%] mx-auto h-[1px] bg-gradient-to-r from-[#cbd6d6] to-[#cbd6d6] container overflow-hidden" />
+          <div className="relative w-[70%] left-[9%] mx-auto h-[1px] bg-gradient-to-r from-[#cbd6d6] to-[#cbd6d6] container overflow-hidden" />
         </header>
 
-        {/* Main Header */}
-        <div className="bg-[#e6f5f5]" style={{ top: "4rem" }}>
+        {/* Main Navigation Section */}
+        <div className="bg-[#e6f5f5]">
           <div className="container flex justify-between items-center mx-auto px-4 md:px-0">
+            {/* Logo */}
             <Image
               alt="logo"
               loading="lazy"
@@ -63,6 +67,7 @@ const Header = () => {
               className="absolute top-[16px] p-3 hidden sm:block"
             />
 
+            {/* Links */}
             <div className="hidden md:flex items-center gap-[40px] mx-auto mt-[-22px]">
               <Link
                 href="/"
@@ -90,6 +95,7 @@ const Header = () => {
               </Link>
             </div>
 
+            {/* Buttons */}
             <div className="hidden md:flex items-center gap-x-4 py-3">
               <button className="px-7 py-3 text-white font-semibold bg-[#009A9F] rounded-full shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)] transition-all hover:rounded-[100px] hover:bg-[#008B8F] hover:shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)]">
                 I need consultation
