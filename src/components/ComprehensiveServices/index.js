@@ -174,9 +174,7 @@ const ComprehensiveServices = () => {
         goToPreviousSlide();
         setDirection("next");
       }
-    }, 5000); // Change slide every 5 seconds
-
-    // Cleanup the interval when the component unmounts
+    }, 5000);
     return () => clearInterval(intervalRef.current);
   }, [direction]);
 

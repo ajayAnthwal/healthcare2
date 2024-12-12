@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import call from "@/assets/images/homepage/call.svg";
@@ -16,14 +17,33 @@ import shoppingCart from "@/assets/images/homepage/shoppingCart.svg";
 import account from "@/assets/images/homepage/account.svg";
 
 const Header = () => {
-  const activePage = "/";
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      setIsVisible(currentScroll === 0);
+      setIsScrolled(currentScroll > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="bg-[#e6f5f5]">
       {/* Top Header */}
       <div className="fixed top-0 inset-x-0 z-50 bg-[#e6f5f5]">
         {/* Top Header Section */}
-        <header className="h-16 hidden md:block relative">
+        <header
+          className={`h-16 hidden md:${
+            isVisible ? "block" : "hidden"
+          } relative transition-all duration-300`}
+        >
           <nav className="container flex items-end justify-end w-full h-full px-4 mx-auto">
             <div className="flex items-center gap-x-6 h-full">
               <div className="flex items-center text-[#FF784B] font-medium text-sm">
@@ -65,11 +85,13 @@ const Header = () => {
               height={74}
               decoding="async"
               src={logohealth}
-              className="absolute top-[16px] p-3 hidden sm:block"
+              className={`absolute top-[16px] p-3 hidden sm:block transition-all duration-300 ${
+                isScrolled ? "top-[-16px] absolute" : ""
+              }`}
             />
 
             {/* Links */}
-            <div className="hidden md:flex items-center gap-[40px] mx-auto mt-[-22px]">
+            <div className="hidden md:flex items-center gap-[40px] mx-auto">
               <Link
                 href="/"
                 className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[rgba(255, 120, 75, 0.01)] hover:bg-[#003638] py-2 px-3 rounded-md transition-all"
