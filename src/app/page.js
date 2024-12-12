@@ -462,11 +462,11 @@ const Home = () => {
             home.{" "}
           </p>
         </div>
-        <div className="mt-5 flex flex-col sm:flex-row justify-center gap-[42px] container mx-auto">
+        <div className="mt-5 flex flex-col sm:flex-row justify-center gap-[5px] sm:gap-[42px] container mx-auto">
           {/* Image Section */}
           <div className="md:w-[40%] w-full m-auto">
             <Image
-              className="w-1/2 m-auto md:w-full sm:mr-20 rounded-[32px]"
+               className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
               src={whyChooseUs1}
               alt="Why Choose Us 1"
             />
@@ -500,7 +500,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="px-4 mt-5 md:flex flex flex-col-reverse sm:flex-row justify-center gap-[42px] container mx-auto">
+        <div className="px-4 mt-5 md:flex flex flex-col-reverse sm:flex-row justify-center gap-[5px] sm:gap-[42px] container mx-auto">
           {/* Text Section */}
           <div className=" md:w-[60%] w-full">
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold">
@@ -531,7 +531,7 @@ const Home = () => {
           {/* Image Section */}
           <div className="md:w-[40%] w-full m-auto">
             <Image
-              className="w-1/2 m-auto md:w-full sm:mr-20 rounded-[32px]"
+              className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
               src={choose}
               alt="Why Choose Us 1"
             />
