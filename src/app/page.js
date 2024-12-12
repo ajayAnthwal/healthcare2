@@ -43,7 +43,6 @@ import LongTermCare from "@/components/Long-term-care/LongTermCare";
 import BookComponent from "@/components/Book/BookComponent";
 import BuyRentEqu from "@/components/BuyRent/BuyRentEqu";
 
-
 const Home = () => {
   const [currentTestimony, setCurrentTestimony] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -134,170 +133,173 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-[#e6f5f5]">
-      <div
-        style={{
-          width: "100%",
-          overflow: "hidden",
-          height: "40rem",
-          backgroundColor: "#e6f5f5",
-        }}
-        className="relative hidden md:block mx-auto"
-      >
-        <Image
-          alt=""
-          src={dots}
-          style={{
-            transitionDuration: "2s",
-            width: index == 0 ? "3rem" : "0rem",
-            top: index == 0 ? "10rem" : "0rem",
-            right: index == 0 ? "7rem" : "0rem",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={arrows}
-          style={{
-            transitionDuration: "2s",
-            width: index == 0 ? "5rem" : "0rem",
-            top: index == 0 ? "13.5rem" : "0rem",
-            right: index == 0 ? "22.5rem" : "0rem",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={ellipse}
-          style={{
-            width: index == 0 ? "40rem" : "0rem",
-            bottom: 0,
-            right: 0,
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={spiral}
-          style={{
-            transitionDuration: "2s",
-            width: index == 0 || index == 1 ? "5rem" : "0rem",
-            visibility: index == 0 || index == 1 ? "visible" : "hidden",
-            top: index == 0 ? "23.5rem" : "20.3rem",
-            right: index == 0 ? "30.5rem" : index == 1 ? "38rem" : "0rem",
-            transform: index == 1 ? "rotate(90deg)" : "",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={doctorNurse}
-          style={{
-            transitionDuration: "1s",
-            width: index == 0 ? "30rem" : "0rem",
-            bottom: 0,
-            right: "2rem",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={
-            index == 0 ? textContent : index == 1 ? textContent2 : textContent3
-          }
-          style={{
-            transitionDuration: "2s",
-            width: "40rem",
-            top: "15.5rem",
-            left: index == 1 || index == 0 ? "12.55%" : "55%",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={index == 1 ? doctors : wheelchair}
-          style={{
-            transitionDuration: "2s",
-            width: index == 1 || index == 2 ? "35rem" : "0rem",
-            visibility: index == 1 || index == 2 ? "visible" : "hidden",
-            top: "3.5rem",
-            right: index == 1 ? "10.5%" : index == 2 ? "55%" : "0rem",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={hand}
-          style={{
-            transitionDuration: "2s",
-            width: index == 2 ? "15rem" : "0rem",
-            visibility: index == 2 ? "visible" : "hidden",
-            top: "3.5rem",
-            right: index == 2 ? "45%" : "0rem",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={ball}
-          style={{
-            transitionDuration: "2s",
-            width: index == 1 ? "5rem" : "0rem",
-            visibility: index == 1 ? "visible" : "hidden",
-            bottom: "3.5rem",
-            right: index == 1 ? "16%" : "0rem",
-            position: "absolute",
-          }}
-        />
-        <Image
-          alt=""
-          src={ball}
-          style={{
-            transitionDuration: "2s",
-            width: index == 1 ? "2.5rem" : "0rem",
-            visibility: index == 1 ? "visible" : "hidden",
-            bottom: "10.5rem",
-            right: index == 1 ? "13%" : "0rem",
-            position: "absolute",
-          }}
-        />
+      <div className="bg-[#e6f5f5] mb-[88px]">
         <div
-          className="absolute flex items-center"
-          style={{ bottom: "1rem", left: "48%" }}
+          style={{
+            width: "100%",
+            overflow: "hidden",
+            height: "42rem",
+            backgroundColor: "#e6f5f5",
+          }}
+          className="relative top-[100px] hidden md:block mx-auto"
         >
-          <div
-            className="me-2"
-            onClick={() => setIndex(0)}
+          <Image
+            alt=""
+            src={dots}
             style={{
-              height: index == 0 ? "1rem" : "0.8rem",
-              width: index == 0 ? "1rem" : "0.8rem",
-              borderRadius: "100%",
-              backgroundColor: index == 0 ? "#00718a" : "white",
+              transitionDuration: "2s",
+              width: index == 0 ? "3rem" : "0rem",
+              top: index == 0 ? "10rem" : "0rem",
+              right: index == 0 ? "7rem" : "0rem",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={arrows}
+            style={{
+              transitionDuration: "2s",
+              width: index == 0 ? "5rem" : "0rem",
+              top: index == 0 ? "13.5rem" : "0rem",
+              right: index == 0 ? "22.5rem" : "0rem",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={ellipse}
+            style={{
+              width: index == 0 ? "40rem" : "0rem",
+              bottom: 0,
+              right: 0,
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={spiral}
+            style={{
+              transitionDuration: "2s",
+              width: index == 0 || index == 1 ? "5rem" : "0rem",
+              visibility: index == 0 || index == 1 ? "visible" : "hidden",
+              top: index == 0 ? "23.5rem" : "20.3rem",
+              right: index == 0 ? "30.5rem" : index == 1 ? "38rem" : "0rem",
+              transform: index == 1 ? "rotate(90deg)" : "",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={doctorNurse}
+            style={{
+              transitionDuration: "1s",
+              width: index == 0 ? "30rem" : "0rem",
+              bottom: 0,
+              right: "2rem",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={
+              index == 0
+                ? textContent
+                : index == 1
+                ? textContent2
+                : textContent3
+            }
+            style={{
+              transitionDuration: "2s",
+              width: "40rem",
+              top: "15.5rem",
+              left: index == 1 || index == 0 ? "12.55%" : "55%",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={index == 1 ? doctors : wheelchair}
+            style={{
+              transitionDuration: "2s",
+              width: index == 1 || index == 2 ? "35rem" : "0rem",
+              visibility: index == 1 || index == 2 ? "visible" : "hidden",
+              top: "3.5rem",
+              right: index == 1 ? "10.5%" : index == 2 ? "55%" : "0rem",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={hand}
+            style={{
+              transitionDuration: "2s",
+              width: index == 2 ? "15rem" : "0rem",
+              visibility: index == 2 ? "visible" : "hidden",
+              top: "3.5rem",
+              right: index == 2 ? "45%" : "0rem",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={ball}
+            style={{
+              transitionDuration: "2s",
+              width: index == 1 ? "5rem" : "0rem",
+              visibility: index == 1 ? "visible" : "hidden",
+              bottom: "3.5rem",
+              right: index == 1 ? "16%" : "0rem",
+              position: "absolute",
+            }}
+          />
+          <Image
+            alt=""
+            src={ball}
+            style={{
+              transitionDuration: "2s",
+              width: index == 1 ? "2.5rem" : "0rem",
+              visibility: index == 1 ? "visible" : "hidden",
+              bottom: "10.5rem",
+              right: index == 1 ? "13%" : "0rem",
+              position: "absolute",
             }}
           />
           <div
-            className="me-2"
-            onClick={() => setIndex(1)}
-            style={{
-              height: index == 1 ? "1rem" : "0.8rem",
-              width: index == 1 ? "1rem" : "0.8rem",
-              borderRadius: "100%",
-              backgroundColor: index == 1 ? "#00718a" : "white",
-            }}
-          />
-          <div
-            onClick={() => setIndex(2)}
-            style={{
-              height: index == 2 ? "1rem" : "0.8rem",
-              width: index == 2 ? "1rem" : "0.8rem",
-              borderRadius: "100%",
-              backgroundColor: index == 2 ? "#00718a" : "white",
-            }}
-          />
+            className="absolute flex items-center"
+            style={{ bottom: "1rem", left: "48%" }}
+          >
+            <div
+              className="me-2"
+              onClick={() => setIndex(0)}
+              style={{
+                height: index == 0 ? "1rem" : "0.8rem",
+                width: index == 0 ? "1rem" : "0.8rem",
+                borderRadius: "100%",
+                backgroundColor: index == 0 ? "#00718a" : "white",
+              }}
+            />
+            <div
+              className="me-2"
+              onClick={() => setIndex(1)}
+              style={{
+                height: index == 1 ? "1rem" : "0.8rem",
+                width: index == 1 ? "1rem" : "0.8rem",
+                borderRadius: "100%",
+                backgroundColor: index == 1 ? "#00718a" : "white",
+              }}
+            />
+            <div
+              onClick={() => setIndex(2)}
+              style={{
+                height: index == 2 ? "1rem" : "0.8rem",
+                width: index == 2 ? "1rem" : "0.8rem",
+                borderRadius: "100%",
+                backgroundColor: index == 2 ? "#00718a" : "white",
+              }}
+            />
+          </div>
         </div>
       </div>
-      </div>
-
 
       <div className="overflow-x-hidden">
         {/* <Image src={banner} alt="banner" className="hidden md:block w-full z-1" /> */}
