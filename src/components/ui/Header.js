@@ -19,7 +19,7 @@ const Header = () => {
     <div className="bg-[#e6f5f5]">
       {/* Top Header */}
       <div className="sticky top-0 inset-x-0 z-50">
-        <header className="h-16 border-b bg-[#e6f5f5] border-ui-border-base hidden md:block">
+        <header className="h-16 bg-[#e6f5f5] border-ui-border-base hidden md:block">
           <nav className="container flex items-end justify-end w-full h-full px-4 mx-auto">
             <div className="flex items-center gap-x-6 h-full">
               <div className="flex items-center text-[#FF784B] font-medium text-sm">
@@ -60,7 +60,7 @@ const Header = () => {
               className="absolute top-[16px] p-3 hidden sm:block"
             />
 
-            <div className="hidden md:flex items-center gap-x-6 mx-auto">
+            <div className="hidden md:flex items-center gap-x-6 mx-auto -mt[-12px]">
               <Link
                 href="/"
                 className="text-[16px] cursor-pointer text-[#009A9F] hover:bg-[#FF784B] hover:text-white hover:border-[#FF784B] hover:border-[1px] py-1 px-2.5  rounded-[4px] transition-all"
