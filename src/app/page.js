@@ -466,7 +466,7 @@ const Home = () => {
           {/* Image Section */}
           <div className="md:w-[40%] w-full m-auto">
             <Image
-               className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
+              className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
               src={whyChooseUs1}
               alt="Why Choose Us 1"
             />
