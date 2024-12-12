@@ -133,7 +133,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-[#e6f5f5] mb-[88px]">
+      <div className="bg-[#e6f5f5] mb-[-31px] md:mb-[88px]">
         <div
           style={{
             width: "100%",

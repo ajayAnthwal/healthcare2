@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.container{
+  width: 1198px !important;
+}
+
+
 .custom-button {
   display: flex;
   align-items: center;
@@ -39,4 +44,8 @@
   .services_cards{
     width: auto !important;
   }
+  .container{
+    width: auto !important;
+  }
+  
 }

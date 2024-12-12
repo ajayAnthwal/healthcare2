@@ -37,14 +37,14 @@ const Header = () => {
   return (
     <div className="bg-[#e6f5f5]">
       {/* Top Header */}
-      <div className="fixed top-0 inset-x-0 z-50 bg-[#e6f5f5]">
+      <div className="fixed top-0 inset-x-0 z-50 bg-[#e6f5f5] w-[1512px] mx-auto">
         {/* Top Header Section */}
         <header
           className={`h-16 hidden md:${
             isVisible ? "block" : "hidden"
           } relative transition-all duration-300`}
         >
-          <nav className="container flex items-end justify-end w-full h-full px-4 mx-auto">
+          <nav className="flex items-end justify-end w-full h-full px-4 mx-auto">
             <div className="flex items-center gap-x-6 h-full">
               <div className="flex items-center text-[#FF784B] font-medium text-sm">
                 <Image src={location} alt="location" height={19} width={19} />
@@ -71,12 +71,12 @@ const Header = () => {
           </nav>
 
           {/* Border above the navigation */}
-          <div className="relative w-[70%] left-[9%] mx-auto h-[1px] bg-gradient-to-r from-[#cbd6d6] to-[#cbd6d6] container overflow-hidden" />
+          <div className="relative w-[70%] left-[9%] mx-auto h-[1px] bg-gradient-to-r from-[#cbd6d6] to-[#cbd6d6] overflow-hidden" />
         </header>
 
         {/* Main Navigation Section */}
         <div className="bg-[#e6f5f5]">
-          <div className="container flex justify-between items-center mx-auto px-4 md:px-0">
+          <div className=" flex justify-between items-center  px-4 md:px-0">
             {/* Logo */}
             <Image
               alt="logo"
@@ -86,7 +86,7 @@ const Header = () => {
               decoding="async"
               src={logohealth}
               className={`absolute top-[16px] p-3 hidden sm:block transition-all duration-300 ${
-                isScrolled ? "top-[-16px] absolute" : ""
+                isScrolled ? "top-[-17px] relative" : ""
               }`}
             />
 

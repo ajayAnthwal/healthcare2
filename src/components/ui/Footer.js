@@ -56,7 +56,7 @@ export default async function Footer() {
       className="w-full p-4 pt-10 mt-5"
       style={{ backgroundColor: "#002122", color: "white" }}
     >
-      <div className="flex flex-col  md:flex-row">
+      <div className="flex flex-col container mx-auto  md:flex-row ">
         <div className="grid grid-cols-2 md:flex container mx-auto gap-2">
           {/* <div className="grid grid-cols-3 gap-4 p-4"> */}
           {items.map((item, index) => (

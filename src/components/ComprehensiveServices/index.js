@@ -181,7 +181,7 @@ const ComprehensiveServices = () => {
   return (
     <div>
       <div className="flex flex-col items-center mt-5 container w-full ">
-        <h1 className="text-[18px] font-bold md:text-[32px]  text-[#031432] leading-normal font-poppins">
+        <h1 className="text-[18px] mb-[20px] font-bold md:text-[32px]  text-[#031432] leading-normal font-poppins">
           Our Comprehensive Services
         </h1>
         <p className="md:block hidden text-[#6C87AE] w-full lg:w-[60%] text-center text-base leading-6">
