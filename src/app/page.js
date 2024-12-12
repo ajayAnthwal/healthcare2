@@ -191,15 +191,134 @@ const Home = () => {
           <Image
             alt=""
             src={doctorNurse}
+            className={`transition-all duration-1000 ${
+              index === 0 ? "w-[691px] h-[665px]" : "w-0 h-0"
+            } absolute bottom-0 right-[2rem]`}
+          />
+
+          <div
             style={{
-              transitionDuration: "1s",
-              width: index == 0 ? "30rem" : "0rem",
-              bottom: 0,
-              right: "2rem",
+              transitionDuration: "2s",
+              width: "40rem",
+              top: "15.5rem",
+              left: index == 1 || index == 0 ? "12.55%" : "55%",
               position: "absolute",
             }}
-          />
-          <Image
+          >
+            {index == 0 ? (
+              <div className="space-y-4">
+                <h1 className="font-Poppins text-[40px] font-bold bg-gradient-to-r from-[#00DDE5] via-[#019196] to-[#03676A] bg-clip-text text-transparent">
+                  Compassionate Long-Term Care Tailored to Your Needs
+                </h1>
+
+                <p className="w-[696px] text-[#6C87AE] font-Poppins text-[16px] font-normal leading-[19.2px]">
+                  Our dedicated caregivers are here to provide quality,
+                  personalized long-term care to ensure you or your loved ones
+                  feel supported and comfortable at every stage of care.
+                </p>
+
+                <button className="px-10 py-5 text-2xl rounded-full text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)]">
+                  Learn More
+                </button>
+              </div>
+            ) : index == 1 ? (
+              <div className="space-y-4">
+                <h1 className="font-Poppins text-[40px] font-bold bg-gradient-to-r from-[#00DDE5] via-[#019196] to-[#03676A] bg-clip-text text-transparent">
+                  Book Essential Pathology Services at Your Convenience
+                </h1>
+
+                <p className="text-[16px] text-[#6C87AE]">
+                  Easily book pathology tests and diagnostic services to manage
+                  your health needs from the comfort of your home or nearby
+                  facility.
+                </p>
+
+                <button className="px-10 py-5 text-2xl rounded-full text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] inline-flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="mr-3"
+                  >
+                    <g clipPath="url(#clip0_116_281)">
+                      <path
+                        d="M17.5017 1.14282H14.9237V2.73751H16.7044V6.29898C16.7044 8.98098 14.5223 11.1628 11.8406 11.1628H11.4685C8.78649 11.1628 6.6047 8.9807 6.6047 6.29898V2.73751H8.38543V1.14282H5.80735C5.36696 1.14282 5.01001 1.49978 5.01001 1.94017V6.29898C5.01001 9.86017 7.90731 12.7575 11.4685 12.7575H11.8406C15.4018 12.7575 18.2991 9.86017 18.2991 6.29898V1.94017C18.2991 1.49978 17.9421 1.14282 17.5017 1.14282Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M14.844 0C14.4036 0 14.0466 0.356953 14.0466 0.797344V3.02991C14.0466 3.4703 14.4036 3.82725 14.844 3.82725C15.2844 3.82725 15.6413 3.4703 15.6413 3.02991V0.797344C15.6413 0.356953 15.2844 0 14.844 0Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M8.5449 0C8.10451 0 7.74756 0.356953 7.74756 0.797344V3.02991C7.74756 3.4703 8.10451 3.82725 8.5449 3.82725C8.98529 3.82725 9.34224 3.4703 9.34224 3.02991V0.797344C9.34224 0.356953 8.98529 0 8.5449 0Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M12.505 16.4521V11.9338H10.9103V16.4521H8.3322C6.25114 16.4521 4.55811 18.1451 4.55811 20.2259C4.55811 22.307 6.26309 24 8.35878 24H8.73087C10.8119 24 12.505 22.307 12.505 20.2259V18.0468H15.2159V16.4521H12.505ZM10.9103 20.2256C10.9103 21.4272 9.93246 22.4051 8.73087 22.4051H8.35878C7.12184 22.4051 6.15279 21.448 6.15279 20.2256C6.15279 19.0241 7.13061 18.0465 8.3322 18.0465H10.9103V20.2256Z"
+                        fill="white"
+                      />
+                      <path
+                        d="M16.9436 14.7512C15.5663 14.7512 14.4456 15.8718 14.4456 17.2496C14.4456 18.6268 15.5661 19.7476 16.9436 19.7476C18.3212 19.7476 19.442 18.6268 19.442 17.2496C19.442 15.872 18.3214 14.7512 16.9436 14.7512ZM16.9436 18.1527C16.4455 18.1527 16.0402 17.7474 16.0402 17.2493C16.0402 16.751 16.4456 16.3457 16.9436 16.3457C17.4419 16.3457 17.8473 16.751 17.8473 17.2493C17.8473 17.7474 17.4419 18.1527 16.9436 18.1527Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_116_281">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  Book Now
+                </button>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <h1 className="font-Poppins text-[40px] font-bold bg-gradient-to-r from-[#00DDE5] via-[#019196] to-[#03676A] bg-clip-text text-transparent">
+                  Buy or Rent Top-Quality Medical Equipment with Ease
+                </h1>
+
+                <p className="text-[16px] text-[#6C87AE]">
+                  Choose from a wide selection of medical equipment, available
+                  for both purchase and rental. We make it easy to get the
+                  quality equipment you need, when and how you need it.
+                </p>
+
+                <button className="px-10 py-5 text-2xl rounded-full text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] inline-flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="mr-3"
+                  >
+                    <mask
+                      id="mask0_118_353"
+                      style={{ maskType: "alpha" }}
+                      maskUnits="userSpaceOnUse"
+                      x="0"
+                      y="0"
+                      width="24"
+                      height="24"
+                    >
+                      <rect width="24" height="24" fill="#D9D9D9" />
+                    </mask>
+                    <g mask="url(#mask0_118_353)">
+                      <path
+                        d="M7 22C6.45 22 5.97917 21.8042 5.5875 21.4125C5.19583 21.0208 5 20.55 5 20C5 19.45 5.19583 18.9792 5.5875 18.5875C5.97917 18.1958 6.45 18 7 18C7.55 18 8.02083 18.1958 8.4125 18.5875C8.80417 18.9792 9 19.45 9 20C9 20.55 8.80417 21.0208 8.4125 21.4125C8.02083 21.8042 7.55 22 7 22ZM17 22C16.45 22 15.9792 21.8042 15.5875 21.4125C15.1958 21.0208 15 20.55 15 20C15 19.45 15.1958 18.9792 15.5875 18.5875C15.9792 18.1958 16.45 18 17 18C17.55 18 18.0208 18.1958 18.4125 18.5875C18.8042 18.9792 19 19.45 19 20C19 20.55 18.8042 21.0208 18.4125 21.4125C18.0208 21.8042 17.55 22 17 22ZM6.15 6L8.55 11H15.55L18.3 6H6.15ZM5.2 4H19.95C20.3333 4 20.625 4.17083 20.825 4.5125C21.025 4.85417 21.0333 5.2 20.85 5.55L17.3 11.95C17.1167 12.2833 16.8708 12.5417 16.5625 12.725C16.2542 12.9083 15.9167 13 15.55 13H8.1L7 15H19V17H7C6.25 17 5.68333 16.6708 5.3 16.0125C4.91667 15.3542 4.9 14.7 5.25 14.05L6.6 11.6L3 4H1V2H4.25L5.2 4Z"
+                        fill="white"
+                      />
+                    </g>
+                  </svg>
+                  Buy Now
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* <Image
             alt=""
             src={
               index == 0
@@ -215,19 +334,23 @@ const Home = () => {
               left: index == 1 || index == 0 ? "12.55%" : "55%",
               position: "absolute",
             }}
-          />
+          /> */}
           <Image
             alt=""
-            src={index == 1 ? doctors : wheelchair}
-            style={{
-              transitionDuration: "2s",
-              width: index == 1 || index == 2 ? "35rem" : "0rem",
-              visibility: index == 1 || index == 2 ? "visible" : "hidden",
-              top: "3.5rem",
-              right: index == 1 ? "10.5%" : index == 2 ? "55%" : "0rem",
-              position: "absolute",
-            }}
+            src={index === 1 ? doctors : wheelchair}
+            className={`transition-all duration-[2000ms] ${
+              index === 1 || index === 2
+                ? "w-[564px] h-[564px] visible"
+                : "w-0 h-0 invisible"
+            } absolute top-[3.5rem] ${
+              index === 1
+                ? "right-[10.5%]"
+                : index === 2
+                ? "right-[55%]"
+                : "right-0"
+            }`}
           />
+
           <Image
             alt=""
             src={hand}
