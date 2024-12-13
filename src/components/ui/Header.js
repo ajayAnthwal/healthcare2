@@ -86,7 +86,7 @@ const Header = () => {
               decoding="async"
               src={logohealth}
               className={`absolute top-[16px] p-3 hidden sm:block transition-all duration-300 ${
-                isScrolled ? "top-[-17px] relative" : ""
+                isScrolled ? "top-[0px] relative" : ""
               }`}
             />
 

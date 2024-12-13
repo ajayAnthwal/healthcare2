@@ -47,5 +47,9 @@
   .container{
     width: auto !important;
   }
+
+  .footer-container{
+    width: auto !important;
+  }
   
 }
