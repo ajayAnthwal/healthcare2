@@ -37,126 +37,136 @@ const Header = () => {
   return (
     <div className="bg-[#e6f5f5] !important">
       {/* Top Header */}
-      
-      <div className="fixed top-0 inset-x-0 z-50 bg-[#e6f5f5] w-[1512px] mx-auto">
-        {/* Top Header Section */}
-        <header
-          className={`h-16 hidden md:${
-            isVisible ? "block" : "hidden"
-          } relative transition-all duration-300`}
-        >
-          <nav className="flex items-end justify-end w-full h-full px-4 mx-auto">
-            <div className="flex items-center gap-x-6 h-full">
-              <div className="flex items-center text-[#FF784B] font-medium text-sm">
-                <Image src={location} alt="location" height={19} width={19} />
-                <p className="ms-2 text-[16px]">New Delhi, Delhi</p>
+
+      <div className="bg-[#e6f5f5] w-full">
+        {/* Fixed Header */}
+        <div className="fixed top-0 inset-x-0 z-50 w-full bg-[#e6f5f5]">
+          <div className="w-[1512px] mx-auto">
+            {/* Top Header Section */}
+            <header
+              className={`h-16 hidden md:${
+                isVisible ? "block" : "hidden"
+              } relative transition-all duration-300`}
+            >
+              <nav className="flex items-end justify-end w-full h-full px-4 mx-auto">
+                <div className="flex items-center gap-x-6 h-full">
+                  <div className="flex items-center text-[#FF784B] font-medium text-sm">
+                    <Image
+                      src={location}
+                      alt="location"
+                      height={19}
+                      width={19}
+                    />
+                    <p className="ms-2 text-[16px]">New Delhi, Delhi</p>
+                    <Image
+                      src={arrowDown}
+                      className="ms-2"
+                      alt="arrow down"
+                      height={19}
+                      width={19}
+                    />
+                  </div>
+                  <p className="text-[#FF784B]">|</p>
+                  <div className="flex items-center text-[#FF784B] font-medium text-sm">
+                    <Image src={call} alt="call" height={19} width={19} />
+                    <p className="ms-2 text-[16px]">1800 108 8586</p>
+                  </div>
+                  <p className="text-[#FF784B]">|</p>
+                  <div className="flex items-center text-[#FF784B] font-medium text-sm">
+                    <Image src={mail} alt="mail" height={19} width={19} />
+                    <p className="ms-2 text-[16px]">care@apollohomecare.com</p>
+                  </div>
+                </div>
+              </nav>
+
+              {/* Border above the navigation */}
+              <div className="relative w-[70%] left-[9%] mx-auto h-[1px] bg-gradient-to-r from-[#cbd6d6] to-[#cbd6d6] overflow-hidden" />
+            </header>
+
+            {/* Main Navigation Section */}
+            <div className="bg-[#e6f5f5]">
+              <div className="flex justify-between items-center px-4 md:px-0">
+                {/* Logo */}
                 <Image
-                  src={arrowDown}
-                  className="ms-2"
-                  alt="arrow down"
-                  height={19}
-                  width={19}
-                />
-              </div>
-              <p className="text-[#FF784B]">|</p>
-              <div className="flex items-center text-[#FF784B] font-medium text-sm">
-                <Image src={call} alt="call" height={19} width={19} />
-                <p className="ms-2 text-[16px]">1800 108 8586</p>
-              </div>
-              <p className="text-[#FF784B]">|</p>
-              <div className="flex items-center text-[#FF784B] font-medium text-sm">
-                <Image src={mail} alt="mail" height={19} width={19} />
-                <p className="ms-2 text-[16px]">care@apollohomecare.com</p>
-              </div>
-            </div>
-          </nav>
-
-          {/* Border above the navigation */}
-          <div className="relative w-[70%] left-[9%] mx-auto h-[1px] bg-gradient-to-r from-[#cbd6d6] to-[#cbd6d6] overflow-hidden" />
-        </header>
-
-        {/* Main Navigation Section */}
-        <div className="bg-[#e6f5f5]">
-          <div className=" flex justify-between items-center  px-4 md:px-0">
-            {/* Logo */}
-            <Image
-              alt="logo"
-              loading="lazy"
-              width={174}
-              height={74}
-              decoding="async"
-              src={logohealth}
-              className={`absolute p-3 hidden sm:block transition-all duration-300 ${
-                isScrolled ? "relative top-[0px] !important" : "top-[16px]"
-              }`}
-            />
-
-            {/* Links */}
-            <div className="hidden md:flex items-center gap-[40px] mx-auto">
-              <Link
-                href="/"
-                className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[rgba(255, 120, 75, 0.01)] hover:text-[#003638]  transition-all"
-              >
-                Home
-              </Link>
-              <Link
-                href="/long-term-care"
-                className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[rgba(255, 120, 75, 0.01)] hover:text-[#003638]  transition-all"
-              >
-                Long term care
-              </Link>
-              <Link
-                href="/home-visit"
-                className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[rgba(255, 120, 75, 0.01)] hover:text-[#003638] transition-all"
-              >
-                Home visit
-              </Link>
-              <Link
-                href="/medical-equipment"
-                className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[rgba(255, 120, 75, 0.01)] hover:text-[#003638]  transition-all"
-              >
-                Medical Equipment
-              </Link>
-            </div>
-
-            {/* Buttons */}
-            <div className="hidden md:flex items-center gap-x-4 py-3">
-              <button className="px-7 py-3 text-white font-semibold bg-[#009A9F] rounded-full shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)] transition-all hover:rounded-[100px] hover:bg-[#008B8F] hover:shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)]">
-                I need consultation
-              </button>
-              <button className="relative inline-flex items-center justify-center overflow-hidden px-4 py-2 text-white bg-[#009A9F] rounded-full transition-all duration-300 ease-in-out hover:rounded-[100px] hover:bg-[#008B8F] hover:shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)]">
-                <Image
-                  alt="Shopping Cart"
+                  alt="logo"
                   loading="lazy"
-                  width={20}
-                  height={20}
-                  src={shoppingCart}
+                  width={174}
+                  height={74}
+                  decoding="async"
+                  src={logohealth}
+                  className={`absolute p-3 hidden sm:block transition-all duration-300 ${
+                    isScrolled ? "relative top-[0px]" : "top-[16px]"
+                  }`}
                 />
-              </button>
-              <button className="relative inline-flex items-center justify-center overflow-hidden px-4 py-2 text-white bg-[#009A9F] rounded-full shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)] transition-all duration-300 ease-in-out hover:rounded-[100px] hover:bg-[#008B8F] hover:shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)]">
-                <Image
-                  alt="account"
-                  loading="lazy"
-                  width={20}
-                  height={20}
-                  src={account}
-                />
-                <span className="ms-2">Rahul</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="w-4 h-4 ms-2 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+
+                {/* Links */}
+                <div className="hidden md:flex items-center gap-[40px] mx-auto">
+                  <Link
+                    href="/"
+                    className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[#003638] transition-all"
+                  >
+                    Home
+                  </Link>
+                  <Link
+                    href="/long-term-care"
+                    className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[#003638] transition-all"
+                  >
+                    Long term care
+                  </Link>
+                  <Link
+                    href="/home-visit"
+                    className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[#003638] transition-all"
+                  >
+                    Home visit
+                  </Link>
+                  <Link
+                    href="/medical-equipment"
+                    className="text-[16px] cursor-pointer text-[#009A9F] hover:text-[#003638] transition-all"
+                  >
+                    Medical Equipment
+                  </Link>
+                </div>
+
+                {/* Buttons */}
+                <div className="hidden md:flex items-center gap-x-4 py-3">
+                  <button className="px-7 py-3 text-white font-semibold bg-[#009A9F] rounded-full shadow-md transition-all hover:bg-[#008B8F]">
+                    I need consultation
+                  </button>
+                  <button className="relative inline-flex items-center justify-center px-4 py-2 text-white bg-[#009A9F] rounded-full hover:bg-[#008B8F]">
+                    <Image
+                      alt="Shopping Cart"
+                      loading="lazy"
+                      width={20}
+                      height={20}
+                      src={shoppingCart}
+                    />
+                  </button>
+                  <button className="relative inline-flex items-center justify-center px-4 py-2 text-white bg-[#009A9F] rounded-full hover:bg-[#008B8F]">
+                    <Image
+                      alt="account"
+                      loading="lazy"
+                      width={20}
+                      height={20}
+                      src={account}
+                    />
+                    <span className="ms-2">Rahul</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-4 h-4 ms-2 text-white"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
