@@ -79,16 +79,17 @@ const Header = () => {
           <div className=" flex justify-between items-center  px-4 md:px-0">
             {/* Logo */}
             <Image
-              alt="logo"
-              loading="lazy"
-              width={174}
-              height={74}
-              decoding="async"
-              src={logohealth}
-              className={`absolute top-[16px] p-3 hidden sm:block transition-all duration-300 ${
-                isScrolled ? "top-[0px] relative" : ""
-              }`}
-            />
+  alt="logo"
+  loading="lazy"
+  width={174}
+  height={74}
+  decoding="async"
+  src={logohealth}
+  className={`absolute p-3 hidden sm:block transition-all duration-300 ${
+    isScrolled ? "relative top-[0px] !important" : "top-[16px]"
+  }`}
+/>
+
 
             {/* Links */}
             <div className="hidden md:flex items-center gap-[40px] mx-auto">
