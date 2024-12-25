@@ -22,11 +22,11 @@ export default function Sidebar({ setActiveLink, activeLink }) {
   return (
     <div
       className="
-      fixed top-[30%] left-[10%]
-      p-5 w-64 
+      static mt-[253px]
+      p-5 w-96
       inline-flex flex-col justify-center items-start gap-2 
       rounded-r-[10px] 
-      border border-solid border-[#1AE2E9] z-50 bg-white
+      border border-solid border-[#1AE2E9] overflow-hidden bg-white h-[50vh]
     "
     >
       <h2 className="text-black font-poppins text-[16px] font-medium leading-normal mb-5">

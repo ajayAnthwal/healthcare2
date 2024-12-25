@@ -25,14 +25,17 @@ const UserProfile = () => {
   const ActiveComponent = SECTIONS[activeLink] || MyPurchases;
 
   return (
-    <div className="flex w-[1512px] mx-auto h-[136vh]">
+    <div className="flex w-[1512px] mx-auto">
       {/* Sidebar */}
       <Sidebar setActiveLink={setActiveLink} activeLink={activeLink} />
 
       {/* Main Content */}
-      <div className="ml-64 pt-52 pl-12 w-full h-screen bg-white">
-        <h1 className="text-3xl font-semibold mb-4">{activeLink}</h1>
-        <div className="p-6 rounded-lg">
+      <div className="pt-[173px] pl-12 w-full min-h-screen bg-white">
+        <h1 className="text-[20px] font-semibold mb-4 pl-6 text-black font-poppins leading-normal">
+          {activeLink}
+        </h1>
+
+        <div className=" rounded-lg">
           <ActiveComponent />
         </div>
       </div>

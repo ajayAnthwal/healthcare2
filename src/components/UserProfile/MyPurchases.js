@@ -35,7 +35,6 @@ const MyPurchases = () => {
 
   return (
     <div className="p-6">
-      {/* Header Section */}
       <div className="flex justify-between items-center border-b pb-4">
         <div className="flex items-center gap-3">
           <div className="text-lg font-semibold mb-2">
@@ -48,7 +47,6 @@ const MyPurchases = () => {
           </select>
         </div>
         <div className="flex items-center border border-gray-300 rounded-md w-fit">
-          {/* Search Icon Input */}
           <div className="flex items-center pl-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +60,6 @@ const MyPurchases = () => {
             </svg>
           </div>
 
-          {/* Input Field */}
           <input
             type="text"
             placeholder='Trying searching "my last 10 orders"'
@@ -104,10 +101,9 @@ const MyPurchases = () => {
               key={purchase.id}
               className="p-4 border-b flex justify-between items-center"
             >
-              {/* Left Section */}
               <div className="flex gap-4 items-start">
                 <Image
-                  src={purchase.image} // Use dynamic image here
+                  src={purchase.image}
                   alt={purchase.name}
                   width={80}
                   height={80}
@@ -125,7 +121,6 @@ const MyPurchases = () => {
                 </div>
               </div>
 
-              {/* Right Section */}
               <div className="flex flex-col gap-2 items-end">
                 <button className="flex justify-right items-center px-[20px] py-[9px] rounded-[50px] bg-[#009A9F] text-white text-[11px] font-bold uppercase tracking-[0.08px] leading-none h-[35px] w-[83px]">
                   RE-BUY
