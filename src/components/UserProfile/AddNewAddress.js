@@ -48,9 +48,10 @@ export default function AddNewAddress() {
             <h3 className="text-black font-poppins text-sm font-semibold leading-none">
               {address.name}
             </h3>
-            <p className="text-black text-sm font-light leading-none mt-2">
-              {address.address}
-            </p>
+            <p className="text-black text-[14px] font-light leading-normal mt-2 ">
+  {address.address}
+</p>
+
 
             <div className="absolute top-4 right-4 flex space-x-2">
               <button
