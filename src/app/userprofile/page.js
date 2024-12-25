@@ -8,7 +8,6 @@ import ManagePaymentOptions from "@/components/UserProfile/ManagePaymentOptions"
 import AddNewAddress from "@/components/UserProfile/AddNewAddress";
 import EditProfile from "@/components/UserProfile/EditProfile";
 
-// Map section names to components
 const SECTIONS = {
   "My Purchases": MyPurchases,
   "My Subscription": MySubscription,
@@ -20,21 +19,15 @@ const SECTIONS = {
 
 const UserProfile = () => {
   const [activeLink, setActiveLink] = useState("My Purchases");
-
-  // Dynamically get the active component
   const ActiveComponent = SECTIONS[activeLink] || MyPurchases;
 
   return (
     <div className="flex w-[1512px] mx-auto">
-      {/* Sidebar */}
       <Sidebar setActiveLink={setActiveLink} activeLink={activeLink} />
-
-      {/* Main Content */}
       <div className="pt-[173px] pl-12 w-full min-h-screen bg-white">
         <h1 className="text-[20px] font-semibold mb-4 pl-6 text-black font-poppins leading-normal">
           {activeLink}
         </h1>
-
         <div className=" rounded-lg">
           <ActiveComponent />
         </div>

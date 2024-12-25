@@ -48,7 +48,6 @@ export default function ManagePaymentOptions() {
   return (
     <div className="flex items-center justify-center bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full bg-white ">
-        {/* Bank List Section */}
         <div className=" rounded-lg p-6 ">
           <ul className="space-y-4 border rounded-lg">
             {BankData.map((bank) => (
@@ -169,7 +168,6 @@ export default function ManagePaymentOptions() {
           </ul>
         </div>
 
-        {/* Bank Details Section */}
         <div className="bg-white rounded-[10px] shadow  border border-gray-200">
           <div className="flex items-center border-b border-gray-300 pb-4 gap-6">
             <div className="flex items-center gap-1 p-6">

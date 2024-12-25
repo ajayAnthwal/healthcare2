@@ -57,7 +57,6 @@ export default function EditProfile() {
           </div>
         </div>
 
-        {/* Personal Information */}
         <section>
           <h2 className="text-base font-medium text-black font-[Poppins] leading-normal mb-4">
             Personal Information
@@ -106,7 +105,6 @@ export default function EditProfile() {
           </div>
         </section>
 
-        {/* Account Security */}
         <section className="mt-6 py-6 px-6 rounded-[8px] border border-[#E5E7EB] bg-white shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]">
           <h2 className="text-[18px]  font-medium text-black font-[Poppins] leading-normal mb-5">
             Account Security

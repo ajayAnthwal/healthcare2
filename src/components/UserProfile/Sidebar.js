@@ -47,7 +47,7 @@ export default function Sidebar({ setActiveLink, activeLink }) {
               } text-[16px] font-poppins font-[400] leading-normal`}
               onClick={(e) => {
                 e.preventDefault();
-                setActiveLink(item.name); // Update active link
+                setActiveLink(item.name);
               }}
             >
               {item.name}
