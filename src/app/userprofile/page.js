@@ -22,9 +22,9 @@ const UserProfile = () => {
   const ActiveComponent = SECTIONS[activeLink] || MyPurchases;
 
   return (
-    <div className="flex w-[1512px] mx-auto">
+    <div className="flex w-full lg:w-[1512px] mx-auto">
       <Sidebar setActiveLink={setActiveLink} activeLink={activeLink} />
-      <div className="pt-[173px] pl-12 w-full min-h-screen bg-white">
+      <div className="w-full min-h-screen bg-white pt-0 pl-0 lg:pt-[173px] lg:pl-12">
         <h1 className="text-[20px] font-semibold mb-4 pl-6 text-black font-poppins leading-normal">
           {activeLink}
         </h1>

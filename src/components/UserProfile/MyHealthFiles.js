@@ -121,7 +121,7 @@ export default function MyHealthFiles() {
             <input
               type="text"
               placeholder="Trying searching 'lab reports'"
-              className="w-full pl-4 pr-16 py-2 border-none text-sm text-[#777] focus:outline-none font-poppins font-normal"
+              className="w-full pr-16 py-2 border-none text-sm text-[#777] focus:outline-none font-poppins font-normal"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

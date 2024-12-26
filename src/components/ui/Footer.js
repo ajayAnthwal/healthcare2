@@ -178,7 +178,7 @@ export default async function Footer() {
       </div>
 
       <hr className="mt-1" style={{ opacity: "0.28" }} />
-      <div className="mt-4 flex container mx-auto " style={{ opacity: "0.8" }}>
+      <div className="mt-4 flex container  mx-auto " style={{ opacity: "0.8" }}>
         <div className=" inline-block">
           <h1 className="inline-block font-semibold me-3">CONTACT US:</h1>
         </div>
