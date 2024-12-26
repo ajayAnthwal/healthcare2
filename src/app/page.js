@@ -42,6 +42,7 @@ import Homemade from "@/components/Homecare";
 import LongTermCare from "@/components/Long-term-care/LongTermCare";
 import BookComponent from "@/components/Book/BookComponent";
 import BuyRentEqu from "@/components/BuyRent/BuyRentEqu";
+import SpecificSection from "@/components/Home/SpecificSection";
 
 const Home = () => {
   const [currentTestimony, setCurrentTestimony] = useState(0);
@@ -712,6 +713,7 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <SpecificSection />
       </div>
     </div>
   );
