@@ -16,17 +16,13 @@ const ProfilePage = () => {
       </div>
 
       <div className="flex flex-col md:flex-row gap-6">
-        {/* Family Members Section */}
         <div className="bg-white rounded-lg p-6 w-full md:w-[332px] border-r border-[#C0C0C0]">
           <div className="md:block">
-            {/* Mobile-specific horizontal scrolling */}
             <div className="flex md:flex-col gap-4 overflow-x-auto scrollbar-hide">
               <FamilyMembers />
             </div>
           </div>
         </div>
-
-        {/* Profile Actions Section */}
         <div className="bg-white rounded-lg p-6 w-full md:w-2/3">
           <ProfileActions />
         </div>

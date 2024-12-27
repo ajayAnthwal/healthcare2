@@ -42,17 +42,13 @@ const Header = () => {
 
   return (
     <div className="bg-[#e6f5f5] !important">
-      {/* Top Header */}
-
       <div className="bg-[#e6f5f5] w-full ">
-        {/* Sticky Header */}
         <div
           className={`fixed top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9] ${
             isScrolled ? "shadow-md" : ""
           }`}
         >
           <div className="max-w-[1512px] mx-auto px-4 flex items-center justify-between h-20 gap-6 ">
-            {/* Logo */}
             <Link href="/">
               <Image
                 src={logo}
@@ -62,9 +58,7 @@ const Header = () => {
                 style={{ cursor: "pointer" }}
               />
             </Link>
-            {/* Location and Search Bar */}
             <div className="flex-1 flex items-center gap-6">
-              {/* Location */}
               <div className="flex items-center text-[#FF784B] font-medium">
                 <Image src={location} alt="Location" width={19} height={19} />
                 <p className="ms-2 text-[16px]">New Delhi, Delhi</p>
@@ -79,14 +73,12 @@ const Header = () => {
                 </svg>
               </div>
 
-              {/* Search Box */}
               <div
                 className="flex items-center gap-0 h-[44px] w-[824px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
                 style={{
                   boxShadow: "0px 1px 10px rgba(0, 247, 255, 0.25)",
                 }}
               >
-                {/* Search Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -101,7 +93,6 @@ const Header = () => {
                   />
                 </svg>
 
-                {/* Input Field */}
                 <input
                   type="text"
                   placeholder='Try searching something like "my subscriptions"'
@@ -114,9 +105,7 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Right Section */}
             <div className="flex items-center gap-4">
-              {/* Cart */}
               <div
                 className="flex items-center h-[44px] px-[20px] gap-[10px] rounded-full bg-[#009A9F] shadow-lg cursor-pointer"
                 style={{
@@ -261,7 +250,6 @@ const Header = () => {
                   </svg>
                 </div>
 
-                {/* Dropdown Menu */}
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 bg-white rounded-md shadow-lg">
                     <ul className="text-[#000]  text-sm leading-[120%]">
@@ -292,7 +280,6 @@ const Header = () => {
         </div>
         <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem] border-b border-gray-200">
           <div className="flex w-full max-w-[1512px] h-16 px-8 items-center">
-            {/* Navigation Section */}
             <nav className="flex justify-center items-center gap-10 pl-[135px]">
               <ul className="flex justify-center items-center gap-10">
                 <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
@@ -316,10 +303,8 @@ const Header = () => {
               </ul>
             </nav>
 
-            {/* Call Button */}
             <div className="pl-[50px]">
               <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
-                {/* SVG Icon */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="13"

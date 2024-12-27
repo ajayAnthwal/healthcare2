@@ -22,15 +22,12 @@ export default function Sidebar({ setActiveLink, activeLink }) {
 
   return (
     <>
-      {/* Quick Links Button for Mobile */}
       <button
         onClick={() => setIsOpen(true)}
         className="fixed left-0 top-[50%] -translate-y-1/2 bg-[#009A9F] text-white px-4 py-2 rounded-r-md lg:hidden"
       >
         Quick Links
       </button>
-
-      {/* Sidebar for Laptop */}
       <div
         className="
         hidden lg:block 
@@ -71,13 +68,10 @@ export default function Sidebar({ setActiveLink, activeLink }) {
       {/* Sidebar for Mobile */}
       {isOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
-          {/* Backdrop */}
           <div
             onClick={() => setIsOpen(false)}
             className="absolute inset-0 bg-black bg-opacity-50"
           ></div>
-
-          {/* Sidebar Content */}
           <div
             className="
             absolute left-0 top-0 w-3/4 max-w-[300px] h-full 
@@ -108,7 +102,7 @@ export default function Sidebar({ setActiveLink, activeLink }) {
                     onClick={(e) => {
                       e.preventDefault();
                       setActiveLink(item.name);
-                      setIsOpen(false); // Close sidebar on mobile
+                      setIsOpen(false);
                     }}
                   >
                     {item.name}

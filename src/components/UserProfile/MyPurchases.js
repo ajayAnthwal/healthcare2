@@ -55,7 +55,6 @@ const MyPurchases = () => {
           </select>
         </div>
 
-        {/* Search Bar */}
         <div className="flex items-center border border-gray-300 rounded-[10px] w-full lg:w-[400px]">
           <div className="pl-2">
             <svg
