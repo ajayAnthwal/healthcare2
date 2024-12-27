@@ -27,7 +27,7 @@ const LongTermCare = () => {
 
   return (
     <>
-      <div className="md:mt-[140px]">
+      <div>
         <TabGroup selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tabs tabsData={tabsData} />
           <TabPanels>
