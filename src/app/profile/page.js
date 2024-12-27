@@ -5,7 +5,7 @@ import ProfileActions from "@/components/Profile/ProfileActions";
 
 const ProfilePage = () => {
   return (
-    <div className="w-[1512px] mx-auto p-6 mt-32">
+    <div className="w-[1512px] mx-auto p-6 mt-32 md:mt-[125px]">
       <div className="relative mb-6 md:block hidden">
         <div className="text-sm text-gray-600 inline-block px-6 py-3 rounded-br-[37px] bg-[#E6F5F5] -top-6 relative">
           Home &gt;&gt;{" "}

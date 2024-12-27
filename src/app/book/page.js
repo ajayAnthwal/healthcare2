@@ -27,7 +27,7 @@ const Book = () => {
 
   return (
     <div>
-      <div className="bg-[#003638] w-full">
+      <div className="bg-[#003638] w-full md:mt-[140px]">
         <div className="container mx-auto">
           <TabGroup selectedIndex={selectedIndex} onChange={setSelectedIndex}>
             <Tabs tabsData={tabsData} />

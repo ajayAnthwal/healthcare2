@@ -6,7 +6,7 @@ import bgImage from "@/assets/images/login/background.png";
 
 const Login = () => {
   return (
-    <div className="relative flex items-center justify-center py-24 px-4 sm:px-6 md:px-8">
+    <div className="relative flex items-center justify-center py-24 px-4 sm:px-6 md:px-8 mt-[115px]">
       <Image
         src={bgImage}
         alt="Background"
