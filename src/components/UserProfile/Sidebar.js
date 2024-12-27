@@ -34,7 +34,7 @@ export default function Sidebar({ setActiveLink, activeLink }) {
       <div
         className="
         hidden lg:block 
-        static mt-[253px] 
+        static mt-[173px] 
         p-5 w-96 
         inline-flex flex-col justify-center items-start gap-2 
         rounded-r-[10px] 

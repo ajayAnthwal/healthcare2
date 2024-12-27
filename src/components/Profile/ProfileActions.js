@@ -6,6 +6,7 @@ import Payment from "@/assets/images/profile/avatar-3.svg";
 import Addresses from "@/assets/images/profile/avatar-4.svg";
 import Profile from "@/assets/images/profile/avatar-5.svg";
 import Image from "next/image";
+import Link from "next/link";
 const actions = [
   {
     title: "My Purchases",
@@ -53,10 +54,11 @@ const ProfileActions = () => {
               <Image src={action.icon} alt="icon" width={60} height={60} />
             </div>
             <div>
-              <h3 className="text-black text-[20px] font-medium leading-normal font-roboto">
-                {action.title}
-              </h3>
-
+              <Link href="/userprofile">
+                <h3 className="text-black text-[20px] font-medium leading-normal font-roboto">
+                  {action.title}
+                </h3>
+              </Link>
               <p className="text-[#78858F] text-[14px] font-normal leading-[25.5px] tracking-[0.5px] font-roboto">
                 {action.description}
               </p>
