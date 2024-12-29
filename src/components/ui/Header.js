@@ -485,7 +485,7 @@ const Header = () => {
                   <Link href="/book">Home visit</Link>
                 </li>
                 <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="#">Medical Equipment</Link>
+                  <Link href="/ecommerce">Medical Equipment</Link>
                 </li>
                 <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
                   <Link href="#">Home Diagnostics</Link>
