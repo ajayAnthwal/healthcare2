@@ -15,12 +15,7 @@ const Services = () => {
       title: "Deal of the week",
       imageSrc: medicine,
       description: "Vaccinations 45% off",
-    },
-    {
-      title: "Most used service",
-      imageSrc: customer,
-      description: "X-ray at home",
-    },
+    }
   ];
 
   return (
