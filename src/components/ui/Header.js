@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     <div className="bg-[#e6f5f5] !important">
-      <div className="bg-[#e6f5f5] w-full ">
+      <div className="bg-[#e6f5f5] w-full mobile-hide">
         <div
           className={`fixed top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9] ${
             isScrolled ? "shadow-md" : ""
@@ -471,7 +471,7 @@ const Header = () => {
           </div>
         </div>
         <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem] border-b border-gray-200">
-          <div className="flex w-full max-w-[1512px] h-16 px-8 items-center">
+          <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
             <nav className="flex justify-center items-center gap-10 pl-[135px]">
               <ul className="flex justify-center items-center gap-10">
                 <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
