@@ -7,7 +7,6 @@ const BookConsultation = () => {
   return (
     <div className=" flex items-center justify-center container mx-auto p-6">
       <div className="flex flex-col md:flex-row items-center gap-10 w-full p-8">
-        {/* Illustration Section */}
         <div className="w-full md:w-1/2">
           <Image
             src={Consultation}
@@ -18,8 +17,6 @@ const BookConsultation = () => {
             className="max-w-full h-auto"
           />
         </div>
-
-        {/* Form Section */}
         <div className="w-full md:w-1/2">
           <form className="space-y-6">
             <div className="flex flex-col md:flex-row gap-4">
@@ -38,7 +35,6 @@ const BookConsultation = () => {
                 />
               </div>
 
-              {/* Phone Number Input */}
               <div className="flex-1">
                 <label
                   htmlFor="phone"
@@ -54,10 +50,7 @@ const BookConsultation = () => {
                 />
               </div>
             </div>
-
-            {/* Row 2: Email Address and Preferred Consultation Type */}
             <div className="flex flex-col md:flex-row gap-4">
-              {/* Email Address Input */}
               <div className="flex-1">
                 <label
                   htmlFor="email"
@@ -72,10 +65,10 @@ const BookConsultation = () => {
                   className="flex h-[52px] p-2 pl-4 items-start gap-2 w-full rounded-lg bg-[rgba(252,243,242,0.7)] text-[#5E6366] placeholder-[#5E6366] placeholder:text-base  placeholder:font-normal"
                 />
 
-                <p  className="text-[#F57E77]  text-sm font-normal">(Optional)</p>
+                <p className="text-[#F57E77]  text-sm font-normal">
+                  (Optional)
+                </p>
               </div>
-
-              {/* Preferred Consultation Type */}
               <div className="flex-1">
                 <label
                   htmlFor="consultation-type"
@@ -93,24 +86,20 @@ const BookConsultation = () => {
                 </select>
               </div>
             </div>
-
-            {/* Message Input */}
             <div>
               <label
                 htmlFor="message"
                 className="text-[#F57E77]  text-sm font-normal"
               >
-                Message 
+                Message
               </label>
               <textarea
                 id="message"
                 placeholder="Message"
                 className="flex h-[120px] p-2 pl-4 items-start gap-2 w-full rounded-lg bg-[#E6F5F5] text-[#5E6366] placeholder-[#5E6366] placeholder:text-base  placeholder:font-normal"
               />
-                 <p  className="text-[#F57E77]  text-sm font-normal">(Optional)</p>
+              <p className="text-[#F57E77]  text-sm font-normal">(Optional)</p>
             </div>
-
-            {/* Submit Button */}
             <div>
               <button
                 type="submit"
