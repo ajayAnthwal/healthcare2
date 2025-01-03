@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Consultation from "@/assets/images/consultation/consultation.png";
+import Consultation from "@/assets/images/consultation/Consultation.png";
 
 const BookConsultation = () => {
   return (
