@@ -12,6 +12,7 @@ import EnquireForm from "@/components/Long-term-care/EnquireForm ";
 import Features from "@/components/Long-term-care/Features";
 import FooterCTA from "@/components/Long-term-care/FooterCTA";
 import NurseAtHome from "@/components/Long-term-care/Nurse_At_Home/NurseAtHome";
+import SpecializedNurseAtHome from "@/components/Long-term-care/SpecializedNurseAtHome";
 
 const LongTermCare = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1); // No tab is selected initially
@@ -33,7 +34,7 @@ const LongTermCare = () => {
           <TabPanels>
             <TabPanel>{selectedIndex === 0 && <NurseAtHome />}</TabPanel>
             <TabPanel>
-              {selectedIndex === 1 && <div>Content for Tab 1</div>}
+              {selectedIndex === 1 && <div><SpecializedNurseAtHome /></div>}
             </TabPanel>
             <TabPanel>
               {selectedIndex === 2 && <div>Content for Tab 2</div>}

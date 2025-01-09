@@ -18,10 +18,7 @@ const FamilyMembers = () => {
       <h2 className="text-[20px] font-semibold leading-[24px] text-[#000] text-center md:text-left flex mb-4">
         Family Members
       </h2>
-
-      {/* Container for responsive layout */}
       <div className="md:grid md:grid-cols-2 md:gap-6 mb-6 mt-10 flex md:flex-wrap overflow-x-auto md:overflow-visible gap-4 items-center">
-        {/* Family Members */}
         {familyMembers.map((member, index) => (
           <div
             key={index}
@@ -49,7 +46,6 @@ const FamilyMembers = () => {
           </div>
         ))}
 
-        {/* Add More Button */}
         <button className="flex flex-col items-center justify-center min-w-[100px] md:min-w-0">
           <div className="w-[42px] h-[42px] md:w-[81px] md:h-[81px] rounded-full bg-[#004548] flex items-center justify-center">
             <span className="text-white text-[24px] md:text-[40px] font-bold -mt-1 md:-mt-2">
