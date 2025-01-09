@@ -13,7 +13,7 @@ import Book_banner from "@/assets/images/book/book-banner.png";
 import ProductPage from "@/components/Ecommerce/ProductPage";
 import ProductDetail from "@/components/Ecommerce/ProductDetail";
 import Services from "@/components/Book/Services";
-import Vaccines from "@/components/Book/vaccines ";
+import Vaccines from "@/components/Book/vaccines";
 import ProductDetailVaccines from "@/components/Book/ProductDetailVaccines";
 
 const Book = () => {
