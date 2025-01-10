@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import call from "@/assets/images/homepage/call.svg";
@@ -18,17 +18,53 @@ import account from "@/assets/images/homepage/account.svg";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
-
   const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const searchRef = useRef(null);
+  const cityRef = useRef(null);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [city, setCity] = useState(false);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (searchRef.current && !searchRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   const handleCityToggle = () => {
     setCity(!city);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target) &&
+        cityRef.current &&
+        !cityRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+        setCity(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -48,6 +84,20 @@ const Header = () => {
     };
   }, []);
 
+  const searchResults = {
+    product: [
+      { title: "Virtual Meetings", subtitle: "In Home visits" },
+      { title: "User Interviews", subtitle: "In Home visits" },
+      { title: "Prototype Testing", subtitle: "In Home visits" },
+    ],
+    blog: [
+      { title: "Virtual Meetings", subtitle: "In Home visits" },
+      { title: "User Interviews", subtitle: "In Home visits" },
+      { title: "Prototype Testing", subtitle: "In Home visits" },
+    ],
+  };
+
+
   return (
     <div className="bg-[#e6f5f5] !important">
       <div className="bg-[#e6f5f5] w-full mobile-hide">
@@ -66,8 +116,9 @@ const Header = () => {
                 style={{ cursor: "pointer" }}
               />
             </Link>
+
             <div className="flex-1 flex items-center gap-6">
-              <div className="relative">
+              <div className="relative" ref={cityRef}>
                 {/* Location Selector */}
                 <div
                   className="flex items-center text-[#FF784B] font-medium cursor-pointer"
@@ -161,37 +212,89 @@ const Header = () => {
                 )}
               </div>
 
-              <div
-                className="flex items-center gap-0 h-[44px] w-[824px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
-                style={{
-                  boxShadow: "0px 1px 10px rgba(0, 247, 255, 0.25)",
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="m-0 p-0"
+              {/* drop  */}
+
+              <div className="relative" ref={searchRef}>
+                <div
+                  className="flex items-center gap-0 h-[44px] w-[824px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
+                  style={{
+                    boxShadow: "0px 1px 10px rgba(0, 247, 255, 0.25)",
+                  }}
                 >
-                  <path
-                    d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
-                    fill="#B3B3B3"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="m-0 p-0"
+                  >
+                    <path
+                      d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                      fill="#B3B3B3"
+                    />
+                  </svg>
+
+                  <input
+                    type="text"
+                    placeholder='Try searching something like "my subscriptions"'
+                    className="flex-1 outline-none text-[16px] text-black placeholder:text-gray-400 m-0 pl-[10px] p-0"
+                    onFocus={() => setIsOpen(true)}
                   />
-                </svg>
 
-                <input
-                  type="text"
-                  placeholder='Try searching something like "my subscriptions"'
-                  className="flex-1 outline-none text-[16px] text-black placeholder:text-gray-400 m-0 pl-[10px] p-0"
-                />
+                  <button className="flex items-center justify-center h-[45px] px-4 rounded-[10px] border border-[#1AE2E9] bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] bg-clip-text text-transparent text-[16px] font-normal transition hover:opacity-90 m-0 p-0">
+                    Search
+                  </button>
+                </div>
 
-                <button className="flex items-center justify-center h-[45px] px-4 rounded-[10px] border border-[#1AE2E9] bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] bg-clip-text text-transparent text-[16px] font-normal transition hover:opacity-90 m-0 p-0">
-                  Search
-                </button>
+                {isOpen && (
+                  <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-[10px] shadow-lg border border-gray-100 py-4">
+                    <div className="px-4">
+                      <h3 className="text-[#00979C] text-base font-medium mb-3">
+                        Most Search - Product
+                      </h3>
+                      <div className="space-y-4">
+                        {searchResults.product.map((item, index) => (
+                          <div
+                            key={`product-${index}`}
+                            className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded"
+                          >
+                            <span className="text-gray-900 font-normal">
+                              {item.title}
+                            </span>
+                            <span className="text-gray-500 text-sm">
+                              {item.subtitle}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="mt-6 px-4">
+                      <h3 className="text-[#00979C] text-base font-medium mb-3">
+                        Most Search - Blog
+                      </h3>
+                      <div className="space-y-4">
+                        {searchResults.blog.map((item, index) => (
+                          <div
+                            key={`blog-${index}`}
+                            className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded"
+                          >
+                            <span className="text-gray-900 font-normal">
+                              {item.title}
+                            </span>
+                            <span className="text-gray-500 text-sm">
+                              {item.subtitle}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
+
 
             <div className="flex items-center gap-4">
               <div
@@ -473,59 +576,58 @@ const Header = () => {
             </div>
           </div>
         </div>
-       
+
         <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem] border-b border-gray-200">
-      <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
-        <nav className="flex justify-center items-center gap-10 pl-[135px]">
-          <ul className="flex justify-center items-center gap-10">
-            {[
-              { href: "/", label: "Home" },
-              { href: "/long-term-care", label: "Long term care" },
-              { href: "/book", label: "Home visit" },
-              { href: "/ecommerce", label: "Medical Equipment" },
-              { href: "/consultation", label: "Home Diagnostics" },
-              { href: "#", label: "Adult Vaccination" },
-            ].map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%]  ${
-                    pathname === link.href
-                      ? "bg-[#FF784B] text-white border border-[#FF784B] rounded"
-                      : "text-[#009A9F] hover:text-[#FF784B]"
-                  }`}
+          <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
+            <nav className="flex justify-center items-center gap-10 pl-[135px]">
+              <ul className="flex justify-center items-center gap-10">
+                {[
+                  { href: "/", label: "Home" },
+                  { href: "/long-term-care", label: "Long term care" },
+                  { href: "/book", label: "Home visit" },
+                  { href: "/ecommerce", label: "Medical Equipment" },
+                  { href: "/consultation", label: "Home Diagnostics" },
+                  { href: "#", label: "Adult Vaccination" },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%]  ${
+                        pathname === link.href
+                          ? "bg-[#FF784B] text-white border border-[#FF784B] rounded"
+                          : "text-[#009A9F] hover:text-[#FF784B]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div className="pl-[50px]">
+              <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="12"
+                  viewBox="0 0 13 12"
+                  fill="none"
+                  className="fill-[#FF784B]"
                 >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="pl-[50px]">
-          <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="13"
-              height="12"
-              viewBox="0 0 13 12"
-              fill="none"
-              className="fill-[#FF784B]"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M3.32042 0.557908C3.08199 0.0277909 2.83095 0.0171788 2.6041 0.00790379C2.41856 -5.52933e-05 2.20615 0.000433081 1.99408 0.000433081C1.78183 0.000433081 1.43694 0.0801935 1.14528 0.398726C0.853444 0.717259 0.0310059 1.4873 0.0310059 3.05341C0.0310059 4.61969 1.17181 6.13308 1.33082 6.34564C1.49 6.55789 3.533 9.87451 6.76853 11.1504C9.45753 12.2108 10.0047 11.9999 10.5884 11.9468C11.1721 11.8938 12.4717 11.177 12.737 10.4336C13.0023 9.69043 13.0023 9.05339 12.9227 8.92023C12.8431 8.78758 12.6309 8.70798 12.3125 8.5488C11.9942 8.38962 10.4292 7.61942 10.1374 7.5133C9.84555 7.40717 9.63331 7.35411 9.42106 7.67282C9.20882 7.99118 8.59911 8.70798 8.4134 8.92023C8.22769 9.13296 8.04198 9.15949 7.72362 9.0003C7.40525 8.84064 6.38002 8.50485 5.16378 7.42042C4.21748 6.57675 3.57859 5.53477 3.39288 5.21609C3.20717 4.89773 3.37297 4.72528 3.53266 4.56659C3.67559 4.42398 3.85102 4.19499 4.01021 4.00911C4.16905 3.82323 4.22211 3.69058 4.32823 3.47834C4.43435 3.26576 4.38129 3.0799 4.3017 2.92071C4.22211 2.76153 3.60347 1.18733 3.32042 0.557908Z"
-              />
-            </svg>
-            <span className="text-[#FF784B] text-base font-medium leading-[120%]">
-              1800 108 8586
-            </span>
-          </button>
-        </div>
-      </div>
-    </header>
-
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M3.32042 0.557908C3.08199 0.0277909 2.83095 0.0171788 2.6041 0.00790379C2.41856 -5.52933e-05 2.20615 0.000433081 1.99408 0.000433081C1.78183 0.000433081 1.43694 0.0801935 1.14528 0.398726C0.853444 0.717259 0.0310059 1.4873 0.0310059 3.05341C0.0310059 4.61969 1.17181 6.13308 1.33082 6.34564C1.49 6.55789 3.533 9.87451 6.76853 11.1504C9.45753 12.2108 10.0047 11.9999 10.5884 11.9468C11.1721 11.8938 12.4717 11.177 12.737 10.4336C13.0023 9.69043 13.0023 9.05339 12.9227 8.92023C12.8431 8.78758 12.6309 8.70798 12.3125 8.5488C11.9942 8.38962 10.4292 7.61942 10.1374 7.5133C9.84555 7.40717 9.63331 7.35411 9.42106 7.67282C9.20882 7.99118 8.59911 8.70798 8.4134 8.92023C8.22769 9.13296 8.04198 9.15949 7.72362 9.0003C7.40525 8.84064 6.38002 8.50485 5.16378 7.42042C4.21748 6.57675 3.57859 5.53477 3.39288 5.21609C3.20717 4.89773 3.37297 4.72528 3.53266 4.56659C3.67559 4.42398 3.85102 4.19499 4.01021 4.00911C4.16905 3.82323 4.22211 3.69058 4.32823 3.47834C4.43435 3.26576 4.38129 3.0799 4.3017 2.92071C4.22211 2.76153 3.60347 1.18733 3.32042 0.557908Z"
+                  />
+                </svg>
+                <span className="text-[#FF784B] text-base font-medium leading-[120%]">
+                  1800 108 8586
+                </span>
+              </button>
+            </div>
+          </div>
+        </header>
       </div>
 
       {/* Mobile Header */}

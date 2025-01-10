@@ -43,6 +43,7 @@ import LongTermCare from "@/components/Long-term-care/LongTermCare";
 import BookComponent from "@/components/Book/BookComponent";
 import BuyRentEqu from "@/components/BuyRent/BuyRentEqu";
 import SpecificSection from "@/components/Home/SpecificSection";
+import FloatingContactWidget from "@/components/Home/FloatingContactWidget";
 
 const Home = () => {
   const [currentTestimony, setCurrentTestimony] = useState(0);
@@ -714,6 +715,7 @@ const Home = () => {
           </div>
         </div>
         <SpecificSection />
+        <FloatingContactWidget />
       </div>
     </div>
   );

@@ -23,12 +23,6 @@ const Homecare = () => {
           </p>
 
           <div className="flex flex-wrap justify-center items-center mt-4 gap-4">
-            {/* Schedule Button */}
-            <button className="px-3 py-1 sm:px-6 sm:py-3 rounded-full border border-white shadow-lg flex items-center gap-2 bg-transparent hover:bg-white hover:text-[#009A9F] transition text-sm sm:text-base">
-              <Image src={calendar} alt="calendar" />
-              Schedule
-            </button>
-            {/* Book Now Button */}
             <button className="px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-white text-[#009A9F] shadow-lg flex items-center gap-2 hover:bg-[#009A9F] hover:text-white transition text-sm sm:text-base">
               <Image src={whatsappSvg} alt="whatsapp" />
               Book Now
