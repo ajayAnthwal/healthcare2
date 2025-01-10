@@ -15,8 +15,11 @@ import logo from "@/assets/images/homepage/logo.svg";
 import logohealth from "@/assets/images/homepage/logohealth.svg";
 import shoppingCart from "@/assets/images/homepage/shoppingCart.svg";
 import account from "@/assets/images/homepage/account.svg";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -470,56 +473,59 @@ const Header = () => {
             </div>
           </div>
         </div>
+       
         <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem] border-b border-gray-200">
-          <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
-            <nav className="flex justify-center items-center gap-10 pl-[135px]">
-              <ul className="flex justify-center items-center gap-10">
-                <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="/">Home</Link>
-                </li>
-                <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="/long-term-care">Long term care</Link>
-                </li>
-                <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="/book">Home visit</Link>
-                </li>
-                <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="/ecommerce">Medical Equipment</Link>
-                </li>
-                <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="/consultation">Home Diagnostics</Link>
-                </li>
-                <li className="text-[#009A9F] text-base font-normal hover:text-orange-500">
-                  <Link href="#">Adult Vaccination</Link>
-                </li>
-              </ul>
-            </nav>
-
-            <div className="pl-[50px]">
-              <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="12"
-                  viewBox="0 0 13 12"
-                  fill="none"
-                  className="fill-[#FF784B]"
+      <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
+        <nav className="flex justify-center items-center gap-10 pl-[135px]">
+          <ul className="flex justify-center items-center gap-10">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/long-term-care", label: "Long term care" },
+              { href: "/book", label: "Home visit" },
+              { href: "/ecommerce", label: "Medical Equipment" },
+              { href: "/consultation", label: "Home Diagnostics" },
+              { href: "#", label: "Adult Vaccination" },
+            ].map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%]  ${
+                    pathname === link.href
+                      ? "bg-[#FF784B] text-white border border-[#FF784B] rounded"
+                      : "text-[#009A9F] hover:text-[#FF784B]"
+                  }`}
                 >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M3.32042 0.557908C3.08199 0.0277909 2.83095 0.0171788 2.6041 0.00790379C2.41856 -5.52933e-05 2.20615 0.000433081 1.99408 0.000433081C1.78183 0.000433081 1.43694 0.0801935 1.14528 0.398726C0.853444 0.717259 0.0310059 1.4873 0.0310059 3.05341C0.0310059 4.61969 1.17181 6.13308 1.33082 6.34564C1.49 6.55789 3.533 9.87451 6.76853 11.1504C9.45753 12.2108 10.0047 11.9999 10.5884 11.9468C11.1721 11.8938 12.4717 11.177 12.737 10.4336C13.0023 9.69043 13.0023 9.05339 12.9227 8.92023C12.8431 8.78758 12.6309 8.70798 12.3125 8.5488C11.9942 8.38962 10.4292 7.61942 10.1374 7.5133C9.84555 7.40717 9.63331 7.35411 9.42106 7.67282C9.20882 7.99118 8.59911 8.70798 8.4134 8.92023C8.22769 9.13296 8.04198 9.15949 7.72362 9.0003C7.40525 8.84064 6.38002 8.50485 5.16378 7.42042C4.21748 6.57675 3.57859 5.53477 3.39288 5.21609C3.20717 4.89773 3.37297 4.72528 3.53266 4.56659C3.67559 4.42398 3.85102 4.19499 4.01021 4.00911C4.16905 3.82323 4.22211 3.69058 4.32823 3.47834C4.43435 3.26576 4.38129 3.0799 4.3017 2.92071C4.22211 2.76153 3.60347 1.18733 3.32042 0.557908Z"
-                    fill="#FF784B"
-                  />
-                </svg>
-                {/* Text */}
-                <span className="text-[#FF784B] text-base font-medium leading-[120%]">
-                  1800 108 8586
-                </span>
-              </button>
-            </div>
-          </div>
-        </header>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="pl-[50px]">
+          <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="12"
+              viewBox="0 0 13 12"
+              fill="none"
+              className="fill-[#FF784B]"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M3.32042 0.557908C3.08199 0.0277909 2.83095 0.0171788 2.6041 0.00790379C2.41856 -5.52933e-05 2.20615 0.000433081 1.99408 0.000433081C1.78183 0.000433081 1.43694 0.0801935 1.14528 0.398726C0.853444 0.717259 0.0310059 1.4873 0.0310059 3.05341C0.0310059 4.61969 1.17181 6.13308 1.33082 6.34564C1.49 6.55789 3.533 9.87451 6.76853 11.1504C9.45753 12.2108 10.0047 11.9999 10.5884 11.9468C11.1721 11.8938 12.4717 11.177 12.737 10.4336C13.0023 9.69043 13.0023 9.05339 12.9227 8.92023C12.8431 8.78758 12.6309 8.70798 12.3125 8.5488C11.9942 8.38962 10.4292 7.61942 10.1374 7.5133C9.84555 7.40717 9.63331 7.35411 9.42106 7.67282C9.20882 7.99118 8.59911 8.70798 8.4134 8.92023C8.22769 9.13296 8.04198 9.15949 7.72362 9.0003C7.40525 8.84064 6.38002 8.50485 5.16378 7.42042C4.21748 6.57675 3.57859 5.53477 3.39288 5.21609C3.20717 4.89773 3.37297 4.72528 3.53266 4.56659C3.67559 4.42398 3.85102 4.19499 4.01021 4.00911C4.16905 3.82323 4.22211 3.69058 4.32823 3.47834C4.43435 3.26576 4.38129 3.0799 4.3017 2.92071C4.22211 2.76153 3.60347 1.18733 3.32042 0.557908Z"
+              />
+            </svg>
+            <span className="text-[#FF784B] text-base font-medium leading-[120%]">
+              1800 108 8586
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
       </div>
 
       {/* Mobile Header */}
