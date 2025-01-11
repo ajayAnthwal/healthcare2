@@ -6,7 +6,7 @@ const FloatingContactWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end space-y-4">
+    <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end space-y-4 widget-1">
       {isOpen && (
         <div className="flex flex-col items-end p-4 bg-white shadow-lg rounded-lg space-y-3">
           <button

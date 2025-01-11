@@ -28,6 +28,18 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [city, setCity] = useState(false);
 
+  const [profileOpen, setProfileOpen] = useState(false);
+  const menuRef = useRef(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const handleProfileToggle = () => {
+    setProfileOpen((prevState) => !prevState);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -65,7 +77,6 @@ const Header = () => {
     };
   }, []);
 
-
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -96,7 +107,6 @@ const Header = () => {
       { title: "Prototype Testing", subtitle: "In Home visits" },
     ],
   };
-
 
   return (
     <div className="bg-[#e6f5f5] !important">
@@ -294,7 +304,6 @@ const Header = () => {
                 )}
               </div>
             </div>
-
 
             <div className="flex items-center gap-4">
               <div
@@ -633,6 +642,7 @@ const Header = () => {
       {/* Mobile Header */}
       <div className="md:hidden block bg-[#e6f5f5] py-2">
         <header className="flex items-center justify-between px-[20px]">
+          {/* Logo */}
           <Image
             alt="logo"
             loading="lazy"
@@ -642,7 +652,12 @@ const Header = () => {
             className="p-3"
             src={logo}
           />
-          <div className="flex items-center text-[#009A9F] font-medium text-sm">
+
+          {/* Location Selector */}
+          <div
+            className="flex items-center text-[#009A9F] font-medium text-sm cursor-pointer"
+            onClick={handleCityToggle}
+          >
             <Image src={location_on} alt="location" height={15} width={15} />
             <p className="mx-1 text-[12px]">New Delhi, Delhi</p>
             <Image
@@ -650,8 +665,13 @@ const Header = () => {
               alt="arrow down"
               height={15}
               width={15}
+              className={`transform transition-transform ${
+                city ? "rotate-180" : "rotate-0"
+              }`}
             />
           </div>
+
+          {/* Icons */}
           <div className="flex gap-[10px]">
             <Image src={search} alt="search" height={24} width={24} />
             <div className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F]">
@@ -662,11 +682,120 @@ const Header = () => {
                 width={12}
               />
             </div>
-            <div className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F]">
-              <Image src={profile} alt="profile" height={19} width={19} />
+            <div className="relative">
+              <div
+                className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F] cursor-pointer"
+                onClick={toggleMenu}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="19"
+                  width="19"
+                  fill="white"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3 7.5 5.015 7.5 7.5 9.515 12 12 12zm0 2c-3.314 0-6 2.686-6 6v2h12v-2c0-3.314-2.686-6-6-6z" />
+                </svg>
+              </div>
+
+              {menuOpen && (
+                <div
+                  className="bg-white shadow-lg p-4 rounded-lg overflow-y-auto absolute top-[100%] right-0 mt-2 z-30 w-[328px]"
+                  style={{ maxHeight: "calc(100vh - 2rem)" }}
+                >
+                  <ul className="flex flex-col gap-4">
+                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                        viewBox="0 0 24 24"
+                        fill="black"
+                      >
+                        <path d="M16 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm1 1h-2v1h-2v1h6v-1h-2v-1zm-7 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-1.78 0-4.7.92-4.7 2.7V18h9.4v-1.3c0-1.78-2.92-2.7-4.7-2.7z" />
+                      </svg>
+                      Family Profiles
+                    </li>
+                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                        viewBox="0 0 24 24"
+                        fill="black"
+                      >
+                        <path d="M13 11h-2v2h2v-2zm0-4h-2v2h2V7zm-1-5C5.92 2 2 6.48 2 11c0 4.52 3.92 9 10 9s10-4.48 10-9c0-4.52-3.92-9-10-9zm0 16c-4.34 0-8-3.28-8-7s3.66-7 8-7 8 3.28 8 7-3.66 7-8 7z" />
+                      </svg>
+                      My Health Files
+                    </li>
+                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                        viewBox="0 0 24 24"
+                        fill="black"
+                      >
+                        <path d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10zm-3-3H8v-2h8v2z" />
+                      </svg>
+                      Payment Method
+                    </li>
+                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                        viewBox="0 0 24 24"
+                        fill="black"
+                      >
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm-.001 6C9.794 10 9 10.791 9 12h2v1h-1v1h1v1h-1v1h2v-1c0-.577.373-.875.738-1.111.292-.19.512-.398.762-.683C13.624 11.597 14 10.932 14 10c0-1.105-.895-2-2.001-2zM13 13h-1v-1h1v1z" />
+                      </svg>
+                      Help & Support
+                    </li>
+                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-[#FF784B]">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                        viewBox="0 0 24 24"
+                        fill="#FF784B"
+                      >
+                        <path d="M10 9v6H5v4h14v-4h-5v-6h5V5H5v4h5zm1-6h-7v16h7v-3h7V6h-7V3z" />
+                      </svg>
+                      Logout
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </header>
+
+        {/* Mobile Dropdown */}
+        {city && (
+          <div className="bg-white shadow-lg p-4 rounded-lg absolute top-[50px] left-0 right-0 mx-auto z-10 w-[184px]">
+            <h3 className="text-black font-semibold text-[14px] mb-2">
+              Select City
+            </h3>
+            <ul className="flex flex-col gap-2">
+              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                Delhi
+              </li>
+              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                Noida
+              </li>
+              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                Gurgaon
+              </li>
+              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                Faridabad
+              </li>
+              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                Ghaziabad
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
