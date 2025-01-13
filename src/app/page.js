@@ -15,7 +15,7 @@ import ourApproach from "@/assets/images/homepage/ourApproach.svg";
 import testimonial1 from "@/assets/images/homepage/testimonial1.png";
 import testimonial2 from "@/assets/images/homepage/testimonial2.png";
 import mediaCoverage from "@/assets/images/homepage/mediaCoverage.png";
-import healthcare from "@/assets/images/homepage/healthcare.png";
+import BannerCarousel from "@/components/Home/BannerCarousel";
 import stethoscope_arrow from "@/assets/images/homepage/stethoscope_arrow.png";
 import relax from "@/assets/images/homepage/relax.png";
 import emoji_people from "@/assets/images/homepage/emoji_people.png";
@@ -44,6 +44,7 @@ import BookComponent from "@/components/Book/BookComponent";
 import BuyRentEqu from "@/components/BuyRent/BuyRentEqu";
 import SpecificSection from "@/components/Home/SpecificSection";
 import FloatingContactWidget from "@/components/Home/FloatingContactWidget";
+import CarouselSection from "@/components/Home/CarouselSection";
 
 const Home = () => {
   const [currentTestimony, setCurrentTestimony] = useState(0);
@@ -431,9 +432,7 @@ const Home = () => {
         <div className="flex flex-col items-center mt-5 container w-full mx-auto md:px-4 px-2">
           <ComprehensiveServices />
         </div>
-        <div className="container mx-auto flex my-[70px]">
-          <Image src={healthcare} alt="banner" className="w-[100%]" />
-        </div>
+        <BannerCarousel />
 
         {/* ---------------Long Term Care---------------- */}
         <div className="md:hidden block">
@@ -625,59 +624,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:mt-20 mt-6 items-center px-4 container mx-auto">
-          <h1 className="md:text-[32px] lg:text-[32px] text-xl  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
-            In the news
-          </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[10px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
-            Stay updated with the latest news and media coverage about Apollo
-            Homecare. Our commitment to providing quality care has made us a
-            trusted name in the healthcare industry, and our recent achievements
-            are gaining attention.
-          </p>
-
-          <div
-            className="mt-10 flex gap-2 w-full mx-auto rounded-lg"
-            style={{
-              boxShadow: "0px 15px 35.8px 0px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Image
-              src={mediaCoverage}
-              alt="media coverage"
-              className="w-[30%] rounded-tl-lg rounded-bl-lg"
-            />
-            <div className="md:m-5 m-[2px]">
-              <h1 className="text-[14px] md:text-3xl md:mt-0 mt-[5px] font-bold">
-                Recent Media Coverage
-              </h1>
-              <p className="md:mt-4 text-gray-600 md:text-[14px] text-[10px] md:text-md my-1">
-                &quot;Apollo Homecare’s New Homecare Initiative Gains
-                Recognition in Healthcare Magazine&quot;
-              </p>
-              <p className="md:text-[14px] text-[10px] text-gray-600 text-md my-1">
-                &quot;Apollo Homecare Featured in National News for Pioneering
-                Virtual Health Services&quot;
-              </p>
-            </div>
-          </div>
-          {/* -----------------Carousel Button------------------ */}
-          <div className="flex justify-center items-center mt-10">
-            <Image onClick={prev} src={chevronLeft} alt="prev" />
-            {testimonials.map((_, index) => (
-              <div
-                key={index}
-                className="w-3 h-3 m-3"
-                style={{
-                  borderRadius: "100%",
-                  backgroundColor:
-                    currentTestimony === index ? "#009A9F" : "#C7C7C7",
-                }}
-              ></div>
-            ))}
-            <Image onClick={next} src={chevronRight} alt="next" />
-          </div>
-        </div>
+        <CarouselSection />
         {/* ---------------About Apollo---------------- */}
         <div className="flex flex-col items-center md:mt-16 mt-6">
           <h1 className="md:text-[32px] lg:text-[32px] text-xl  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">

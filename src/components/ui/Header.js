@@ -642,7 +642,6 @@ const Header = () => {
       {/* Mobile Header */}
       <div className="md:hidden block bg-[#e6f5f5] py-2">
         <header className="flex items-center justify-between px-[20px]">
-          {/* Logo */}
           <Image
             alt="logo"
             loading="lazy"
@@ -652,8 +651,6 @@ const Header = () => {
             className="p-3"
             src={logo}
           />
-
-          {/* Location Selector */}
           <div
             className="flex items-center text-[#009A9F] font-medium text-sm cursor-pointer"
             onClick={handleCityToggle}
@@ -671,9 +668,59 @@ const Header = () => {
             />
           </div>
 
-          {/* Icons */}
           <div className="flex gap-[10px]">
-            <Image src={search} alt="search" height={24} width={24} />
+            <Image
+              src={search}
+              alt="search"
+              height={24}
+              width={24}
+              onClick={() => setIsOpen(!isOpen)}
+            />
+            {isOpen && (
+              <div className="absolute top-[57px] left-0 w-full mt-2 bg-white rounded-[10px] shadow-lg border border-gray-100 py-4 z-50">
+                <div className="px-4">
+                  <h3 className="text-[#00979C] text-base font-medium mb-3">
+                    Most Search - Product
+                  </h3>
+                  <div className="space-y-4">
+                    {searchResults.product.map((item, index) => (
+                      <div
+                        key={`product-${index}`}
+                        className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-2 rounded"
+                      >
+                        <span className="text-gray-900 font-semibold text-sm">
+                          {item.title}
+                        </span>
+                        <span className="text-gray-500 text-xs">
+                          {item.subtitle}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="mt-6 px-4">
+                  <h3 className="text-[#00979C] text-base font-medium mb-3">
+                    Most Search - Blog
+                  </h3>
+                  <div className="space-y-4">
+                    {searchResults.blog.map((item, index) => (
+                      <div
+                        key={`blog-${index}`}
+                        className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-2 rounded"
+                      >
+                        <span className="text-gray-900 font-semibold text-sm">
+                          {item.title}
+                        </span>
+                        <span className="text-gray-500 text-xs">
+                          {item.subtitle}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
             <div className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F]">
               <Image
                 src={shoppingCart}
@@ -683,6 +730,7 @@ const Header = () => {
               />
             </div>
             <div className="relative">
+              {/* Profile Icon */}
               <div
                 className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F] cursor-pointer"
                 onClick={toggleMenu}
@@ -698,12 +746,23 @@ const Header = () => {
                 </svg>
               </div>
 
+              {/* Dropdown Menu */}
               {menuOpen && (
-                <div
-                  className="bg-white shadow-lg p-4 rounded-lg overflow-y-auto absolute top-[100%] right-0 mt-2 z-30 w-[328px]"
-                  style={{ maxHeight: "calc(100vh - 2rem)" }}
-                >
-                  <ul className="flex flex-col gap-4">
+                <div className="fixed inset-0 bg-white z-30 h-screen p-4 overflow-y-auto w-[375px] left-[60px]">
+                  {/* Close Button */}
+                  <div className="flex justify-between items-center bg-[#009A9F] p-[10px_20px_10px_10px]">
+                    <h3 className="text-white font-poppins text-sm font-normal leading-[1.2] rounded-b-[20px] self-stretch ">
+                      Profile
+                    </h3>
+
+                    <button
+                      className="text-[#fff] font-bold text-lg"
+                      onClick={toggleMenu}
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <ul className="mt-6 flex flex-col gap-4">
                     <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
