@@ -5,6 +5,7 @@ import Book_banner from "@/assets/images/book/book-banner.png";
 import product from "@/assets/images/book/product.png";
 import chair from "@/assets/images/book/chair.png";
 import vaccines from "@/assets/images/book/image1.png";
+import Link from "next/link";
 
 const ProductDetailVaccines = () => {
   const [quantity, setQuantity] = useState(1);
@@ -229,9 +230,11 @@ const ProductDetailVaccines = () => {
             </div>
 
             <div className="flex flex-col md:flex-row gap-4 mt-4">
-              <button className="flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#009A9F] text-white text-center font-poppins text-sm font-semibold hover:bg-[#008a8e]">
-                Buy Now
-              </button>
+              <Link href="/checkout">
+                <button className="flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#009A9F] text-white text-center font-poppins text-sm font-semibold hover:bg-[#008a8e]">
+                  Buy Now
+                </button>
+              </Link>
             </div>
 
             <div className="flex items-center text-[#777] text-sm font-medium leading-[23.4px] mt-4">

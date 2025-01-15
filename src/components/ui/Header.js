@@ -586,7 +586,7 @@ const Header = () => {
           </div>
         </div>
 
-        <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem] border-b border-gray-200">
+        <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem]">
           <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
             <nav className="flex justify-center items-center gap-10 pl-[135px]">
               <ul className="flex justify-center items-center gap-10">

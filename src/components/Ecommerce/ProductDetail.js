@@ -4,6 +4,7 @@ import Image from "next/image";
 import Book_banner from "@/assets/images/book/book-banner.png";
 import product from "@/assets/images/book/product.png";
 import chair from "@/assets/images/book/chair.png";
+import Link from "next/link";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
@@ -96,9 +97,11 @@ const ProductDetail = () => {
               </div>
 
               <div className="flex flex-col md:flex-row gap-4 mt-4">
-                <button className="flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#009A9F] text-white text-center font-poppins text-sm font-semibold hover:bg-[#008a8e]">
-                  Buy Now
-                </button>
+                <Link href="/checkout">
+                  <button className="flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#009A9F] text-white text-center font-poppins text-sm font-semibold hover:bg-[#008a8e]">
+                    Buy Now
+                  </button>
+                </Link>
 
                 <button className="flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#E6F5F5] text-[#003638] text-center font-poppins text-sm font-semibold border border-[#C0DAD9] hover:bg-[#D9EFEF] w-full md:w-auto">
                   Add to Cart
@@ -270,7 +273,7 @@ const ProductDetail = () => {
             Description
           </button>
           <button className="hover:text-gray-900 text-teal-600  font-semibold text-[14px] leading-[21px] text-center">
-          Vendor&apos;s Info
+            Vendor&apos;s Info
           </button>
           <button className="hover:text-gray-900 text-teal-600  font-semibold text-[14px] leading-[21px] text-center">
             More Offers
@@ -284,10 +287,11 @@ const ProductDetail = () => {
         </div>
 
         <div className="mt-6 text-sm text-gray-700">
-        <p className="text-black text-justify text-[14.662px] font-normal leading-[21.993px]">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-</p>
-
+          <p className="text-black text-justify text-[14.662px] font-normal leading-[21.993px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
 
           <p className="mt-2">
             <a
