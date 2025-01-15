@@ -1,4 +1,5 @@
 import { Button, Text, clx } from "@medusajs/ui";
+import Link from "next/link";
 
 export default async function Footer() {
   const items = [
@@ -227,11 +228,31 @@ const MobileFooter = () => {
         <div>
           <h3 className="font-semibold mb-2">About</h3>
           <ul className="space-y-1">
-            <li>Legacy</li>
-            <li>Leadership</li>
-            <li>Vision</li>
-            <li>Our Pillars</li>
-            <li>Awards</li>
+            <li>
+              <Link href="/about">
+                <a className="hover:underline">Legacy</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a className="hover:underline">Leadership</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a className="hover:underline">Vision</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a className="hover:underline">Our Pillars</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">
+                <a className="hover:underline">Awards</a>
+              </Link>
+            </li>
           </ul>
         </div>
 
