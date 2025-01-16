@@ -13,9 +13,10 @@ import Features from "@/components/Long-term-care/Features";
 import FooterCTA from "@/components/Long-term-care/FooterCTA";
 import NurseAtHome from "@/components/Long-term-care/Nurse_At_Home/NurseAtHome";
 import SpecializedNurseAtHome from "@/components/Long-term-care/SpecializedNurseAtHome";
+import NursAtHomeProduct from "@/components/Long-term-care/Nurse_At_Home/NursAtHomeProduct";
 
 const LongTermCare = () => {
-  const [selectedIndex, setSelectedIndex] = useState(-1); // No tab is selected initially
+  const [selectedIndex, setSelectedIndex] = useState(-1); 
 
   const tabsData = [
     { name: "Nurse at Home", image: Nurse },
@@ -34,10 +35,14 @@ const LongTermCare = () => {
           <TabPanels>
             <TabPanel>{selectedIndex === 0 && <NurseAtHome />}</TabPanel>
             <TabPanel>
-              {selectedIndex === 1 && <div><SpecializedNurseAtHome /></div>}
+              {selectedIndex === 1 && (
+                <div>
+                  <SpecializedNurseAtHome />
+                </div>
+              )}
             </TabPanel>
             <TabPanel>
-              {selectedIndex === 2 && <div>Content for Tab 2</div>}
+              {selectedIndex === 2 && <div><NursAtHomeProduct /></div>}
             </TabPanel>
             <TabPanel>
               {selectedIndex === 3 && <div>Content for Tab 3</div>}

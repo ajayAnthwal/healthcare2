@@ -9,12 +9,12 @@ const NurseAtHome = () => {
     {
       type: "select",
       placeholder: "Select City",
-      options: ["City 1", "City 2", "City 3"],
+      options: ["Select City", "City 1", "City 2", "City 3"],
     },
     {
       type: "select",
       placeholder: "Choose a Service",
-      options: ["Service 1", "Service 2", "Service 3"],
+      options: ["Choose a Service", "Service 1", "Service 2", "Service 3"],
     },
   ];
 

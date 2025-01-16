@@ -1,8 +1,32 @@
 import React from "react";
+import ServiceInquiryForm from "./ServiceInquiryForm";
+import inquiry from "@/assets/images/longterm/inquiry.png";
 
 const SpecializedNurseAtHome = () => {
+  const formFields = [
+    { type: "text", placeholder: "Name" },
+    { type: "tel", placeholder: "Phone" },
+    {
+      type: "select",
+      placeholder: "Select City",
+      options: ["Select City", "City 1", "City 2", "City 3"],
+    },
+    {
+      type: "select",
+      placeholder: "Choose a Service",
+      options: ["Choose a Service", "Service 1", "Service 2", "Service 3"],
+    },
+  ];
+
   return (
     <div>
+      <div>
+        <ServiceInquiryForm
+          imageSrc={inquiry}
+          formTitle="Expert Critical Care in the Comfort of Your Home"
+          fields={formFields}
+        />
+      </div>
       <section className="bg-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">

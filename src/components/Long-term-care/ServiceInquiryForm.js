@@ -25,7 +25,7 @@ const ServiceInquiryForm = ({ imageSrc, formTitle, fields }) => {
               return (
                 <select
                   key={index}
-                  className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-[400px] h-[60px] p-[10px]"
+                  className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-[400px] h-[60px] p-[10px] text-[#B5B5B5]  text-[16px] font-normal leading-[24px]"
                   placeholder={field.placeholder}
                 >
                   {field.options.map((option, optionIndex) => (
@@ -42,13 +42,13 @@ const ServiceInquiryForm = ({ imageSrc, formTitle, fields }) => {
                 key={index}
                 type={field.type}
                 placeholder={field.placeholder}
-                className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-[400px] h-[60px] p-[10px]"
+                className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-[400px] h-[60px] p-[10px] border-[0.5px]"
               />
             );
           })}
           <button
             type="submit"
-            className="block mx-auto mt-11 text-[#007477] border border-[#003638] bg-transparent py-3 px-4 rounded-[8px] shadow-[0px_2px_7px_0px_#00000040] w-[400px] h-[50px]"
+            className="block mx-auto mt-11 text-[#007477] border border-[#007477] bg-transparent py-3 px-4 rounded-[8px] shadow-[0px_2px_7px_0px_#00000040] w-[400px] h-[50px]"
           >
             BOOK NOW
           </button>
