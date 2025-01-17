@@ -5,7 +5,7 @@ import Image from "next/image";
 const Tabs = ({ tabsData }) => {
   return (
     <div className="bg-[#003638]">
-      <TabList className="flex gap-24 container w-full mx-auto">
+      <TabList className="flex gap-24 max-w-[1512px]  mx-auto">
         {tabsData.map((tab, index) => (
           <Tab
             key={index}

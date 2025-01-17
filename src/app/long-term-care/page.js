@@ -16,15 +16,16 @@ import SpecializedNurseAtHome from "@/components/Long-term-care/SpecializedNurse
 import NursAtHomeProduct from "@/components/Long-term-care/Nurse_At_Home/NursAtHomeProduct";
 
 const LongTermCare = () => {
-  const [selectedIndex, setSelectedIndex] = useState(-1); 
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const tabsData = [
-    { name: "Nurse at Home", image: Nurse },
-    { name: "Long Term Assistant Care", image: Vector },
-    { name: "Subscription", image: subscriptions },
+    { name: "ICU at Home", image: Nurse },
+    { name: "Specialized Nurse at Home", image: Vector },
+    { name: "Trained Attendant at Home", image: subscriptions },
     { name: "Mother & Baby Care", image: Vector_second },
-    { name: "Elder Care", image: self_improvement },
-    { name: "ICU Setup at Home", image: add_home },
+    { name: "Senior Care Subscription", image: self_improvement },
+    { name: "Travel Nurses", image: add_home },
+    { name: "Specialty Rehab Packages", image: add_home },
   ];
 
   return (
@@ -42,7 +43,11 @@ const LongTermCare = () => {
               )}
             </TabPanel>
             <TabPanel>
-              {selectedIndex === 2 && <div><NursAtHomeProduct /></div>}
+              {selectedIndex === 2 && (
+                <div>
+                  <NursAtHomeProduct />
+                </div>
+              )}
             </TabPanel>
             <TabPanel>
               {selectedIndex === 3 && <div>Content for Tab 3</div>}
@@ -52,6 +57,10 @@ const LongTermCare = () => {
             </TabPanel>
             <TabPanel>
               {selectedIndex === 5 && <div>Content for Tab 5</div>}
+            </TabPanel>
+
+            <TabPanel>
+              {selectedIndex === 6 && <div>Content for Tab 6</div>}
             </TabPanel>
           </TabPanels>
         </TabGroup>
