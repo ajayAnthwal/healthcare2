@@ -14,6 +14,9 @@ import FooterCTA from "@/components/Long-term-care/FooterCTA";
 import NurseAtHome from "@/components/Long-term-care/Nurse_At_Home/NurseAtHome";
 import SpecializedNurseAtHome from "@/components/Long-term-care/SpecializedNurseAtHome";
 import NursAtHomeProduct from "@/components/Long-term-care/Nurse_At_Home/NursAtHomeProduct";
+import Applo_Nurse_At_home from "@/components/Long-term-care/Applo_Nurse_At_home";
+import Trained_Attendant_at_Home from "@/components/Long-term-care/Trained_Attendant_at_Home";
+import Mother_Baby_Care from "@/components/Long-term-care/Mother_Baby_Care";
 
 const LongTermCare = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -50,13 +53,26 @@ const LongTermCare = () => {
               )}
             </TabPanel>
             <TabPanel>
-              {selectedIndex === 3 && <div>Content for Tab 3</div>}
+              {selectedIndex === 3 && (
+                <div>
+                  <Applo_Nurse_At_home />
+                </div>
+              )}
             </TabPanel>
             <TabPanel>
-              {selectedIndex === 4 && <div>Content for Tab 4</div>}
+              {selectedIndex === 4 && (
+                <div>
+                  <Trained_Attendant_at_Home />
+                </div>
+              )}
             </TabPanel>
             <TabPanel>
-              {selectedIndex === 5 && <div>Content for Tab 5</div>}
+              {selectedIndex === 5 && (
+                <div>
+                  {" "}
+                  <Mother_Baby_Care />
+                </div>
+              )}
             </TabPanel>
 
             <TabPanel>
