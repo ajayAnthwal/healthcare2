@@ -1,7 +1,6 @@
 import React from "react";
 import inquiry from "@/assets/images/longterm/inquiry.png";
-import mother from "@/assets/images/longterm/mother.png";
-import motherson from "@/assets/images/longterm/mother_son.png";
+import doctor from "@/assets/images/book/doctor.png";
 import choose from "@/assets/images/longterm/choose.png";
 import Image from "next/image";
 
@@ -70,11 +69,11 @@ const Home_Visit = () => {
             </div>
             <div className="w-full md:w-1/2 px-4">
               <Image
-                src={mother}
+                src={doctor}
                 alt="Newborn baby care"
-                className="mx-auto w-[277px]"
-                width={277}
-                height={308}
+                className="mx-auto w-[400px]"
+                width={400}
+                height={400}
               />
             </div>
           </div>
