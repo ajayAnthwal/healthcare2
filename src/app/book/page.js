@@ -15,6 +15,7 @@ import ProductDetail from "@/components/Ecommerce/ProductDetail";
 import Services from "@/components/Book/Services";
 import Vaccines from "@/components/Book/Vaccines";
 import ProductDetailVaccines from "@/components/Book/ProductDetailVaccines";
+import Home_Visit from "@/components/Book/Home_Visit";
 
 const Book = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -34,16 +35,21 @@ const Book = () => {
         <TabGroup selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tabs tabsData={tabsData} />
           <TabPanels>
-            <TabPanel>{selectedIndex === 0 && <Vaccines />}</TabPanel>
+            <TabPanel>{selectedIndex === 0 && <Services />}</TabPanel>
             <TabPanel>
               {selectedIndex === 1 && (
                 <div>
-                  <ProductDetailVaccines />
+                  <Vaccines />
                 </div>
               )}
             </TabPanel>
             <TabPanel>
-              {selectedIndex === 2 && <div>Content for Tab 2</div>}
+              {selectedIndex === 2 && (
+                <div>
+                  {" "}
+                  <ProductDetailVaccines />
+                </div>
+              )}
             </TabPanel>
             <TabPanel>
               {selectedIndex === 3 && <div>Content for Tab 3</div>}
@@ -60,18 +66,7 @@ const Book = () => {
 
       {selectedIndex === -1 && (
         <div>
-          <Image
-            src={Book_banner}
-            alt="Book Banner"
-            width={1192}
-            height={344}
-            priority
-            className="mx-auto container mt-10"
-          />
-
-          <div>
-            <Services />
-          </div>
+          <Home_Visit />
         </div>
       )}
     </>
