@@ -196,7 +196,7 @@ const Home_Visit = () => {
           <p className="text-[#525252] text-center  text-[16px] font-normal leading-[24px] py-9">
             An Apollo’s General Practitioner (GP) is essential as the first
             point of contact for healthcare, offering diagnosis, treatment, and
-            preventive care.They  <br/> manage chronic conditions, coordinate
+            preventive care.They <br /> manage chronic conditions, coordinate
             specialist referrals, and ensure holistic, patient-centred care,
             fostering long-term health and well-being.
           </p>
@@ -209,7 +209,7 @@ const Home_Visit = () => {
             <p className="text-[#525252] text-center  text-[16px] font-normal leading-[24px]">
               A specialist is a medical doctor with advanced training and
               expertise in a specific area of medicine, such as cardiology,
-              orthopedics, neurology, or <br/> oncology. Specialists focus on
+              orthopedics, neurology, or <br /> oncology. Specialists focus on
               diagnosing, treating, and managing complex or specific health
               conditions that go beyond general medical care.
             </p>
@@ -237,9 +237,9 @@ const Home_Visit = () => {
             <p className="text-[#525252] text-center text-[16px] font-normal leading-6">
               Apollo&apos;s ECG at Home Service allows you to undergo an
               electrocardiogram (ECG) test in the comfort of your home with your
-              loved ones. This service <br/> is designed for convenience, enabling
-              early detection and monitoring of heart conditions without the
-              need to visit a clinic or hospital.
+              loved ones. This service <br /> is designed for convenience,
+              enabling early detection and monitoring of heart conditions
+              without the need to visit a clinic or hospital.
             </p>
 
             <h4 className="text-[#031432] text-center font-poppins text-[24px] font-semibold leading-normal mt-4">
@@ -248,9 +248,9 @@ const Home_Visit = () => {
             <p className="text-[#525252] text-center  text-[16px] font-normal leading-6 mt-2">
               Apollo&apos;s trained technician comes to your home with a
               portable ECG device. This test is done by placing electrodes on
-              your chest to record the <br/>electrical activity of the heart. The
-              results are shared with your doctor for further analysis and
-              diagnosis.
+              your chest to record the <br />
+              electrical activity of the heart. The results are shared with your
+              doctor for further analysis and diagnosis.
             </p>
 
             <h4 className="text-[#031432] text-center font-poppins text-[28px] font-semibold leading-normal mt-8">
@@ -270,8 +270,8 @@ const Home_Visit = () => {
             <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px] mt-4">
               Apollo offers ECG at home with advanced portable equipment handled
               by skilled technicians. The results are seamlessly integrated with
-              Apollo&apos;s <br/> healthcare network, ensuring prompt analysis and
-              expert consultation. Apollo&apos;s commitment to accuracy,
+              Apollo&apos;s <br /> healthcare network, ensuring prompt analysis
+              and expert consultation. Apollo&apos;s commitment to accuracy,
               efficiency, and patient-centric care sets it apart.
             </p>
           </div>
@@ -283,9 +283,9 @@ const Home_Visit = () => {
             <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px] mt-4">
               Our Apollo physiotherapists deliver expert care at home to enhance
               mobility and improve quality of life. Collaborating with your
-              doctor and <br/> Homecare nurses, they address challenges from illness,
-              injury, disability, or aging—all in the comfort and safety of your
-              home.
+              doctor and <br /> Homecare nurses, they address challenges from
+              illness, injury, disability, or aging—all in the comfort and
+              safety of your home.
             </p>
 
             <div className="py-10">
@@ -295,9 +295,10 @@ const Home_Visit = () => {
               <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px] mt-4">
                 Physiotherapists play a vital role in improving mobility,
                 managing pain, and aiding recovery from injuries, surgeries, or
-                chronic conditions. They help<br/> restore strength, prevent further
-                complications, and enhance overall quality of life through
-                tailored rehabilitation programs.
+                chronic conditions. They help
+                <br /> restore strength, prevent further complications, and
+                enhance overall quality of life through tailored rehabilitation
+                programs.
               </p>
             </div>
             <div className="py-1">
@@ -307,7 +308,7 @@ const Home_Visit = () => {
               <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px] mt-4">
                 Apollo homecare sets itself apart by combining expertise,
                 compassion, holistic approach, and innovation to deliver
-                exceptional physiotherapy <br/> services.
+                exceptional physiotherapy <br /> services.
               </p>
             </div>
           </div>
@@ -323,8 +324,9 @@ const Home_Visit = () => {
             <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px]">
               Apollo&apos;s experienced homecare speech therapists deliver
               personalized rehabilitation sessions to children and adults in the
-              comfort of your home. This <br/>holistic, home-based approach promotes
-              faster recovery and better outcomes.
+              comfort of your home. This <br />
+              holistic, home-based approach promotes faster recovery and better
+              outcomes.
             </p>
 
             <div className="mt-8 text-center">
@@ -345,10 +347,15 @@ const Home_Visit = () => {
             </div>
           </section>
 
+          {/* css end  */}
+
           {/* Nurse Procedures Section */}
           <section>
-            <h2 className="text-center text-2xl font-bold">NURSE PROCEDURES</h2>
-            <p className="text-center text-gray-600 mt-4">
+            <h2 className="text-center text-[32px] font-poppins font-semibold leading-normal text-[#031432]">
+              NURSE PROCEDURES
+            </h2>
+
+            <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]">
               Apollo&apos;s  home nursing care services are just a call away &
               ensure compassionate and comprehensive care for you and your loved
               ones whenever you need it. From complex procedures that require
@@ -361,10 +368,10 @@ const Home_Visit = () => {
             </p>
 
             <div className="mt-8 space-y-6 text-center">
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#031432]">
                 What are Nurse Procedures?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]">
                 Apollo&apos;s Nurse procedures involve specialized medical care
                 provided by trained nurses to manage a range of healthcare
                 needs. These include: Wound dressing, ECG, colostomy bag change,
@@ -372,8 +379,10 @@ const Home_Visit = () => {
                 cannula for antibiotics, IV injection, IV infusion, Foley
                 catheter, Post-Surgical Care, Vital Sign Monitoring.
               </p>
-              <h3 className="text-lg font-semibold">How Apollo is Different</h3>
-              <ul className="list-disc list-inside mt-2 space-y-2 text-gray-600">
+              <h3 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#031432]">
+                How Apollo is Different
+              </h3>
+              <ul className="list-none list-inside mt-2 space-y-2 text-gray-600">
                 <li>Highly Trained and Qualified Nurses</li>
                 <li>Comprehensive Care</li>
                 <li>Advanced Techniques</li>
@@ -381,7 +390,7 @@ const Home_Visit = () => {
                 <li>Trusted Legacy</li>
               </ul>
             </div>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px] mt-4">
               With Apollo&apos;s nurse procedures, you receive expert care that
               prioritizes your comfort, recovery, and peace of mind—all
               delivered directly to your home.
@@ -390,59 +399,66 @@ const Home_Visit = () => {
 
           {/* Medical Procedures Section */}
           <section>
-            <h2 className="text-center text-2xl font-bold">
+            <h2 className="text-center text-[32px] font-poppins font-semibold leading-normal text-[#031432]">
               MEDICAL PROCEDURE
             </h2>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]  mt-4">
               Apollo homecare&apos;s Medical procedures involve specific
               techniques or interventions performed by healthcare professionals
-              to diagnose, treat, or manage a medical condition. They may
+              to diagnose, treat, or <br /> manage a medical condition. They may
               include Albumin infusion, PICC line dressing and removal, TPN
-              infusion, wound debridement, chemoport handling, plasma and blood
-              transfusion. These procedures are carried out using sterile
-              equipment and evidence-based protocols, ensuring patient safety
-              and effective care.
+              infusion, wound debridement, chemoport <br />
+              handling, plasma and blood transfusion. These procedures are
+              carried out using sterile equipment and evidence-based protocols,
+              ensuring patient safety and effective care.
             </p>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]  mt-4">
               A “medical procedure” encompasses a broader range of diagnostic or
               therapeutic interventions that can be performed by a doctor or
-              nurse, including more invasive procedures thus requiring
-              specialized training and often performed by a doctor or qualified
-              nurse available at Apollo.
+              nurse, <br />
+              including more invasive procedures thus requiring specialized
+              training and often performed by a doctor or qualified nurse
+              available at Apollo.
             </p>
             <div className="mt-8 text-center">
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-center text-[28px] font-poppins font-semibold leading-normal text-[#031432]">
                 Importance of Apollo&apos;s Medical Procedures at Home
               </h3>
               <div className="mt-6 space-y-4">
                 <div>
-                  <h4 className="text-base font-bold">Accurate Diagnosis</h4>
-                  <p className="text-gray-600">
+                  <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                    Accurate Diagnosis
+                  </h4>
+                  <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]  mt-4">
                     Apollo Homecare ensures precise medical evaluations at home,
                     enabling timely and appropriate care for better health
                     outcomes.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-base font-bold">Effective Treatment</h4>
-                  <p className="text-gray-600">
+                  <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                    Effective Treatment
+                  </h4>
+                  <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]  mt-4">
                     Expert healthcare professionals deliver personalized
                     treatments at your doorstep, ensuring quality care in a
                     comfortable environment.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-base font-bold">
+                  <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
                     Prevention of Complications
                   </h4>
-                  <p className="text-gray-600">
+                  <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]  mt-4">
                     Proactive monitoring and timely interventions reduce risks,
                     helping you avoid potential health complications.
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-base font-bold">Enhanced Recovery</h4>
-                  <p className="text-gray-600">
+                  <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                    Enhanced Recovery
+                  </h4>
+                  <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]  mt-4">
                     Recover faster in the comfort of your home with tailored
                     medical care designed to meet your unique needs.
                   </p>
@@ -453,10 +469,10 @@ const Home_Visit = () => {
 
           {/* Respiratory Therapist Section */}
           <section>
-            <h2 className="text-center text-2xl font-bold">
+            <h2 className="text-center text-[32px] font-poppins font-semibold leading-normal text-[#031432]">
               Respiratory Therapist
             </h2>
-            <p className="text-center text-gray-600 mt-4">
+            <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]  mt-4">
               A respiratory therapist is a healthcare professional specializing
               in the diagnosis, treatment, and management of respiratory
               conditions. They provide care for patients with breathing
@@ -466,10 +482,10 @@ const Home_Visit = () => {
               lung function.
             </p>
             <div className="mt-8 text-center">
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#031432]">
                 Importance of Apollo&apos;s Respiratory Therapist
               </h3>
-              <p className="text-center text-gray-600 mt-4">
+              <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]  mt-4">
                 The importance of Apollo respiratory therapists lies in their
                 ability to enhance lung function, improve quality of life, and
                 assist in preventing complications associated with respiratory
@@ -477,7 +493,7 @@ const Home_Visit = () => {
                 or acute respiratory issues, helping to stabilize their health
                 and promote faster recovery.
               </p>
-              <p className="text-center text-gray-600 mt-4">
+              <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]  mt-4">
                 At Apollo, respiratory therapists work with a skilled healthcare
                 team, offering personalized care, advanced respiratory
                 therapies, and home-based services to ensure the best possible
@@ -490,8 +506,10 @@ const Home_Visit = () => {
 
           {/* Dietitian Section */}
           <section>
-            <h2 className="text-center text-2xl font-bold">Dietitian</h2>
-            <p className="text-center text-gray-600 mt-4">
+            <h2 className="text-center text-[32px] font-poppins font-semibold leading-normal text-[#031432]">
+              Dietitian
+            </h2>
+            <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]  mt-4">
               Dietitians are healthcare professionals who specialize in
               nutrition and diet planning. They look at the nutritional needs of
               individuals, create personalized meal plans, and advise on
@@ -499,10 +517,10 @@ const Home_Visit = () => {
               disease, through diet.
             </p>
             <div className="mt-8 text-center">
-              <h3 className="text-lg font-semibold">
+              <h3 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#031432]">
                 How Apollo&apos;s Dietitian at Home Works
               </h3>
-              <p className="text-gray-600">
+              <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px] mt-4">
                 Dietitian at Home services bring personalized nutrition
                 counselling to your home. Dietitians evaluate your health,
                 lifestyle, and medical history, and create meal plans and
@@ -517,33 +535,41 @@ const Home_Visit = () => {
       <div>
         <section>
           <div className="mt-8 text-center">
-            <h3 className="text-lg font-semibold">
+            <h3 className="text-center text-[28px] font-poppins font-semibold leading-normal text-[#031432]">
               Benefits of Dietitian at Home
             </h3>
-            <div className="mt-6 space-y-4">
-              <div>
-                <h4 className="text-base font-bold">Personal guidance</h4>
-                <p className="text-gray-600">
+            <div className="space-y-4">
+              <div className="py-5">
+                <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                  Personal guidance
+                </h4>
+                <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]">
                   Customized meal plans based on individual health needs and
                   goals.
                 </p>
               </div>
               <div>
-                <h4 className="text-base font-bold">Convenience</h4>
-                <p className="text-gray-600">
+                <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                  Convenience
+                </h4>
+                <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]">
                   Receive professional advice without leaving your home.
                 </p>
               </div>
-              <div>
-                <h4 className="text-base font-bold">Health management</h4>
-                <p className="text-gray-600">
+              <div className="py-5">
+                <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                  Health management
+                </h4>
+                <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]">
                   Help manage chronic conditions, such as diabetes,
                   hypertension, and obesity, through proper diet.
                 </p>
               </div>
               <div>
-                <h4 className="text-base font-bold">Ongoing support</h4>
-                <p className="text-gray-600">
+                <h4 className="text-center text-[24px] font-poppins font-semibold leading-normal text-[#000]">
+                  Ongoing support
+                </h4>
+                <p className="text-center text-[#6C87AE] text-[16px] font-normal leading-[24px]">
                   Regular follow-ups to track progress and adjust plans as
                   needed.
                 </p>
