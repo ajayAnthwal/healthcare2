@@ -21,12 +21,14 @@ const Book = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const tabsData = [
-    { name: "Oxygen Cylinder", image: Nurse },
-    { name: "Oxygen Concentrator", image: Vector },
-    { name: "Bi-PAP/CPAP", image: subscriptions },
-    { name: "Wheel Chairs", image: Vector_second },
-    { name: "Cardiac Monitors", image: self_improvement },
-    { name: "Manual/Motorized Bed", image: add_home },
+    { name: "Doctor at Home", image: Nurse },
+    { name: "ECG at Home", image: Vector },
+    { name: "Physiotherapy at Home", image: subscriptions },
+    { name: "Speech Therapist at Home", image: Vector_second },
+    { name: "Nurse Procedures", image: self_improvement },
+    { name: "Medical Procedures", image: add_home },
+    { name: "Respiratory Therapist", image: add_home },
+    { name: "Dietitian", image: add_home },
   ];
 
   return (
