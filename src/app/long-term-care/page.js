@@ -18,7 +18,7 @@ import Applo_Nurse_At_home from "@/components/Long-term-care/Applo_Nurse_At_home
 import Trained_Attendant_at_Home from "@/components/Long-term-care/Trained_Attendant_at_Home";
 import Mother_Baby_Care from "@/components/Long-term-care/Mother_Baby_Care";
 import Senior_Care_Subscription from "@/components/Long-term-care/Senior_Care_Subscription";
-
+import TravelNurses from "@/components/Long-term-care/TravelNurses";
 const LongTermCare = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
@@ -30,6 +30,8 @@ const LongTermCare = () => {
     { name: "Senior Care Subscription", image: self_improvement },
     { name: "Travel Nurses", image: add_home },
     { name: "Specialty Rehab Packages", image: add_home },
+    { name: "Specialty Travel Nurses", image: add_home },
+    { name: "Specialty", image: add_home },
   ];
 
   return (
@@ -79,6 +81,13 @@ const LongTermCare = () => {
               {selectedIndex === 6 && (
                 <div>
                   <Senior_Care_Subscription />
+                </div>
+              )}
+            </TabPanel>
+            <TabPanel>
+              {selectedIndex === 7 && (
+                <div>
+                  <TravelNurses />
                 </div>
               )}
             </TabPanel>
