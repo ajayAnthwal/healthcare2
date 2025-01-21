@@ -28,10 +28,10 @@ const LongTermCare = () => {
     { name: "Trained Attendant at Home", image: subscriptions },
     { name: "Mother & Baby Care", image: Vector_second },
     { name: "Senior Care Subscription", image: self_improvement },
-    { name: "Travel Nurses", image: add_home },
-    { name: "Specialty Rehab Packages", image: add_home },
-    { name: "Specialty Travel Nurses", image: add_home },
-    { name: "Specialty", image: add_home },
+    { name: "Travel Nurses", image: Vector_second },
+    { name: "Specialty Rehab Packages", image: Vector_second },
+    { name: "Specialty Travel Nurses", image: Vector_second },
+    { name: "Specialty Travel Nurses", image: Vector_second },
   ];
 
   return (

@@ -284,8 +284,8 @@ const TravelNurses = () => {
                 Personalized Care Plans
               </h3>
               <p className="text-[#6C87AE] text-center  text-base font-normal leading-6">
-                We customize our services to match each patient&apos;s unique needs,
-                ensuring individual attention and support.
+                We customize our services to match each patient&apos;s unique
+                needs, ensuring individual attention and support.
               </p>
             </div>
             <div className="mt-4 mb-6">
