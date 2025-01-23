@@ -19,6 +19,7 @@ import Trained_Attendant_at_Home from "@/components/Long-term-care/Trained_Atten
 import Mother_Baby_Care from "@/components/Long-term-care/Mother_Baby_Care";
 import Senior_Care_Subscription from "@/components/Long-term-care/Senior_Care_Subscription";
 import TravelNurses from "@/components/Long-term-care/TravelNurses";
+import Specially_Rehab_Packages from "@/components/Long-term-care/Specially_Rehab_Packages";
 const LongTermCare = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
@@ -88,6 +89,13 @@ const LongTermCare = () => {
               {selectedIndex === 7 && (
                 <div>
                   <TravelNurses />
+                </div>
+              )}
+            </TabPanel>
+            <TabPanel>
+              {selectedIndex === 8 && (
+                <div>
+                  <Specially_Rehab_Packages />
                 </div>
               )}
             </TabPanel>
