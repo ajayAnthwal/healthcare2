@@ -595,8 +595,8 @@ const Header = () => {
                   { href: "/long-term-care", label: "Long term care" },
                   { href: "/book", label: "Home visit" },
                   { href: "/ecommerce", label: "Medical Equipment" },
-                  { href: "/consultation", label: "Home Diagnostics" },
-                  { href: "#", label: "Adult Vaccination" },
+                  { href: "/diagnostics", label: "Home Diagnostics" },
+                  { href: "/vacinnation", label: "Adult Vaccination" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link
