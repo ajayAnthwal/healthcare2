@@ -121,8 +121,8 @@ const Header = () => {
               <Image
                 src={logo}
                 alt="Apollo Homecare Logo"
-                width={104}
-                height={44.23}
+                width={141}
+                height={60}
                 style={{ cursor: "pointer" }}
               />
             </Link>
@@ -226,7 +226,7 @@ const Header = () => {
 
               <div className="relative" ref={searchRef}>
                 <div
-                  className="flex items-center gap-0 h-[44px] w-[824px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
+                  className="flex items-center gap-0 h-[44px] w-[790px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
                   style={{
                     boxShadow: "0px 1px 10px rgba(0, 247, 255, 0.25)",
                   }}

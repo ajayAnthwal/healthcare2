@@ -25,6 +25,15 @@
   height: 15px;
 }
 
+.filter-orange {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(500%) hue-rotate(355deg) brightness(1.1) contrast(1);
+}
+
+.filter-white {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1) contrast(1);
+}
+
+
 @media screen and (max-width: 767px) {
   .widget-1{
     display: none;
