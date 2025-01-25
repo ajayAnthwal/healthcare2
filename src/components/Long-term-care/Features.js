@@ -3,8 +3,8 @@ import Doctor from "@/assets/images/longterm/Group.png";
 
 const Features = () => {
   return (
-    <div className="container mx-auto mt-24 my-20">
-      <h1 className="text-center text-[32px] font-semibold leading-[48px] text-[#031432] mb-4">
+    <div className="container mx-auto mt-24 my-20 px-4">
+      <h1 className="text-center text-[28px] md:text-[32px] font-semibold leading-[40px] md:leading-[48px] text-[#031432] mb-4">
         What is Long Term Care &amp; Why It&#39;s Required?
       </h1>
 
@@ -15,8 +15,8 @@ const Features = () => {
         within the home environment.
       </p>
 
-      <div className="flex gap-11 items-center justify-center mt-20">
-        <div className="w-6/12">
+      <div className="flex flex-col md:flex-row gap-11 items-center justify-center mt-14 md:mt-20">
+        <div className="w-full md:w-6/12">
           <Image
             src={Doctor}
             alt="Illustration of long-term care"
@@ -26,29 +26,29 @@ const Features = () => {
           />
         </div>
 
-        <div>
-          <h2 className="text-[32px] font-semibold leading-[48px] text-[#031432] mb-4">
+        <div className="w-full md:w-6/12">
+          <h2 className="text-[24px] md:text-[32px] font-semibold leading-[36px] md:leading-[48px] text-[#031432] mb-4">
             Personalized Care
           </h2>
           <p className="text-[16px] font-normal leading-[24px] text-[#6C87AE] text-justify mb-4">
             Tailored to individual health conditions and preferences.
           </p>
 
-          <h2 className="text-[32px] font-semibold leading-[48px] text-[#031432] mb-4">
+          <h2 className="text-[24px] md:text-[32px] font-semibold leading-[36px] md:leading-[48px] text-[#031432] mb-4">
             Emotional Support
           </h2>
           <p className="text-[16px] font-normal leading-[24px] text-[#6C87AE] text-justify mb-4">
             Promotes mental and emotional well-being through companionship.
           </p>
 
-          <h2 className="text-[32px] font-semibold leading-[48px] text-[#031432] mb-4">
+          <h2 className="text-[24px] md:text-[32px] font-semibold leading-[36px] md:leading-[48px] text-[#031432] mb-4">
             Convenience at Home
           </h2>
           <p className="text-[16px] font-normal leading-[24px] text-[#6C87AE] text-justify mb-4">
             No need for hospital stays; professional care comes to you.
           </p>
 
-          <h2 className="text-[32px] font-semibold leading-[48px] text-[#031432] mb-4">
+          <h2 className="text-[24px] md:text-[32px] font-semibold leading-[36px] md:leading-[48px] text-[#031432] mb-4">
             Improved Quality of Life
           </h2>
           <p className="text-[16px] font-normal leading-[24px] text-[#6C87AE] text-justify mb-4">

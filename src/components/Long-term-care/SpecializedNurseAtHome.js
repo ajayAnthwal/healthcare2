@@ -210,7 +210,7 @@ const SpecializedNurseAtHome = () => {
               at Home Service.
             </h3>
 
-            <p className="text-[#6C87AE] text-center text-base font-normal leading-6 mt-4 w-[814px] mx-auto">
+            <p className="text-[#6C87AE] text-center text-base font-normal leading-6 mt-4 max-w-full md:w-[814px] mx-auto px-4">
               Our mission is to provide professional ICU-level care services in
               the comfort of your home. Please contact us for personalized care
               plans, so your needs are met with quality and safety.
