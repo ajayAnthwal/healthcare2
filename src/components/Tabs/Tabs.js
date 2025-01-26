@@ -1,8 +1,17 @@
-import React from "react";
+"use client";
+import { useEffect, useState } from "react";
 import { Tab, TabList } from "@headlessui/react";
 import Image from "next/image";
 
 const Tabs = ({ tabsData }) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+
   return (
     <div className="bg-[#003638]">
       {window.innerWidth > 770 ? (
