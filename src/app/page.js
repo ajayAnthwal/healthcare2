@@ -392,7 +392,14 @@ const Home = () => {
           />
           <div
             className="absolute flex items-center"
-            style={{ bottom: "1rem", left: "48%" }}
+            style={{
+              bottom: "0",
+              left: "48%",
+              borderRadius: "10px 10px 0px 0px",
+              background: "#a3d9e3",
+              backdropFilter: "blur(50px)",
+              padding: "5px 8px",
+            }}
           >
             <div
               className="me-2"
