@@ -35,7 +35,7 @@ const LongTermCare = () => {
       <p className="text-gray-600 mb-4 text-base text-[12px]">
         Comprehensive elder care for your loved ones.
       </p>
-      <div className="overflow-x-auto flex gap-6 pb-4">
+      <div className="overflow-x-auto scrollbar-hide flex gap-6 pb-4">
         {longTerm.map((item, index) => (
           <div
             key={index}

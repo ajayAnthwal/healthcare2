@@ -35,7 +35,7 @@ const BookComponent = () => {
       <p className="text-gray-600 mb-4 text-[12px]">
         Seamlessly book professional healthcare services from home.
       </p>
-      <div className="overflow-x-auto flex gap-6 pb-4">
+      <div className="overflow-x-auto scrollbar-hide flex gap-6 pb-4">
         {longTerm.map((item, index) => (
           <div
             key={index}
