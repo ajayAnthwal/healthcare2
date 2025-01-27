@@ -144,7 +144,7 @@ const Home = () => {
             height: "42rem",
             backgroundColor: "#e6f5f5",
           }}
-          className="relative top-[100px] hidden md:block mx-auto"
+          className="relative hidden md:block mx-auto"
         >
           <Image
             alt=""
