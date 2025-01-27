@@ -616,7 +616,9 @@ const Header = () => {
             </nav>
 
             <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-12">
-              <Image src={emailICon} alt="email" height={32} width={37} />
+              <Link href="mailto:care@apollohomecare.com">
+                <Image src={emailICon} alt="email" height={32} width={37} />
+              </Link>
             </div>
             <div className="pl-[50px]">
               <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
@@ -683,7 +685,62 @@ const Header = () => {
             {isOpen && (
               <div className="absolute top-[57px] left-0 w-full mt-2 bg-white rounded-[10px] shadow-lg border border-gray-100 py-4 z-50">
                 <div className="px-4">
-                  <h3 className="text-[#00979C] text-base font-medium mb-3">
+                  <div className="w-full  mx-auto">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="cursor-pointer"
+                      >
+                        <path
+                          d="M15 18L9 12L15 6"
+                          stroke="black"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <h2 className="text-lg font-semibold">Search</h2>
+                    </div>
+                    <div className="flex items-center border border-gray-500 w-full p-2 rounded-md">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="text-gray-500 mr-2"
+                      >
+                        <path
+                          d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                          fill="#B3B3B3"
+                        />
+                      </svg>
+                      <input
+                        type="text"
+                        placeholder='try searching something "my subscriptions"'
+                        className="flex-grow text-gray-800 focus:outline-none bg-transparent placeholder-gray-400"
+                      />
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="text-black cursor-pointer ml-2"
+                      >
+                        <path
+                          d="M8.4 17L7 15.6L10.6 12L7 8.42502L8.4 7.02502L12 10.625L15.575 7.02502L16.975 8.42502L13.375 12L16.975 15.6L15.575 17L12 13.4L8.4 17Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-[#00979C] text-base font-medium mb-3 mt-2">
                     Most Search - Product
                   </h3>
                   <div className="space-y-4">
@@ -734,7 +791,6 @@ const Header = () => {
               />
             </div>
             <div className="relative">
-              {/* Profile Icon */}
               <div
                 className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F] cursor-pointer"
                 onClick={toggleMenu}
