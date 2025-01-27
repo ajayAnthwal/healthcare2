@@ -12,8 +12,8 @@ export default async function Footer() {
       options: ["Long term care", "Booking services", "Buy/rent equipments"],
     },
     {
-      title: "Homecare for corporates",
-      options: ["B2B company packages"],
+      title: "Partner with us",
+      options: ["Corporates", "Doctors"],
     },
     {
       title: "Careers",
@@ -24,10 +24,7 @@ export default async function Footer() {
         "Hiring Process",
       ],
     },
-    {
-      title: "Refer a Patient",
-      options: ["Patient referrals for doctors"],
-    },
+
     {
       title: "News & Media",
       options: ["Press Releases", "Gallery", "Journals", "Blogs", "Campaigns"],
@@ -92,22 +89,17 @@ export default async function Footer() {
         </div>
         <div className="mt-8 md:mt-0 flex flex-col justify-center items-center">
           <Button
-            className="ps-3 pe-3"
+            className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FF784B] shadow-lg text-white"
             style={{
-              borderRadius: "50px",
-              border: "none",
-              background: "#FF784B",
               boxShadow: "0px 8px 23px 0px rgba(65, 132, 247, 0.24)",
             }}
           >
             SHARE A FEEDBACK
           </Button>
+
           <Button
-            className="mt-4 ps-3 pe-3"
+            className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FF784B] shadow-lg text-white mt-3  "
             style={{
-              borderRadius: "50px",
-              border: "none",
-              background: "#FF784B",
               boxShadow: "0px 8px 23px 0px rgba(65, 132, 247, 0.24)",
             }}
           >
@@ -179,7 +171,10 @@ export default async function Footer() {
       </div>
 
       <hr className="mt-1" style={{ opacity: "0.28" }} />
-      <div className="mt-4 flex container  mx-auto " style={{ opacity: "0.8" }}>
+      <div
+        className="mt-4 flex w-[1512px] mx-auto footer-container pl-[4rem] "
+        style={{ opacity: "0.8" }}
+      >
         <div className=" inline-block">
           <h1 className="inline-block font-semibold me-3">CONTACT US:</h1>
         </div>
@@ -201,7 +196,7 @@ export default async function Footer() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 justify-center md:flex md:justify-start mt-4 container mx-auto ">
+      <div className="grid grid-cols-2 justify-center md:flex md:justify-start mt-4 w-[1512px] mx-auto footer-container pl-[4rem] ">
         {options.map((item, index) => (
           <div className="" key={index}>
             <p
