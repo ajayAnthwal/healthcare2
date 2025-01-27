@@ -7,9 +7,21 @@ import bookmark_add from "../../assets/images/footer/bookmark_add.svg";
 import local_mall from "../../assets/images/footer/local_mall.svg";
 import callosity from "@/assets/images/header/callwhite.png";
 import menu from "@/assets/images/header/menu.png";
+import { motion, AnimatePresence } from "framer-motion";
 
 const BottomNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = (e) => {
+    if (e.target.id === "popup-overlay") {
+      setIsPopupOpen(false);
+    }
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -19,25 +31,94 @@ const BottomNav = () => {
     setMenuOpen(false);
   };
 
-  return (
-    <div className="md:hidden block bg-[#003638] px-2 sticky bottom-0 left-0 w-full py-2">
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex gap-4">
-          <button className="flex items-center rounded-[40.608px] border-[0.406px] border-[#FF784B] box-shadow-[0px_3.249px_9.34px_0px_rgba(65,_132,_247,_0.24)] px-[15px] py-[6.497px] text-[10.182px] font-semibold leading-[120%] bg-gradient-to-r from-[#FFD439] via-[#FF7A00] to-[#E95709] bg-clip-text text-transparent">
-            I need consultation
-          </button>
-          <button className="flex items-center rounded-[40.608px] bg-[#FF784B] box-shadow-[0px_3.249px_9.34px_0px_rgba(247,_165,_65,_0.24)] px-[15px] py-[6.497px] text-white font-[Poppins] text-[10.182px] font-semibold leading-[120%]">
-            <Image
-              src={callosity}
-              width={15}
-              height={15}
-              alt="Call Icon"
-              className="mr-1"
-            />
-            Call Now
-          </button>
-        </div>
+  const popupVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 50 },
+  };
 
+  return (
+    <div className="md:hidden block sticky bottom-0 left-0 w-full pt-2">
+      <div className="mt-2 py-3 flex justify-center items-center bg-[#009A9F]">
+        <button
+          className="rounded-[40.608px] bg-[#003638] px-[15px] py-[6.497px] text-[10.182px] font-semibold leading-[120%] text-white shadow-[0px_3.249px_9.34px_0px_rgba(65,132,247,0.24)]"
+          onClick={handleButtonClick}
+        >
+          Request a Call
+        </button>
+
+        {isPopupOpen && (
+          <div
+            id="popup-overlay"
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-end mb-[70px]"
+            onClick={handleClosePopup}
+          >
+            <motion.div
+              className="bg-white rounded-lg  w-[100%]"
+              variants={popupVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <div className="bg-white rounded-lg w-[100%]">
+                <div className="flex justify-between items-center border-b  mb-4 bg-[#009A9F] text-center mx-auto py-4">
+                  <h2 className="text-lg font-bold text-[#fff] text-center mx-auto">
+                    Request a Call
+                  </h2>
+                  <button
+                    onClick={() => setIsPopupOpen(false)}
+                    className="text-[#fff] font-bold mr-3"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <form className="p-6 ">
+                  <div className="flex gap-4 mb-4">
+                    <div className="flex-1">
+                      <label className="block text-sm font-medium text-red-400 mb-1">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Enter full name"
+                        className="w-full border rounded-md p-2 bg-red-50"
+                        defaultValue="Aman"
+                      />
+                      <span className="text-sm text-red-400">
+                        Enter full name
+                      </span>
+                    </div>
+                    <div className="flex-1">
+                      <label className="block text-sm font-medium text-[#009A9F] mb-1">
+                        Phone Number
+                      </label>
+                      <div className="flex items-center border rounded-md bg-[#E6F7F8] p-2">
+                        <input
+                          type="text"
+                          defaultValue="123 456 7890"
+                          className="w-full bg-transparent focus:outline-none"
+                        />
+                        <span className="text-green-500 ml-2">✔</span>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    className="block mx-auto bg-[#003638] text-white py-2 px-6 rounded-[50px] shadow-md"
+                  >
+                    Send
+                  </button>
+                </form>
+                <p className="text-center text-sm text-gray-500 mt-4">
+                  Note: any note or important thing here.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </div>
+      <div className="flex flex-col items-center gap-2 bg-[#003638] ">
         <div className="flex justify-between w-full mt-3">
           <div className="bg-white rounded-lg px-[10px] py-[8px] flex flex-col justify-center items-center">
             <div>
@@ -105,7 +186,7 @@ const BottomNav = () => {
               <p className="text-[10px] text-[#fff]">WhatsApp</p>
             </div>
           </div>
-          
+
           <div
             className="rounded-lg px-[10px] py-[8px] flex flex-col justify-center items-center cursor-pointer"
             onClick={toggleMenu}
