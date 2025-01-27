@@ -460,10 +460,10 @@ const Home = () => {
         </div>
         {/* ---------------Why Choose Us Section---------------- */}
         <div className="md:mt-12 mt-4 flex flex-col items-center container mx-auto px-4">
-          <h1 className="md:text-[32px] lg:text-[32px] text-xl  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
+          <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
             Why Choose Us?
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[10px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
+          <p className="md:text-[16px] lg:text-[16px] text-[15px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
             Choosing Apollo Homecare means choosing a healthcare provider that
             prioritizes your comfort, convenience, and well-being. Discover why
             countless families trust us to deliver exceptional care right at
@@ -485,7 +485,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold">
               Experienced Professionals
             </h1>
-            <p className="md:text-[16px] text-[10px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
               Our team includes highly skilled doctors, nurses, and caregivers
               with extensive experience in home-based healthcare.
             </p>
@@ -493,7 +493,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               Personalized Care Plans
             </h1>
-            <p className="md:text-[16px] text-[10px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
               We customize each care plan to fit individual health needs and
               lifestyles, ensuring the best possible outcomes.
             </p>
@@ -501,7 +501,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               24/7 Support
             </h1>
-            <p className="md:text-[16px] text-[10px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
               Receive round-the-clock assistance and support, so help is always
               just a call away.
             </p>
@@ -514,7 +514,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold">
               Advanced Technology
             </h1>
-            <p className="md:text-[16px] text-[10px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
               From remote health monitoring to on-demand consultations, we use
               the latest technology to provide efficient and reliable care.
             </p>
@@ -522,7 +522,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               Trusted Brand
             </h1>
-            <p className="md:text-[16px] text-[10px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
               As part of the Apollo family, we bring a legacy of healthcare
               excellence and trust that our patients rely on.
             </p>
@@ -530,7 +530,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               Affordable Care Options
             </h1>
-            <p className="md:text-[16px] text-[10px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
               We offer cost-effective care solutions that provide value without
               compromising quality.
             </p>
@@ -564,10 +564,10 @@ const Home = () => {
                 height={60}
                 className="mb-1 md:w-[60px] md:h-[60px] w-[24px] h-[24px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[14px]">
+              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
                 1Mn+
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[7px]">
+              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
                 PATIENTS SERVED A YEAR
               </p>
             </div>
@@ -583,10 +583,10 @@ const Home = () => {
                 height={60}
                 className="mb-2 md:w-[40px] md:h-[40px] w-[24px] h-[24px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[14px]">
+              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
                 5Mn+
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[7px]">
+              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
                 CARE HOURS PERFORMED
               </p>
             </div>
@@ -602,10 +602,10 @@ const Home = () => {
                 height={60}
                 className="mb-2 md:w-[40px] md:h-[40px] w-[24px] h-[24px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[14px]">
+              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
                 2K+
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[7px]">
+              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
                 CARE GIVERS
               </p>
             </div>
@@ -621,10 +621,10 @@ const Home = () => {
                 height={60}
                 className="mb-2 md:w-[40px] md:h-[40px] w-[24px] h-[24px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[14px]">
+              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
                 4.9
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[7px]">
+              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
                 RATING ON GOOGLE
               </p>
             </div>
@@ -637,7 +637,7 @@ const Home = () => {
           <h1 className="md:text-[32px] lg:text-[32px] text-xl  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
             About Apollo Homecare
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[10px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto">
+          <p className="md:text-[16px] lg:text-[16px] text-[12px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto">
             Apollo Homecare is dedicated to bringing world-class healthcare
             services directly to your home. As a trusted leader in healthcare,
             we combine professional medical expertise with personalized care to
