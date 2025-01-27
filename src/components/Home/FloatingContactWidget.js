@@ -6,7 +6,7 @@ const FloatingContactWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end space-y-3">
+    <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end space-y-3 widget-1">
       <button
         className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] shadow-lg cursor-pointer"
         style={{ boxShadow: "0px 8px 23px rgba(65, 132, 247, 0.24)" }}

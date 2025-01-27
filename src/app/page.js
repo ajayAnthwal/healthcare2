@@ -549,11 +549,11 @@ const Home = () => {
         {/* ---------------Statistics Section---------------- */}
         <div className="container mx-auto md:mt-20 mt-6 py-5 px-7 rounded-[28px]">
           <div
-            className="md:bg-custom-gradient bg-gray-200 flex items-center justify-between py-5 px-7  rounded-[28px]"
-            // style={{
-            //   background:
-            //     "linear-gradient(118.43deg, #1AE2E9 -5.9%, #019196 42.54%, #03676A 90.98%)",
-            // }}
+            className="md: flex flex-col md:flex-row items-center justify-between py-5 px-7 rounded-[28px] space-y-6 md:space-y-0 md:space-x-6"
+            style={{
+              backgroundImage:
+                "linear-gradient(118.43deg, #1AE2E9 -5.9%, #019196 42.54%, #03676A 90.98%)",
+            }}
           >
             {/* Patients Served Section */}
             <div className="flex flex-col items-center p-[0px]">
@@ -562,17 +562,18 @@ const Home = () => {
                 alt="Patients Served"
                 width={60}
                 height={60}
-                className="mb-1 md:w-[60px] md:h-[60px] w-[24px] h-[24px]"
+                className="mb-1 md:w-[60px] md:h-[60px] w-[60px] h-[60px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
                 1Mn+
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
                 PATIENTS SERVED A YEAR
               </p>
             </div>
 
-            <div className="border-l md:border-white border-black h-28 mx-6"></div>
+            {/* Divider */}
+            <div className="hidden md:block border-l md:border-white border-black h-28"></div>
 
             {/* Care Hours Section */}
             <div className="flex flex-col items-center p-[0px]">
@@ -581,17 +582,18 @@ const Home = () => {
                 alt="Care Hours"
                 width={60}
                 height={60}
-                className="mb-2 md:w-[40px] md:h-[40px] w-[24px] h-[24px]"
+                className="mb-2 md:w-[40px] md:h-[40px] w-[60px] h-[60px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
                 5Mn+
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
                 CARE HOURS PERFORMED
               </p>
             </div>
 
-            <div className="border-l md:border-white border-black h-28 mx-6"></div>
+            {/* Divider */}
+            <div className="hidden md:block border-l md:border-white border-black h-28"></div>
 
             {/* Care Givers Section */}
             <div className="flex flex-col items-center p-[0px]">
@@ -600,17 +602,18 @@ const Home = () => {
                 alt="Care Givers"
                 width={60}
                 height={60}
-                className="mb-2 md:w-[40px] md:h-[40px] w-[24px] h-[24px]"
+                className="mb-2 md:w-[40px] md:h-[40px] w-[60px] h-[60px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
                 2K+
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
                 CARE GIVERS
               </p>
             </div>
 
-            <div className="border-l md:border-white border-black h-28 mx-6"></div>
+            {/* Divider */}
+            <div className="hidden md:block border-l md:border-white border-black h-28"></div>
 
             {/* Rating Section */}
             <div className="flex flex-col items-center p-[0px]">
@@ -619,12 +622,12 @@ const Home = () => {
                 alt="Rating"
                 width={60}
                 height={60}
-                className="mb-2 md:w-[40px] md:h-[40px] w-[24px] h-[24px]"
+                className="mb-2 md:w-[40px] md:h-[40px] w-[60px] h-[60px]"
               />
-              <h4 className="md:text-white text-black font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[16px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
                 4.9
               </h4>
-              <p className="md:text-white text-black opacity-75 font-[600] md:text-[18px] text-[10px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
                 RATING ON GOOGLE
               </p>
             </div>
