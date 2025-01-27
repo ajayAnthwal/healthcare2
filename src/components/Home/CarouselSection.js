@@ -44,7 +44,7 @@ const CarouselSection = () => {
       <h1 className="md:text-[32px] lg:text-[32px] font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px] ">
         In the news
       </h1>
-      <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
+      <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto leading-[24px]">
         Stay updated with the latest news and media coverage about Apollo
         Homecare. Our commitment to providing quality care has made us a trusted
         name in the healthcare industry, and our recent achievements are gaining

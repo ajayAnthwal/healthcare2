@@ -562,12 +562,12 @@ const Home = () => {
                 alt="Patients Served"
                 width={60}
                 height={60}
-                className="mb-1 md:w-[60px] md:h-[60px] w-[60px] h-[60px]"
+                className="mb-1 md:w-[60px] md:h-[60px] w-[42px] h-[42px]"
               />
-              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[23px]">
                 1Mn+
               </h4>
-              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[12px]">
                 PATIENTS SERVED A YEAR
               </p>
             </div>
@@ -582,12 +582,12 @@ const Home = () => {
                 alt="Care Hours"
                 width={60}
                 height={60}
-                className="mb-2 md:w-[40px] md:h-[40px] w-[60px] h-[60px]"
+                className="mb-2 md:w-[40px] md:h-[40px] w-[42px] h-[42px]"
               />
-              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[23px]">
                 5Mn+
               </h4>
-              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[12px]">
                 CARE HOURS PERFORMED
               </p>
             </div>
@@ -602,12 +602,12 @@ const Home = () => {
                 alt="Care Givers"
                 width={60}
                 height={60}
-                className="mb-2 md:w-[40px] md:h-[40px] w-[60px] h-[60px]"
+                className="mb-2 md:w-[40px] md:h-[40px] w-[42px] h-[42px]"
               />
-              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[23px]">
                 2K+
               </h4>
-              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[12px]">
                 CARE GIVERS
               </p>
             </div>
@@ -622,12 +622,12 @@ const Home = () => {
                 alt="Rating"
                 width={60}
                 height={60}
-                className="mb-2 md:w-[40px] md:h-[40px] w-[60px] h-[60px]"
+                className="mb-2 md:w-[40px] md:h-[40px] w-[42px] h-[42px]"
               />
-              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[25px]">
+              <h4 className="md:text-white text-white font-[600] tracking-[0.13px] md:text-[32px] mb-1 text-[23px]">
                 4.9
               </h4>
-              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[15px]">
+              <p className="md:text-white text-white opacity-75 font-[600] md:text-[18px] text-[12px]">
                 RATING ON GOOGLE
               </p>
             </div>
@@ -640,7 +640,7 @@ const Home = () => {
           <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px]">
             About Apollo Homecare
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto">
+          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto leading-[24px]">
             Apollo Homecare is dedicated to bringing world-class healthcare
             services directly to your home. As a trusted leader in healthcare,
             we combine professional medical expertise with personalized care to
