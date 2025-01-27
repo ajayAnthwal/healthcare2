@@ -15,6 +15,7 @@ import logo from "@/assets/images/homepage/logo.svg";
 import logohealth from "@/assets/images/homepage/logohealth.svg";
 import shoppingCart from "@/assets/images/homepage/shoppingCart.svg";
 import account from "@/assets/images/homepage/account.svg";
+import emailICon from "@/assets/images/header/email.svg";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -614,6 +615,9 @@ const Header = () => {
               </ul>
             </nav>
 
+            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-12">
+              <Image src={emailICon} alt="email" height={32} width={37} />
+            </div>
             <div className="pl-[50px]">
               <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
                 <svg
