@@ -637,10 +637,10 @@ const Home = () => {
         <CarouselSection />
         {/* ---------------About Apollo---------------- */}
         <div className="flex flex-col items-center md:mt-16 mt-6">
-          <h1 className="md:text-[32px] lg:text-[32px] text-xl  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
+          <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px]">
             About Apollo Homecare
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[12px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto">
+          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto">
             Apollo Homecare is dedicated to bringing world-class healthcare
             services directly to your home. As a trusted leader in healthcare,
             we combine professional medical expertise with personalized care to

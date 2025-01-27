@@ -41,10 +41,10 @@ const CarouselSection = () => {
 
   return (
     <div className="flex flex-col md:mt-20 mt-6 items-center px-4 container mx-auto">
-      <h1 className="md:text-[32px] lg:text-[32px] text-xl font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
+      <h1 className="md:text-[32px] lg:text-[32px] font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px] ">
         In the news
       </h1>
-      <p className="md:text-[16px] lg:text-[16px] text-[10px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
+      <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
         Stay updated with the latest news and media coverage about Apollo
         Homecare. Our commitment to providing quality care has made us a trusted
         name in the healthcare industry, and our recent achievements are gaining
@@ -66,13 +66,13 @@ const CarouselSection = () => {
           className="w-[30%] rounded-tl-lg rounded-bl-lg"
         />
         <div className="md:m-5 m-[2px]">
-          <h1 className="text-[14px] md:text-3xl md:mt-0 mt-[5px] font-bold">
+          <h1 className="text-[20px] md:text-3xl md:mt-0 mt-[5px] font-bold">
             {testimonials[currentIndex].title}
           </h1>
-          <p className="md:mt-4 text-gray-600 md:text-[14px] text-[10px] md:text-md my-1">
+          <p className="md:mt-4 text-gray-600 md:text-[12px] text-[14px] md:text-md my-1">
             &quot;{testimonials[currentIndex].description1}&quot;
           </p>
-          <p className="md:text-[14px] text-[10px] text-gray-600 text-md my-1">
+          <p className="md:text-[14px] text-[12px] text-gray-600 text-md my-1">
             &quot;{testimonials[currentIndex].description2}&quot;
           </p>
         </div>
