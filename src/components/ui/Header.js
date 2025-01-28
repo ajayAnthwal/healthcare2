@@ -16,6 +16,7 @@ import logohealth from "@/assets/images/homepage/logohealth.svg";
 import shoppingCart from "@/assets/images/homepage/shoppingCart.svg";
 import account from "@/assets/images/homepage/account.svg";
 import emailICon from "@/assets/images/header/email.svg";
+import logoMobile from "@/assets/images/header/logo-mobile.png";
 import { usePathname } from "next/navigation";
 
 const Header = () => {
@@ -651,11 +652,10 @@ const Header = () => {
           <Image
             alt="logo"
             loading="lazy"
-            width={85}
-            height={40}
+            width={25}
+            height={28}
             decoding="async"
-            className="p-3"
-            src={logo}
+            src={logoMobile}
           />
           <div
             className="flex items-center text-[#009A9F] font-medium text-sm cursor-pointer"
