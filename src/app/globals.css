@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
+.container {
   width: 1198px !important;
 }
-
 
 .custom-button {
   display: flex;
@@ -26,16 +25,17 @@
 }
 
 .filter-orange {
-  filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(500%) hue-rotate(355deg) brightness(1.1) contrast(1);
+  filter: brightness(0) saturate(100%) invert(60%) sepia(80%) saturate(500%)
+    hue-rotate(355deg) brightness(1.1) contrast(1);
 }
 
 .filter-white {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(1) contrast(1);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(1) contrast(1);
 }
 
-
 @media screen and (max-width: 767px) {
-  .widget-1{
+  .widget-1 {
     display: none;
   }
   .custom-button {
@@ -53,19 +53,34 @@
     height: auto;
   }
 
-  .services_cards{
+  .services_cards {
     width: auto !important;
   }
-  .container{
-    width: auto !important;
-  }
-
-  .footer-container{
+  .container {
     width: auto !important;
   }
 
-  .mobile-hide{
+  .footer-container {
+    width: auto !important;
+  }
+
+  .mobile-hide {
     display: none !important;
   }
-  
+}
+
+@media (min-width: 767px) and (max-width: 925px) {
+  html,
+  :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    width: fit-content;
+  }
 }

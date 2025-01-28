@@ -470,7 +470,7 @@ const Home = () => {
             home.{" "}
           </p>
         </div>
-        <div className="mt-5 flex flex-col sm:flex-row justify-center gap-[5px] sm:gap-[42px] container mx-auto">
+        <div className="mt-5 flex flex-col sm:flex-row justify-center gap-[5px] sm:gap-[42px] container mx-auto ">
           {/* Image Section */}
           <div className="md:w-[40%] w-full m-auto">
             <Image
@@ -481,11 +481,11 @@ const Home = () => {
           </div>
 
           {/* Text Section */}
-          <div className="px-4 md:mt-4 text-center sm:text-left">
+          <div className="px-4 md:mt-4 text-center sm:text-left ">
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold">
               Experienced Professionals
             </h1>
-            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               Our team includes highly skilled doctors, nurses, and caregivers
               with extensive experience in home-based healthcare.
             </p>
@@ -493,7 +493,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               Personalized Care Plans
             </h1>
-            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               We customize each care plan to fit individual health needs and
               lifestyles, ensuring the best possible outcomes.
             </p>
@@ -501,7 +501,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               24/7 Support
             </h1>
-            <p className="md:text-[16px] text-[15px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               Receive round-the-clock assistance and support, so help is always
               just a call away.
             </p>
