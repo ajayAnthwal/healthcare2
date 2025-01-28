@@ -140,11 +140,11 @@ const Header = () => {
                   <p className="ms-2 text-[16px]">New Delhi, Delhi</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="24"
+                    height="24"
                     fill="#FF784B"
                     viewBox="0 0 16 16"
-                    className={`transform transition-transform ${
+                    className={`transform transition-transform pt-1 ${
                       city ? "rotate-180" : "rotate-0"
                     }`}
                   >
@@ -161,60 +161,25 @@ const Header = () => {
                         <h3 className="text-black font-semibold text-[14px] leading-[16.8px]  mb-[10px] font-poppins">
                           Delhi
                         </h3>
-
-                        <ul className="flex gap-[46px]  pb-[6px]">
+                        <div className="border-t border-[#C0C0C0] my-2"></div>
+                        <ul className="flex flex-col gap-[12px] ">
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
                             Delhi
                           </li>
+                          <div className="border-t border-[#C0C0C0]"></div>
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
                             Noida
                           </li>
+                          <div className="border-t border-[#C0C0C0]"></div>
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
                             Greater Noida
                           </li>
+                          <div className="border-t border-[#C0C0C0]"></div>
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
                             Gurgaon
                           </li>
-                        </ul>
-
-                        <ul className="flex flex-wrap  gap-[46px] mt-2 ">
+                          <div className="border-t border-[#C0C0C0]"></div>
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
-                            Faridabad
-                          </li>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
-                            Ghaziabad
-                          </li>
-                        </ul>
-                      </div>
-
-                      {/* Divider Line */}
-                      <div className="border-t border-[#C0C0C0] my-2"></div>
-
-                      {/* Second Section */}
-                      <div className="mb-4">
-                        <h3 className="text-black font-semibold text-[14px] leading-[16.8px] mb-[10px] font-poppins">
-                          Delhi
-                        </h3>
-                        <ul className="flex gap-[46px] pb-[6px]">
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max">
-                            Delhi
-                          </li>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max">
-                            Noida
-                          </li>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max">
-                            Greater Noida
-                          </li>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max">
-                            Gurgaon
-                          </li>
-                        </ul>
-
-                        <ul className="flex flex-wrap  gap-[46px] mt-2">
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max">
-                            Faridabad
-                          </li>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max">
                             Ghaziabad
                           </li>
                         </ul>
