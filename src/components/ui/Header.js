@@ -619,11 +619,16 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-12">
-              <Link href="mailto:care@apollohomecare.com">
+            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-12 mr-4">
+              <Link
+                href="mailto:care@apollohomecare.com"
+                className="flex items-center space-x-2"
+              >
                 <Image src={emailICon} alt="email" height={32} width={37} />
+                <p className="text-[#009A9F] hover:text-[#FF784B]">Email</p>
               </Link>
             </div>
+
             <div className="pl-[50px]">
               <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
                 <svg

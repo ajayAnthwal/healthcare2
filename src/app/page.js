@@ -152,8 +152,8 @@ const Home = () => {
             style={{
               transitionDuration: "2s",
               width: index == 0 ? "3rem" : "0rem",
-              top: index == 0 ? "10rem" : "0rem",
-              right: index == 0 ? "7rem" : "0rem",
+              top: index == 0 ? "3rem" : "0rem",
+              right: index == 0 ? "10rem" : "0rem",
               position: "absolute",
             }}
           />
@@ -163,8 +163,8 @@ const Home = () => {
             style={{
               transitionDuration: "2s",
               width: index == 0 ? "5rem" : "0rem",
-              top: index == 0 ? "13.5rem" : "0rem",
-              right: index == 0 ? "22.5rem" : "0rem",
+              top: index == 0 ? "4.5rem" : "0rem",
+              right: index == 0 ? "30.5rem" : "0rem",
               position: "absolute",
             }}
           />
@@ -172,7 +172,7 @@ const Home = () => {
             alt=""
             src={ellipse}
             style={{
-              width: index == 0 ? "40rem" : "0rem",
+              width: index == 0 ? "51rem" : "0rem",
               bottom: 0,
               right: 0,
               position: "absolute",
