@@ -309,10 +309,8 @@ const Header = () => {
 
             <div className="flex items-center gap-4">
               <div
-                className="flex items-center h-[44px] px-[20px] gap-[10px] rounded-full bg-[#009A9F] shadow-lg cursor-pointer"
-                style={{
-                  boxShadow: "0px 8px 23px rgba(65, 132, 247, 0.24)",
-                }}
+                className="relative flex items-center h-[44px] px-[20px] gap-[10px] rounded-full bg-[#009A9F] shadow-lg cursor-pointer"
+                style={{ boxShadow: "0px 8px 23px rgba(65, 132, 247, 0.24)" }}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -339,9 +337,14 @@ const Header = () => {
                     />
                   </g>
                 </svg>
+
                 <span className="text-white font-poppins text-[16px]">
                   Cart
                 </span>
+
+                <div className="absolute -top-2 right-0 bg-[#FF2525] text-white text-[12px] font-poppins font-normal leading-[120%] w-[23px] h-[23px] flex flex-col items-center justify-center gap-[10px] rounded-full p-[4px_1px]">
+                  9+
+                </div>
               </div>
 
               <div className="relative">
