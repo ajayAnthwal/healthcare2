@@ -71,7 +71,7 @@ const CarouselSection = () => {
       </p>
 
       <div
-        className="mt-10 flex flex-col sm:flex-row gap-2 w-full mx-auto rounded-lg"
+        className="mt-10 flex flex-col px-2 sm:flex-row gap-2 w-full mx-auto rounded-lg"
         style={{
           boxShadow: "0px 15px 35.8px 0px rgba(0, 0, 0, 0.25)",
         }}
@@ -83,7 +83,7 @@ const CarouselSection = () => {
           height={200}
           className="w-full md:w-[30%] sm:w-[50%] rounded-tl-lg rounded-bl-lg"
         />
-        <div className="md:m-5 m-[2px] min-h-[200px] flex flex-col justify-between">
+        <div className="md:m-5 m-[2px] min-h-[200px] flex flex-col gap-[5px]">
           <h1 className="text-[20px] md:text-3xl md:mt-0 mt-[5px] font-bold">
             {testimonials[currentIndex].title}
           </h1>
@@ -93,6 +93,7 @@ const CarouselSection = () => {
           <p className="md:text-[14px] text-[12px] text-gray-600 text-md my-1">
             &quot;{testimonials[currentIndex].description2}&quot;
           </p>
+
         </div>
       </div>
 
