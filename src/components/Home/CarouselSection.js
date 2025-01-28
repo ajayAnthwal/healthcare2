@@ -3,26 +3,45 @@ import Image from "next/image";
 import mediaCoverage from "@/assets/images/homepage/mediaCoverage.png";
 import chevronLeft from "@/assets/images/homepage/chevron-left.svg";
 import chevronRight from "@/assets/images/homepage/chevron-right.svg";
+import testimonal1 from "@/assets/images/homepage/1.png";
+import testimonal2 from "@/assets/images/homepage/2.png";
+import testimonal3 from "@/assets/images/homepage/3.png";
+import testimonal4 from "@/assets/images/homepage/4.png";
 
 const CarouselSection = () => {
   const testimonials = [
     {
       id: 1,
-      image: mediaCoverage,
-      title: "Recent Media Coverage",
-      description1: `Apollo Homecare’s New Homecare Initiative Gains
-      Recognition in Healthcare Magazine`,
-      description2: `Apollo Homecare Featured in National News for Pioneering
-      Virtual Health Services`,
+      image: testimonal1,
+      title:
+        "Mint BFSI Summit | Bima Sugam: Unlocking the potential of digital insurance",
+      description1: `Apollo HomeCare recognizes the impact of digital innovation on healthcare and insurance.`,
+      description2: `Explore insights from the Mint BFSI Summit on Bima Sugam, where industry leaders discuss how digital platforms are transforming rural healthcare access and reshaping insurance for a brighter future.`,
     },
     {
       id: 2,
-      image: mediaCoverage,
-      title: "Another Media Highlight",
-      description1: `Apollo Homecare’s Digital Expansion Featured in Tech Journal`,
-      description2: `Awarded for Excellence in Patient Care by Healthcare Review`,
+      image: testimonal2,
+      title:
+        "Hospitals stretched, home is where future of Indian healthcare could be",
+      description1: `As hospitals face growing challenges, Apollo HomeCare leads the way in reimagining healthcare with home-based solutions.`,
+      description2: `Discover how the future of healthcare in India is shifting towards convenient, personalized care delivered right to your doorstep.`,
     },
-    // Add more items as needed
+    {
+      id: 3,
+      image: testimonal3,
+      title:
+        "Healthcare sector in 2024 was efficient with digital technology, 2025 to provide patient-centric care",
+      description1: `At Apollo HomeCare, we embrace the evolution of digital healthcare.`,
+      description2: `Learn how innovations in 2024 set the stage for 2025’s patient-first approach, delivering care that’s more accessible, efficient, and centered on individual needs.`,
+    },
+    {
+      id: 4,
+      image: testimonal4,
+      title:
+        "From hospitals to homes: Redefining patient recovery in a new era of care",
+      description1: `Apollo HomeCare is at the forefront of redefining recovery by bringing expert care from hospitals to homes.`,
+      description2: `Explore how personalized home-based care solutions are transforming the patient recovery journey in today’s evolving healthcare landscape.`,
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -51,9 +70,8 @@ const CarouselSection = () => {
         attention.
       </p>
 
-      {/* Carousel */}
       <div
-        className="mt-10 flex gap-2 w-full mx-auto rounded-lg"
+        className="mt-10 flex flex-col sm:flex-row gap-2 w-full mx-auto rounded-lg"
         style={{
           boxShadow: "0px 15px 35.8px 0px rgba(0, 0, 0, 0.25)",
         }}
@@ -63,9 +81,9 @@ const CarouselSection = () => {
           alt="media coverage"
           width={300}
           height={200}
-          className="w-[30%] rounded-tl-lg rounded-bl-lg"
+          className="w-full md:w-[30%] sm:w-[50%] rounded-tl-lg rounded-bl-lg"
         />
-        <div className="md:m-5 m-[2px]">
+        <div className="md:m-5 m-[2px] min-h-[200px] flex flex-col justify-between">
           <h1 className="text-[20px] md:text-3xl md:mt-0 mt-[5px] font-bold">
             {testimonials[currentIndex].title}
           </h1>
@@ -78,7 +96,6 @@ const CarouselSection = () => {
         </div>
       </div>
 
-      {/* Carousel Navigation */}
       <div className="flex justify-center items-center mt-10">
         <Image
           onClick={prev}
@@ -98,7 +115,7 @@ const CarouselSection = () => {
         ))}
         <Image
           onClick={next}
-         src={chevronRight}
+          src={chevronRight}
           alt="next"
           width={24}
           height={24}
