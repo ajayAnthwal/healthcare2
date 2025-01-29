@@ -14,7 +14,6 @@ import service11 from "@/assets/images/homepage/service11.png";
 import service12 from "@/assets/images/homepage/service12.png";
 import service13 from "@/assets/images/homepage/service13.png";
 import service14 from "@/assets/images/homepage/service14.png";
-import { TbBrandWhatsapp } from "react-icons/tb";
 
 const services = [
   { title: "ICU Setup at Home", image: service1 },
@@ -53,8 +52,7 @@ const ComprehensiveServices = () => {
             <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
               {service.title}
             </h3>
-            <button className="mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
-              <TbBrandWhatsapp />
+            <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
               Enquire Now
             </button>
           </div>
@@ -76,8 +74,7 @@ const ComprehensiveServices = () => {
               <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
                 {service.title}
               </h3>
-              <button className="mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
-                <TbBrandWhatsapp />
+              <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
                 Enquire Now
               </button>
             </div>

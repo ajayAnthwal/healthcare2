@@ -463,7 +463,7 @@ const Home = () => {
           <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
             Why Choose Us?
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[15px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto leading-[24px] ">
+          <p className="md:text-[16px] lg:text-[16px] text-[15px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-full mx-auto leading-[24px] ">
             Choosing Apollo Homecare means choosing a healthcare provider that
             prioritizes your comfort, convenience, and well-being. Discover why
             countless families trust us to deliver exceptional care right at
@@ -487,7 +487,7 @@ const Home = () => {
             </h1>
             <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               Our team includes highly skilled doctors, nurses, and caregivers
-              with extensive experience in home-based healthcare.
+              with extensive experience in <br /> home-based healthcare.
             </p>
 
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
@@ -495,7 +495,7 @@ const Home = () => {
             </h1>
             <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               We customize each care plan to fit individual health needs and
-              lifestyles, ensuring the best possible outcomes.
+              lifestyles, ensuring the best <br /> possible outcomes.
             </p>
 
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
@@ -514,7 +514,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold">
               Advanced Technology
             </h1>
-            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               From remote health monitoring to on-demand consultations, we use
               the latest technology to provide efficient and reliable care.
             </p>
@@ -522,7 +522,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               Trusted Brand
             </h1>
-            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               As part of the Apollo family, we bring a legacy of healthcare
               excellence and trust that our patients rely on.
             </p>
@@ -530,7 +530,7 @@ const Home = () => {
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
               Affordable Care Options
             </h1>
-            <p className="md:text-[16px] text-[15px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-3/4">
+            <p className="md:text-[16px] text-[15px] leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               We offer cost-effective care solutions that provide value without
               compromising quality.
             </p>
@@ -547,9 +547,9 @@ const Home = () => {
         </div>
 
         {/* ---------------Statistics Section---------------- */}
-        <div className="container mx-auto md:mt-20 mt-6 py-5 px-7 rounded-[28px]">
+        <div className="container mx-auto md:mt-20 mt-6 py-5 px-7 rounded-[28px] transition-transform duration-500 ease-in-out hover:scale-105">
           <div
-            className="md: flex flex-col md:flex-row items-center justify-between py-5 px-7 rounded-[28px] space-y-6 md:space-y-0 md:space-x-6"
+            className="md:flex flex-col md:flex-row items-center justify-between py-5 px-7 rounded-[28px] space-y-6 md:space-y-0 md:space-x-6"
             style={{
               backgroundImage:
                 "linear-gradient(118.43deg, #1AE2E9 -5.9%, #019196 42.54%, #03676A 90.98%)",
@@ -640,10 +640,10 @@ const Home = () => {
           <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px]">
             About Apollo Homecare
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto leading-[24px] p-6">
+          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[80%] mx-auto leading-[24px] p-6">
             Apollo Homecare is dedicated to bringing world-class healthcare
             services directly to your home. As a trusted leader in healthcare,
-            we combine professional medical expertise with personalized care to
+            we combine <br/> professional medical expertise with personalized care to
             support you and your loved ones through every step of your health
             journey.
           </p>

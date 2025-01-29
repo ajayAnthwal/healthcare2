@@ -589,8 +589,36 @@ const Header = () => {
                 href="mailto:care@apollohomecare.com"
                 className="flex items-center space-x-2"
               >
-                <Image src={emailICon} alt="email" height={32} width={37} />
-                <p className="text-[#009A9F] hover:text-[#FF784B]">Email</p>
+                <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="12"
+                    viewBox="0 0 18 12"
+                    fill="none"
+                    className="fill-[#FF784B]"
+                  >
+                    <path
+                      d="M0.207397 1.00235V11.0061L5.20928 6.00423L0.207397 1.00235Z"
+                      fill="#FF784B"
+                    />
+                    <path
+                      d="M1.20129 0L7.53376 6.33247C8.33353 7.13223 9.72835 7.13223 10.5281 6.33247L16.8606 0H1.20129Z"
+                      fill="#FF784B"
+                    />
+                    <path
+                      d="M11.5262 7.33059C10.8605 7.99694 9.97395 8.3647 9.03089 8.3647C8.08783 8.3647 7.20125 7.99694 6.5356 7.33059L6.20736 7.00235L1.20972 12H16.8521L11.8544 7.00235L11.5262 7.33059Z"
+                      fill="#FF784B"
+                    />
+                    <path
+                      d="M12.8525 6.00423L17.8544 11.0061V1.00235L12.8525 6.00423Z"
+                      fill="#FF784B"
+                    />
+                  </svg>
+                  <span className="text-[#FF784B] text-base font-medium leading-[120%]">
+                   Email
+                  </span>
+                </button>
               </Link>
             </div>
 

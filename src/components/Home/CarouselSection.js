@@ -63,7 +63,7 @@ const CarouselSection = () => {
       <h1 className="md:text-[32px] lg:text-[32px] font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px] ">
         In the news
       </h1>
-      <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto leading-[24px] p-2">
+      <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-full mx-auto leading-[24px] p-2">
         Stay updated with the latest news and media coverage about Apollo
         Homecare. Our commitment to providing quality care has made us a trusted
         name in the healthcare industry, and our recent achievements are gaining
@@ -71,7 +71,7 @@ const CarouselSection = () => {
       </p>
 
       <div
-        className="mt-10 flex flex-col px-2 sm:flex-row gap-2 w-full mx-auto rounded-lg"
+        className="mt-10 flex flex-col px-2 h-[510px] sm:h-auto sm:flex-row gap-2 w-full mx-auto rounded-lg"
         style={{
           boxShadow: "0px 15px 35.8px 0px rgba(0, 0, 0, 0.25)",
         }}

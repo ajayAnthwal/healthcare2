@@ -30,7 +30,7 @@ const BannerCarousel = () => {
         width={1920}
         height={600}
       />
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="absolute -bottom-[10px]  sm:bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
         {banners.map((_, index) => (
           <div
             key={index}
