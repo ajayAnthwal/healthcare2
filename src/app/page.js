@@ -472,7 +472,7 @@ const Home = () => {
         </div>
         <div className="mt-5 flex flex-col sm:flex-row justify-center gap-[5px] sm:gap-[42px] container mx-auto ">
           {/* Image Section */}
-          <div className="md:w-[40%] w-full m-auto">
+          <div className="md:w-[50%] w-full m-auto">
             <Image
               className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
               src={whyChooseUs1}
@@ -510,7 +510,7 @@ const Home = () => {
 
         <div className="px-4 mt-5 md:flex flex flex-col-reverse sm:flex-row justify-center gap-[5px] sm:gap-[42px] container mx-auto">
           {/* Text Section */}
-          <div className=" md:w-[60%] w-full">
+          <div className=" md:w-[50%] w-full">
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold">
               Advanced Technology
             </h1>
@@ -537,7 +537,7 @@ const Home = () => {
           </div>
 
           {/* Image Section */}
-          <div className="md:w-[40%] w-full m-auto">
+          <div className="md:w-[50%] w-full m-auto">
             <Image
               className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
               src={choose}
