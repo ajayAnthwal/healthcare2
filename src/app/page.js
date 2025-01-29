@@ -463,7 +463,7 @@ const Home = () => {
           <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432]">
             Why Choose Us?
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[15px] font-normal md:leading-[24px] leading-4 text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto">
+          <p className="md:text-[16px] lg:text-[16px] text-[15px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-1/2 mx-auto leading-[24px] ">
             Choosing Apollo Homecare means choosing a healthcare provider that
             prioritizes your comfort, convenience, and well-being. Discover why
             countless families trust us to deliver exceptional care right at
@@ -640,7 +640,7 @@ const Home = () => {
           <h1 className="md:text-[32px] lg:text-[32px]  font-bold md:leading-[48px] leading-[10px] text-center text-[#031432] text-[26px]">
             About Apollo Homecare
           </h1>
-          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto leading-[24px]">
+          <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[38%] mx-auto leading-[24px] p-6">
             Apollo Homecare is dedicated to bringing world-class healthcare
             services directly to your home. As a trusted leader in healthcare,
             we combine professional medical expertise with personalized care to
