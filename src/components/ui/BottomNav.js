@@ -120,7 +120,7 @@ const BottomNav = () => {
         )}
       </div>
       <div className="flex flex-col items-center gap-2 bg-[#003638] ">
-        <div className="flex justify-between w-full mt-3">
+        <div className="flex justify-between w-full">
           <div className="bg-white rounded-lg px-[10px] py-[8px] flex flex-col justify-center items-center">
             <div>
               <Image src={home} width={15} height={15} alt="home" />
