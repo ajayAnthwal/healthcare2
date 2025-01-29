@@ -154,34 +154,35 @@ const Header = () => {
 
                 {/* Dropdown Menu */}
                 {city && (
-                  <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 shadow-lg rounded-md w-max overflow-auto p-[10px_20px_10px_10px]">
-                    <div className="">
-                      {/* First Section */}
-                      <div className="mb-4 p-4">
-                        <h3 className="text-black font-semibold text-[14px] leading-[16.8px]  mb-[10px] font-poppins">
+                  <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 shadow-lg rounded-md overflow-auto p-0 w-[184px]">
+                    <div>
+                      <div className="mb-4">
+                        <h3 className="text-black font-semibold text-[14px] leading-[16.8px] font-poppins p-[10px_20px]">
                           Delhi
                         </h3>
-                        <div className="border-t border-[#C0C0C0] my-2"></div>
-                        <ul className="flex flex-col gap-[12px] ">
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
-                            Delhi
-                          </li>
-                          <div className="border-t border-[#C0C0C0]"></div>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
+                        <div className="border-t  w-full"></div>
+
+                        <ul className="flex flex-col">
+
+                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] text-[#009A9F] p-[10px_20px]">
                             Noida
                           </li>
-                          <div className="border-t border-[#C0C0C0]"></div>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
+                          <div className="border-t  w-full"></div>
+
+                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] text-black p-[10px_20px]">
                             Greater Noida
                           </li>
-                          <div className="border-t border-[#C0C0C0]"></div>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
+                          <div className="border-t  w-full"></div>
+
+                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] text-black p-[10px_20px]">
                             Gurgaon
                           </li>
-                          <div className="border-t border-[#C0C0C0]"></div>
-                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] w-max text-black">
+                          <div className="border-t w-full"></div>
+
+                          <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] text-black p-[10px_20px]">
                             Ghaziabad
                           </li>
+                         
                         </ul>
                       </div>
                     </div>
