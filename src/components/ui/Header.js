@@ -696,6 +696,7 @@ const Header = () => {
                         type="text"
                         placeholder='try searching something "my subscriptions"'
                         className="flex-grow text-gray-800 focus:outline-none bg-transparent placeholder-gray-400"
+                        value=""
                       />
 
                       <svg
@@ -781,21 +782,21 @@ const Header = () => {
 
               {/* Dropdown Menu */}
               {menuOpen && (
-                <div className="fixed inset-0 bg-white z-30 h-screen p-4 overflow-y-auto w-[375px] left-[60px]">
+                <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-[375px] left-[60px]">
                   {/* Close Button */}
-                  <div className="flex justify-between items-center bg-[#009A9F] p-[10px_20px_10px_10px]">
-                    <h3 className="text-white font-poppins text-sm font-normal leading-[1.2] rounded-b-[20px] self-stretch ">
+                  <div className="flex justify-between items-center bg-[#009A9F] p-[10px_20px_10px_10px] rounded-b-[20px]">
+                    <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] rounded-b-[20px] self-stretch p-4">
                       Profile
                     </h3>
 
                     <button
-                      className="text-[#fff] font-bold text-lg"
+                      className="text-[#fff] font-bold text-[25px] mr-3"
                       onClick={toggleMenu}
                     >
                       ×
                     </button>
                   </div>
-                  <ul className="mt-6 flex flex-col gap-4">
+                  <ul className="mt-1 flex flex-col gap-4 p-4">
                     <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -93,7 +93,6 @@ const CarouselSection = () => {
           <p className="md:text-[14px] text-[12px] text-gray-600 text-md my-1">
             &quot;{testimonials[currentIndex].description2}&quot;
           </p>
-
         </div>
       </div>
 
