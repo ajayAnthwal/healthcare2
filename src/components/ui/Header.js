@@ -26,6 +26,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const searchRef = useRef(null);
   const cityRef = useRef(null);
+  const inputRef = useRef(null);
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [city, setCity] = useState(false);
@@ -65,15 +66,15 @@ const Header = () => {
       if (
         searchRef.current &&
         !searchRef.current.contains(event.target) &&
-        cityRef.current &&
-        !cityRef.current.contains(event.target)
+        inputRef.current &&
+        !inputRef.current.contains(event.target) // ✅ Ignore input click
       ) {
         setIsOpen(false);
-        setCity(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
@@ -163,7 +164,6 @@ const Header = () => {
                         <div className="border-t  w-full"></div>
 
                         <ul className="flex flex-col">
-
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] text-[#009A9F] p-[10px_20px]">
                             Noida
                           </li>
@@ -182,7 +182,6 @@ const Header = () => {
                           <li className="hover:text-[#FF784B] cursor-pointer font-normal text-[14px] leading-[16.8px] text-black p-[10px_20px]">
                             Ghaziabad
                           </li>
-                         
                         </ul>
                       </div>
                     </div>
@@ -710,7 +709,10 @@ const Header = () => {
                       </svg>
                       <h2 className="text-lg font-semibold">Search</h2>
                     </div>
-                    <div className="flex items-center border border-gray-500 w-full p-2 rounded-md">
+                    <div
+                      className="flex items-center border border-gray-500 w-full p-2 rounded-md "
+                      ref={searchRef}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -725,10 +727,11 @@ const Header = () => {
                         />
                       </svg>
                       <input
+                        ref={inputRef}
                         type="text"
                         placeholder='try searching something "my subscriptions"'
                         className="flex-grow text-gray-800 focus:outline-none bg-transparent placeholder-gray-400"
-                        value=""
+                        onFocus={() => setIsOpen(true)}
                       />
 
                       <svg
@@ -822,7 +825,7 @@ const Header = () => {
                     </h3>
 
                     <button
-                      className="text-[#fff] font-bold text-[25px] mr-3"
+                      className="text-[#fff] font-bold text-[25px] mr-[2.5rem]"
                       onClick={toggleMenu}
                     >
                       ×

@@ -26,7 +26,7 @@ const BannerCarousel = () => {
       <Image
         src={banners[currentIndex].image}
         alt={banners[currentIndex].alt}
-        className="w-[100%] rounded-lg"
+        className="w-[96%]  md:w-[100%] rounded-lg"
         width={1920}
         height={600}
       />
