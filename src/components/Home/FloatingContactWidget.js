@@ -47,7 +47,7 @@ const FloatingContactWidget = () => {
           onClick={closePopup}
         >
           <motion.div
-            className="bg-white rounded-lg w-[100%] max-w-[400px] mx-auto"
+            className="bg-white rounded-lg w-[100%] max-w-[570px] mx-auto"
             variants={popupVariants}
             initial="hidden"
             animate="visible"
@@ -84,6 +84,20 @@ const FloatingContactWidget = () => {
                   <div className="flex-1">
                     <label className="block text-sm font-medium text-[#009A9F] mb-1">
                       Phone Number
+                    </label>
+                    <div className="flex items-center border rounded-md bg-[#E6F7F8] p-2">
+                      <input
+                        type="text"
+                        placeholder="123 456 7890"
+                        className="w-full bg-transparent focus:outline-none"
+                      />
+                      <span className="text-green-500 ml-2">✔</span>
+                    </div>
+                  </div>
+
+                  <div className="flex-1">
+                    <label className="block text-sm font-medium text-[#009A9F] mb-1">
+                      Google Captcha
                     </label>
                     <div className="flex items-center border rounded-md bg-[#E6F7F8] p-2">
                       <input
