@@ -36,7 +36,7 @@ export default function SpecificSection() {
       <div className="flex flex-wrap justify-center gap-4 mt-9">
         {items.map((item, index) => (
           <Link key={index} href={item.href} passHref>
-            <span className="cursor-pointer flex px-[10px] py-[10px] justify-center items-center gap-[10px] border border-[#696969] rounded-[20px] text-[#696969] text-[12px] font-normal leading-[16px] tracking-[0.36px] overflow-hidden text-ellipsis hover:bg-[#009A9F] hover:text-white transition duration-200">
+            <span className="cursor-pointer flex px-[10px] py-[10px] justify-center items-center gap-[10px] border border-[#009A9F]  rounded-[20px] text-[#696969] text-[12px] font-normal leading-[16px] tracking-[0.36px] overflow-hidden text-ellipsis hover:bg-[#009A9F] hover:text-white transition duration-200">
               {item.name}
             </span>
           </Link>
