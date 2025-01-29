@@ -105,7 +105,7 @@ const BottomNav = () => {
                     </div>
                     <div className="flex-1">
                       <label className="block text-sm font-medium text-[#009A9F] mb-1">
-                       Google Captcha
+                        Google Captcha
                       </label>
                       <div className="flex items-center border rounded-md bg-[#E6F7F8] p-2">
                         <input
@@ -124,9 +124,6 @@ const BottomNav = () => {
                     Send
                   </button>
                 </form>
-                <p className="text-center text-sm text-gray-500 mt-4">
-                  Note: any note or important thing here.
-                </p>
               </div>
             </motion.div>
           </div>

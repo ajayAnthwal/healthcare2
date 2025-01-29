@@ -18,6 +18,7 @@ import account from "@/assets/images/homepage/account.svg";
 import emailICon from "@/assets/images/header/email.svg";
 import logoMobile from "@/assets/images/header/logo-mobile.png";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const pathname = usePathname();
@@ -109,6 +110,12 @@ const Header = () => {
       { title: "User Interviews", subtitle: "In Home visits" },
       { title: "Prototype Testing", subtitle: "In Home visits" },
     ],
+  };
+
+  const popupVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 50 },
   };
 
   return (
@@ -817,83 +824,92 @@ const Header = () => {
 
               {/* Dropdown Menu */}
               {menuOpen && (
-                <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-[375px] left-[60px]">
-                  {/* Close Button */}
-                  <div className="flex justify-between items-center bg-[#009A9F] p-[10px_20px_10px_10px] rounded-b-[20px]">
-                    <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] rounded-b-[20px] self-stretch p-4">
-                      Profile
-                    </h3>
+                <motion.div
+                  className="fixed inset-0 bg-white z-30 h-screen overflow-y-auto w-[375px] left-[60px]"
+                  variants={popupVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                >
+                  <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-[375px] left-[60px]">
+                    {/* Close Button */}
+                    <div className="flex justify-between items-center bg-[#009A9F] p-[10px_20px_10px_10px] rounded-b-[20px]">
+                      <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] rounded-b-[20px] self-stretch p-4">
+                        Profile
+                      </h3>
 
-                    <button
-                      className="text-[#fff] font-bold text-[25px] mr-[2.5rem]"
-                      onClick={toggleMenu}
-                    >
-                      ×
-                    </button>
+                      <button
+                        className="text-[#fff] font-bold text-[25px] mr-[2.5rem]"
+                        onClick={toggleMenu}
+                      >
+                        ×
+                      </button>
+                    </div>
+                    <ul className="mt-1 flex flex-col gap-4 p-4">
+                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          width="20"
+                          viewBox="0 0 24 24"
+                          fill="black"
+                        >
+                          <path d="M16 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm1 1h-2v1h-2v1h6v-1h-2v-1zm-7 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-1.78 0-4.7.92-4.7 2.7V18h9.4v-1.3c0-1.78-2.92-2.7-4.7-2.7z" />
+                        </svg>
+                        Family Profiles
+                      </li>
+                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          width="20"
+                          viewBox="0 0 24 24"
+                          fill="black"
+                        >
+                          <path d="M13 11h-2v2h2v-2zm0-4h-2v2h2V7zm-1-5C5.92 2 2 6.48 2 11c0 4.52 3.92 9 10 9s10-4.48 10-9c0-4.52-3.92-9-10-9zm0 16c-4.34 0-8-3.28-8-7s3.66-7 8-7 8 3.28 8 7-3.66 7-8 7z" />
+                        </svg>
+                        My Health Files
+                      </li>
+                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          width="20"
+                          viewBox="0 0 24 24"
+                          fill="black"
+                        >
+                          <path d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10zm-3-3H8v-2h8v2z" />
+                        </svg>
+                        Payment Method
+                      </li>
+                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          width="20"
+                          viewBox="0 0 24 24"
+                          fill="black"
+                        >
+                          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm-.001 6C9.794 10 9 10.791 9 12h2v1h-1v1h1v1h-1v1h2v-1c0-.577.373-.875.738-1.111.292-.19.512-.398.762-.683C13.624 11.597 14 10.932 14 10c0-1.105-.895-2-2.001-2zM13 13h-1v-1h1v1z" />
+                        </svg>
+                        Help & Support
+                      </li>
+                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-[#FF784B]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="20"
+                          width="20"
+                          viewBox="0 0 24 24"
+                          fill="#FF784B"
+                        >
+                          <path d="M10 9v6H5v4h14v-4h-5v-6h5V5H5v4h5zm1-6h-7v16h7v-3h7V6h-7V3z" />
+                        </svg>
+                        Logout
+                      </li>
+                    </ul>
                   </div>
-                  <ul className="mt-1 flex flex-col gap-4 p-4">
-                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        width="20"
-                        viewBox="0 0 24 24"
-                        fill="black"
-                      >
-                        <path d="M16 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm1 1h-2v1h-2v1h6v-1h-2v-1zm-7 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-1.78 0-4.7.92-4.7 2.7V18h9.4v-1.3c0-1.78-2.92-2.7-4.7-2.7z" />
-                      </svg>
-                      Family Profiles
-                    </li>
-                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        width="20"
-                        viewBox="0 0 24 24"
-                        fill="black"
-                      >
-                        <path d="M13 11h-2v2h2v-2zm0-4h-2v2h2V7zm-1-5C5.92 2 2 6.48 2 11c0 4.52 3.92 9 10 9s10-4.48 10-9c0-4.52-3.92-9-10-9zm0 16c-4.34 0-8-3.28-8-7s3.66-7 8-7 8 3.28 8 7-3.66 7-8 7z" />
-                      </svg>
-                      My Health Files
-                    </li>
-                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        width="20"
-                        viewBox="0 0 24 24"
-                        fill="black"
-                      >
-                        <path d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10zm-3-3H8v-2h8v2z" />
-                      </svg>
-                      Payment Method
-                    </li>
-                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        width="20"
-                        viewBox="0 0 24 24"
-                        fill="black"
-                      >
-                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm-.001 6C9.794 10 9 10.791 9 12h2v1h-1v1h1v1h-1v1h2v-1c0-.577.373-.875.738-1.111.292-.19.512-.398.762-.683C13.624 11.597 14 10.932 14 10c0-1.105-.895-2-2.001-2zM13 13h-1v-1h1v1z" />
-                      </svg>
-                      Help & Support
-                    </li>
-                    <li className="flex items-center gap-3 cursor-pointer text-[14px] text-[#FF784B]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        width="20"
-                        viewBox="0 0 24 24"
-                        fill="#FF784B"
-                      >
-                        <path d="M10 9v6H5v4h14v-4h-5v-6h5V5H5v4h5zm1-6h-7v16h7v-3h7V6h-7V3z" />
-                      </svg>
-                      Logout
-                    </li>
-                  </ul>
-                </div>
+                </motion.div>
               )}
             </div>
           </div>

@@ -117,9 +117,6 @@ const FloatingContactWidget = () => {
                   Send
                 </button>
               </form>
-              <p className="text-center text-sm text-gray-500 mt-4">
-                Note: any note or important thing here.
-              </p>
             </div>
           </motion.div>
         </div>
