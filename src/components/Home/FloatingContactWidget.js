@@ -53,6 +53,7 @@ const FloatingContactWidget = () => {
             animate="visible"
             exit="exit"
             transition={{ duration: 0.3, ease: "easeInOut" }}
+            onClick={(e) => e.stopPropagation()}
           >
             <div className="bg-white rounded-lg">
               <div className="flex justify-between items-center border-b mb-4 bg-[#009A9F] text-center py-4">

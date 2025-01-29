@@ -487,7 +487,7 @@ const Home = () => {
             </h1>
             <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               Our team includes highly skilled doctors, nurses, and caregivers
-              with extensive experience in <br /> home-based healthcare.
+              with extensive experience in home-based healthcare.
             </p>
 
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
@@ -495,7 +495,7 @@ const Home = () => {
             </h1>
             <p className="md:text-[16px] text-[15px] md:leading-[24px] text-justify text-[#6C87AE] md:mt-4 sm:w-full">
               We customize each care plan to fit individual health needs and
-              lifestyles, ensuring the best <br /> possible outcomes.
+              lifestyles, ensuring the best possible outcomes.
             </p>
 
             <h1 className="text-lg md:text-[32px] leading-[48px] text-left text-[#031432] font-bold md:mt-8">
@@ -539,7 +539,7 @@ const Home = () => {
           {/* Image Section */}
           <div className="md:w-[50%] w-full m-auto">
             <Image
-              className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:mr-20 rounded-[32px]"
+              className="w-[full] h-[full] m-auto sm:w-1/2 md:w-full sm:ml-[40px] rounded-[32px]"
               src={choose}
               alt="Why Choose Us 1"
             />
@@ -643,9 +643,9 @@ const Home = () => {
           <p className="md:text-[16px] lg:text-[16px] text-[16px] font-normal md:leading-[24px]  text-center text-[#6C87AE] mt-4 w-full sm:w-3/4 md:w-[80%] mx-auto leading-[24px] p-6">
             Apollo Homecare is dedicated to bringing world-class healthcare
             services directly to your home. As a trusted leader in healthcare,
-            we combine <br/> professional medical expertise with personalized care to
-            support you and your loved ones through every step of your health
-            journey.
+            we combine <br /> professional medical expertise with personalized
+            care to support you and your loved ones through every step of your
+            health journey.
           </p>
         </div>
         <div className="container mx-auto my-10 px-4">

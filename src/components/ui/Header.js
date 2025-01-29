@@ -155,9 +155,9 @@ const Header = () => {
                 {/* Dropdown Menu */}
                 {city && (
                   <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 shadow-lg rounded-md w-max overflow-auto p-[10px_20px_10px_10px]">
-                    <div className="p-4">
+                    <div className="">
                       {/* First Section */}
-                      <div className="mb-4">
+                      <div className="mb-4 p-4">
                         <h3 className="text-black font-semibold text-[14px] leading-[16.8px]  mb-[10px] font-poppins">
                           Delhi
                         </h3>
