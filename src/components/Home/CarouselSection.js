@@ -7,6 +7,7 @@ import testimonal1 from "@/assets/images/homepage/1.png";
 import testimonal2 from "@/assets/images/homepage/2.png";
 import testimonal3 from "@/assets/images/homepage/3.png";
 import testimonal4 from "@/assets/images/homepage/4.png";
+import Link from "next/link";
 
 const CarouselSection = () => {
   const testimonials = [
@@ -17,6 +18,7 @@ const CarouselSection = () => {
         "Mint BFSI Summit | Bima Sugam: Unlocking the potential of digital insurance",
       description1: `Apollo HomeCare recognizes the impact of digital innovation on healthcare and insurance.`,
       description2: `Explore insights from the Mint BFSI Summit on Bima Sugam, where industry leaders discuss how digital platforms are transforming rural healthcare access and reshaping insurance for a brighter future.`,
+      link: "https://www.livemint.com/insurance/mint-bfsi-summit-bima-sugam-digital-insurance-pb-fintech-phonepe-insurtech-aditya-birla-health-insurance-rural-coverage-11737124143006.html",
     },
     {
       id: 2,
@@ -25,6 +27,7 @@ const CarouselSection = () => {
         "Hospitals stretched, home is where future of Indian healthcare could be",
       description1: `As hospitals face growing challenges, Apollo HomeCare leads the way in reimagining healthcare with home-based solutions.`,
       description2: `Discover how the future of healthcare in India is shifting towards convenient, personalized care delivered right to your doorstep.`,
+      link: "https://www.indiatoday.in/india-today-insight/story/hospitals-stretched-home-is-where-future-of-indian-healthcare-could-be-2658641-2025-01-02",
     },
     {
       id: 3,
@@ -33,6 +36,7 @@ const CarouselSection = () => {
         "Healthcare sector in 2024 was efficient with digital technology, 2025 to provide patient-centric care",
       description1: `At Apollo HomeCare, we embrace the evolution of digital healthcare.`,
       description2: `Learn how innovations in 2024 set the stage for 2025’s patient-first approach, delivering care that’s more accessible, efficient, and centered on individual needs.`,
+      link: "https://www.pharmabiz.com/NewsDetails.aspx?aid=174426&sid=1",
     },
     {
       id: 4,
@@ -41,9 +45,9 @@ const CarouselSection = () => {
         "From hospitals to homes: Redefining patient recovery in a new era of care",
       description1: `Apollo HomeCare is at the forefront of redefining recovery by bringing expert care from hospitals to homes.`,
       description2: `Explore how personalized home-based care solutions are transforming the patient recovery journey in today’s evolving healthcare landscape.`,
+      link: "https://www.expresshealthcare.in/news/from-hospitals-to-homes-redefining-patient-recovery-in-a-new-era-of-care/447432/",
     },
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prev = () => {
@@ -71,7 +75,7 @@ const CarouselSection = () => {
       </p>
 
       <div
-        className="mt-10 flex flex-col px-2 h-[510px] sm:h-auto sm:flex-row gap-2 w-full mx-auto rounded-lg"
+        className="mt-10 flex flex-col px-2 h-[550px] sm:h-auto sm:flex-row gap-2 w-full mx-auto rounded-lg"
         style={{
           boxShadow: "0px 15px 35.8px 0px rgba(0, 0, 0, 0.25)",
         }}
@@ -93,6 +97,13 @@ const CarouselSection = () => {
           <p className="md:text-[14px] text-[12px] text-gray-600 text-md my-1">
             &quot;{testimonials[currentIndex].description2}&quot;
           </p>
+          <Link
+            href={testimonials[currentIndex].link}
+            target="_blank"
+            className="text-[#009A9F] font-[Poppins] text-[16px] font-semibold leading-[23px] tracking-[0.5px] underline underline-offset-4"
+          >
+            Read more
+          </Link>
         </div>
       </div>
 
