@@ -8,6 +8,7 @@ import local_mall from "../../assets/images/footer/local_mall.svg";
 import callosity from "@/assets/images/header/callwhite.png";
 import menu from "@/assets/images/header/menu.png";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const BottomNav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -164,7 +165,9 @@ const BottomNav = () => {
               </svg>
             </div>
             <div>
-              <p className="text-[10px] text-[#fff]">Call Now</p>
+              <Link href="tel:+918001088586">
+                <p className="text-[10px] text-[#fff]">Call Now</p>
+              </Link>
             </div>
           </div>
           <div className="rounded-lg px-[10px] py-[8px] flex flex-col justify-center items-center">
@@ -183,7 +186,9 @@ const BottomNav = () => {
               </svg>
             </div>
             <div>
-              <p className="text-[10px] text-[#fff]">WhatsApp</p>
+              <Link href="https://wa.me/918001088586">
+                <p className="text-[10px] text-[#fff]">WhatsApp</p>
+              </Link>
             </div>
           </div>
 
