@@ -13,9 +13,9 @@ const Tabs = ({ tabsData }) => {
   if (!isClient) return null;
 
   return (
-    <div className="bg-[#003638]">
+    <div className="md:bg-[#003638]">
       {window.innerWidth > 770 ? (
-        <TabList className=" md:flex gap-24 max-w-[1512px] mx-auto">
+        <TabList className="md:flex gap-24 max-w-[1512px] mx-auto">
           {tabsData.map((tab, index) => (
             <Tab
               key={index}
@@ -46,7 +46,7 @@ const Tabs = ({ tabsData }) => {
             <Tab
               key={index}
               className={({ selected }) =>
-                `w-[calc(50%-0.5rem)] p-4 bg-[#E8F8F5] rounded-lg flex flex-col items-center gap-2 shadow ${
+                `w-[calc(50%-0.5rem)] p-4 bg-[#E0F7FA] rounded-[10px] flex flex-col items-center gap-2 shadow ${
                   selected ? "ring ring-orange-500" : ""
                 }`
               }
@@ -62,7 +62,7 @@ const Tabs = ({ tabsData }) => {
                       selected ? "filter-orange" : "brightness-0"
                     }`}
                   />
-                  <span className="text-center text-sm font-medium text-[#003638]">
+                  <span className="text-center text-[9.8px] font-bold leading-[13.3px] text-[#003638] font-poppins">
                     {tab.name}
                   </span>
                 </>

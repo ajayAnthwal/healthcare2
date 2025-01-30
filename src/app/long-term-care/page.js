@@ -124,16 +124,16 @@ const LongTermCare = () => {
         <>
           <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
             <div className="relative w-[1512px] mx-auto h-[555px] flex flex-col items-center md:bg-cover bg-no-repeat">
-              <div className="absolute top-0 left-0 transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
+              <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Long Term Care
               </div>
               <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
                 <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
                   <h1 className="w-max text-5xl md:text-6xl font-medium leading-[105.84px] tracking-[-1.2px] font-poppins text-white">
-                    Care You Can Trust At
-                    <span className="text-gray-300 bg-gradient-to-r from-[#002729] to-[#FFF] bg-clip-text text-transparent">
+                    Care You Can Trust At Home
+                    {/* <span className="text-gray-300 bg-gradient-to-r from-[#002729] to-[#FFF] bg-clip-text text-transparent">
                       &nbsp; Home
-                    </span>
+                    </span> */}
                   </h1>
                   <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px]">
                     Expert care for your loved ones, combining medical <br />
@@ -159,7 +159,7 @@ const LongTermCare = () => {
           </div>
 
           <div className="relative block md:hidden">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
+            <div className="absolute top-0 left-[107px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
               Home &gt;&gt;&gt; Long Term Care
             </div>
           </div>
@@ -328,7 +328,7 @@ const LongTermCare = () => {
             </div>
           </section>
           <div>
-          <div className="mt-8 mb-8 container mx-auto px-5 md:px-0">
+            <div className="mt-8 mb-8 container mx-auto px-5 md:px-0">
               <h2 className="text-[32px] font-semibold text-[#031432] font-poppins leading-normal">
                 How Apollo is Different
               </h2>
