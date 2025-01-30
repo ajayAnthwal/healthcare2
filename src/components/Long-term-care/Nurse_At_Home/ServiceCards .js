@@ -89,10 +89,6 @@ const ServiceCards = () => {
           </div>
         ))}
       </div>
-
-      <div className="mt-12">
-        <FooterCTA />
-      </div>
     </div>
   );
 };

@@ -1,10 +1,44 @@
 import React from "react";
 import doctor from "@/assets/images/book/doctor.png";
+import homevisit from "@/assets/images/book/homevisit.png";
 import Image from "next/image";
 
 const Home_Visit = () => {
   return (
     <div>
+      <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
+        <div className="relative w-[1512px] mx-auto h-[508px] flex flex-col items-center md:bg-cover bg-no-repeat">
+          <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
+            Home &gt;&gt;&gt; Home Visit
+          </div>
+          <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
+            <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
+            <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
+                Expert Healthcare, Right at <br /> Your Doorstep
+              </h1>
+              <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px]">
+                Convenient, personalized medical care delivered in the <br />{" "}
+                comfort of your home.
+              </p>
+
+              <button className="mt-4 px-5 py-3.5 bg-white text-[#003638] rounded-[10.08px] font-poppins text-[18.9px] font-medium leading-[39.06px] tracking-[-0.191px] flex justify-center items-center gap-[10.08px] shadow-md hover:bg-gray-200">
+                Enquire Now
+              </button>
+            </div>
+
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+              <Image
+                src={homevisit}
+                alt="Care at Home"
+                width={791}
+                height={541}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section className="bg-white py-10">
         <div className="container mx-auto">
           <h2 className="text-[#031432] text-center font-poppins text-[32px] font-semibold leading-normal mb-12">

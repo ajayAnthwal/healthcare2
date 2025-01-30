@@ -5,18 +5,56 @@ import Book_banner from "@/assets/images/book/book-banner.png";
 import product from "@/assets/images/book/product.png";
 import chair from "@/assets/images/book/chair.png";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [isRentMode, setIsRentMode] = useState(false);
+  const [showCalendar, setShowCalendar] = useState(false);
+  const [showInput, setShowInput] = useState(false);
+  const [activeTab, setActiveTab] = useState(0);
 
   const increaseQuantity = () => setQuantity(quantity + 1);
   const decreaseQuantity = () => {
     if (quantity > 1) setQuantity(quantity - 1);
   };
 
+  const handleCheckPincode = () => {
+    toast.success("Pincode checked successfully!", {
+      position: "top-right",
+      autoClose: 2000,
+    });
+  };
+
+  const tabs = [
+    {
+      name: "Description",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ",
+    },
+    {
+      name: "Vendor's Info",
+      content: "Vendor information and details about the seller.",
+    },
+    {
+      name: "More Offers",
+      content: "Check out additional offers and deals available.",
+    },
+    {
+      name: "Store Policies",
+      content: "Read about return, refund, and store policies.",
+    },
+    {
+      name: "Inquiries",
+      content: "Have questions? Here are some common inquiries answered.",
+    },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-8">
+      <ToastContainer />
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Product Detail</h1>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1">
@@ -48,7 +86,7 @@ const ProductDetail = () => {
                 Brand C WheelChair
               </h2>
               <div className="flex items-center space-x-2">
-                <span className="text-yellow-500 text-lg">★★★★★</span>
+                <span className="text-black text-lg">★★★★★</span>
                 <span className="text-right text-[14px] text-[#009A9F] font-poppins font-normal leading-[21px] underline">
                   12 reviews
                 </span>
@@ -88,12 +126,34 @@ const ProductDetail = () => {
                   </svg>
                   Delivered in 1-2 days
                 </span>
-                <a
-                  href="#"
-                  className="text-[#009A9F] ml-2 underline hover:underline-offset-4"
+                <button
+                  className="text-[#009A9F] underline hover:underline-offset-4 ml-3"
+                  onClick={() => setShowInput(!showInput)}
                 >
                   Check Pincode
-                </a>
+                </button>
+              </div>
+              <div>
+                {showInput && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="mt-2 flex items-center border border-[#009A9F] rounded-lg overflow-hidden w-72"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Pincode"
+                      className="p-2 w-full text-gray-600 focus:outline-none"
+                    />
+                    <button
+                      className="bg-[#009A9F] text-white px-4 py-2"
+                      onClick={handleCheckPincode}
+                    >
+                      Check
+                    </button>
+                  </motion.div>
+                )}
               </div>
 
               <div className="flex flex-col md:flex-row gap-4 mt-4">
@@ -151,7 +211,7 @@ const ProductDetail = () => {
                 Brand C WheelChair - Rent Now
               </h2>
               <div className="flex items-center space-x-2">
-                <span className="text-yellow-500 text-lg">★★★★★</span>
+                <span className="text-black text-lg">★★★★★</span>
                 <span className="text-right text-[14px] text-[#009A9F] font-poppins font-normal leading-[21px] underline">
                   12 reviews
                 </span>
@@ -172,9 +232,64 @@ const ProductDetail = () => {
                   <button className="px-4 py-2 bg-[#E6F5F5] text-[#009A9F] rounded-full text-sm font-medium hover:bg-[#D9EFEF]">
                     30 Days
                   </button>
-                  <button className="px-4 py-2 bg-[#E6F5F5] text-[#009A9F] rounded-full text-sm font-medium hover:bg-[#D9EFEF]">
+                  <button
+                    className="px-4 py-2 bg-[#E6F5F5] text-[#009A9F] rounded-full text-sm font-medium hover:bg-[#D9EFEF]"
+                    onClick={() => setShowCalendar(!showCalendar)}
+                  >
                     Start Time
                   </button>
+
+                  {showCalendar && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      className="absolute mt-2 bg-white shadow-lg rounded-lg p-4 w-80"
+                    >
+                      <div className="flex justify-between items-center">
+                        <p className="text-gray-700 font-medium">
+                          Choose Time period
+                        </p>
+                        <button
+                          className="text-gray-500"
+                          onClick={() => setShowCalendar(false)}
+                        >
+                          ✕
+                        </button>
+                      </div>
+                      <div className="flex gap-2 mt-2">
+                        <button className="px-4 py-2 bg-[#009A9F] text-white rounded-full text-sm font-medium">
+                          15 Days
+                        </button>
+                        <button className="px-4 py-2 bg-[#E6F5F5] text-[#009A9F] rounded-full text-sm font-medium hover:bg-[#D9EFEF]">
+                          30 Days
+                        </button>
+                      </div>
+                      <div className="mt-4">
+                        <p className="font-semibold">Month 2000</p>
+                        <div className="grid grid-cols-7 gap-2 text-center mt-2 text-gray-600">
+                          {[
+                            "Mon",
+                            "Tue",
+                            "Wed",
+                            "Thu",
+                            "Fri",
+                            "Sat",
+                            "Sun",
+                          ].map((day) => (
+                            <span key={day} className="font-medium">
+                              {day}
+                            </span>
+                          ))}
+                          {[...Array(42)].map((_, i) => (
+                            <span key={i} className="py-1">
+                              {i + 1}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
               </div>
 
@@ -211,11 +326,31 @@ const ProductDetail = () => {
                 <a
                   href="#"
                   className="text-[#009A9F] ml-2 underline hover:underline-offset-4"
+                  onClick={() => setShowInput(!showInput)}
                 >
                   Check Pincode
                 </a>
               </div>
 
+              <div>
+                {showInput && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="mt-2 flex items-center border border-[#009A9F] rounded-lg overflow-hidden w-72"
+                  >
+                    <input
+                      type="text"
+                      placeholder="Pincode"
+                      className="p-2 w-full text-gray-600 focus:outline-none"
+                    />
+                    <button className="bg-[#009A9F] text-white px-4 py-2">
+                      Check
+                    </button>
+                  </motion.div>
+                )}
+              </div>
               <div className="flex flex-col md:flex-row gap-4 mt-4">
                 <button className="flex flex-col items-center gap-2 px-5 py-2.5 rounded-full bg-[#009A9F] text-white text-center font-poppins text-sm font-semibold hover:bg-[#008a8e]">
                   Rent Now
@@ -268,35 +403,29 @@ const ProductDetail = () => {
       </div>
 
       <div className="mt-10 border-t pt-6">
-        <div className="flex gap-6 border-b pb-3 text-gray-600 text-sm">
-          <button className="text-teal-600  font-semibold text-[14px] leading-[21px] border-b-2 border-teal-600 text-center">
-            Description
-          </button>
-          <button className="hover:text-gray-900 text-teal-600  font-semibold text-[14px] leading-[21px] text-center">
-            Vendor&apos;s Info
-          </button>
-          <button className="hover:text-gray-900 text-teal-600  font-semibold text-[14px] leading-[21px] text-center">
-            More Offers
-          </button>
-          <button className="hover:text-gray-900 text-teal-600  font-semibold text-[14px] leading-[21px] text-center">
-            Store Policies
-          </button>
-          <button className="hover:text-gray-900 text-teal-600  font-semibold text-[14px] leading-[21px] text-center">
-            Inquiries
-          </button>
+        <div className="flex gap-6 border-b pb-3 text-gray-600 text-sm flex-wrap sm:flex-nowrap">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={`text-teal-600 font-semibold text-[14px] leading-[21px] text-center border-b-2 transition-all ${
+                activeTab === index
+                  ? "border-teal-600"
+                  : "border-transparent hover:text-gray-900"
+              }`}
+            >
+              {tab.name}
+            </button>
+          ))}
         </div>
-
         <div className="mt-6 text-sm text-gray-700">
           <p className="text-black text-justify text-[14.662px] font-normal leading-[21.993px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris.
+            {tabs[activeTab].content}
           </p>
-
           <p className="mt-2">
             <a
               href="#"
-              className="text-black font-poppins text-[14.662px] font-normal leading-[21.993px] underline decoration-solid decoration-black decoration-auto underline-offset-auto"
+              className="text-black font-poppins text-[14.662px] font-normal leading-[21.993px] underline decoration-solid decoration-black"
             >
               LEARN MORE
             </a>
@@ -309,27 +438,33 @@ const ProductDetail = () => {
           Similar Products
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {[...Array(5)].map((_, index) => (
-            <div key={index} className="bg-white shadow-md rounded-lg p-4">
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-lg p-4 w-[90%] sm:w-auto mx-auto"
+            >
               <Image
                 src={product}
                 alt="Similar Product"
                 width={210}
                 height={210}
-                className="rounded-[6.5px] flex-shrink-0 bg-cover bg-center bg-lightgray"
+                className="rounded-[6.5px] bg-cover bg-center bg-lightgray mx-auto"
               />
 
-              <h3 className="text-[#03314A] font-poppins text-[18.2px] font-bold leading-[23.4px] tracking-[0.364px] mt-4">
+              <h3 className="text-[#03314A] font-poppins text-[18.2px] font-bold leading-[23.4px] tracking-[0.364px] mt-4 text-center">
                 Hospital Beds
               </h3>
 
-              <p className="text-[#3A4548] font-poppins text-[15.6px] font-normal leading-[22.1px]">
+              <p className="text-[#3A4548] font-poppins text-[15.6px] font-normal leading-[22.1px] text-center">
                 Delivery Date: 22nd Dec, 2024
               </p>
 
-              <p className="text-sm text-gray-600">Time: 9AM-10PM</p>
-              <button className="mt-4 px-[13px] py-[13px] inline-flex justify-center items-center gap-[13px] border-[0.65px] border-[#009A9F] bg-white text-[#009A9F] font-poppins text-[16.9px] font-medium leading-[23.4px] rounded-[18.2px] hover:bg-teal-100 w-full">
+              <p className="text-sm text-gray-600 text-center">
+                Time: 9AM-10PM
+              </p>
+
+              <button className="mt-4 px-[13px] w-[231px] py-[13px] inline-flex justify-center items-center gap-[13px] border-[0.65px] border-[#009A9F] bg-white text-[#009A9F] font-poppins text-[16.9px] font-medium leading-[23.4px] rounded-[18.2px] hover:bg-teal-100 md:w-full">
                 Book Now
               </button>
             </div>
