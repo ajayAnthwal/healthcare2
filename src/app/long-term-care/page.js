@@ -27,6 +27,7 @@ import service4 from "@/assets/images/homepage/service4.png";
 import service5 from "@/assets/images/homepage/service5.png";
 import service6 from "@/assets/images/homepage/service6.png";
 import service7 from "@/assets/images/homepage/service7.png";
+import FooterCTA from "@/components/Long-term-care/FooterCTA";
 
 const LongTermCare = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -121,14 +122,14 @@ const LongTermCare = () => {
       </div>
       {selectedIndex === -1 && (
         <>
-          <div className="bg-[url('/bg.png')] bg-cover bg-center">
-            <div className="relative w-[1512px] mx-auto h-[555px] flex items-center md:bg-cover bg-no-repeat">
-              <div className="absolute top-0 left-0 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
+          <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
+            <div className="relative w-[1512px] mx-auto h-[555px] flex flex-col items-center md:bg-cover bg-no-repeat">
+              <div className="absolute top-0 left-0 transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Long Term Care
               </div>
-              <div className="max-w-[1512px] flex flex-col md:flex-row items-center w-full pl-8">
+              <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
                 <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-                  <h1 className=" w-max text-5xl md:text-6xl font-medium leading-[105.84px] tracking-[-1.2px] font-poppins text-white">
+                  <h1 className="w-max text-5xl md:text-6xl font-medium leading-[105.84px] tracking-[-1.2px] font-poppins text-white">
                     Care You Can Trust At
                     <span className="text-gray-300 bg-gradient-to-r from-[#002729] to-[#FFF] bg-clip-text text-transparent">
                       &nbsp; Home
@@ -157,9 +158,15 @@ const LongTermCare = () => {
             </div>
           </div>
 
+          <div className="relative block md:hidden">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
+              Home &gt;&gt;&gt; Long Term Care
+            </div>
+          </div>
+
           <div>
             <div className="container mx-auto px-4 py-8">
-              <h1 className="text-center text-2xl md:text-4xl font-bold text-[#031432] mb-10">
+              <h1 className="text-center text-2xl mt-12 md:text-4xl font-bold text-[#031432] mb-10">
                 Our Services
               </h1>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center">
@@ -365,6 +372,8 @@ const LongTermCare = () => {
           </div>
         </>
       )}
+
+      <FooterCTA />
     </>
   );
 };
