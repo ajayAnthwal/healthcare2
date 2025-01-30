@@ -328,7 +328,7 @@ const LongTermCare = () => {
             </div>
           </section>
           <div>
-            <div className="mt-8 mb-8 container  mx-auto">
+          <div className="mt-8 mb-8 container mx-auto px-5 md:px-0">
               <h2 className="text-[32px] font-semibold text-[#031432] font-poppins leading-normal">
                 How Apollo is Different
               </h2>
