@@ -84,3 +84,27 @@
     width: fit-content;
   }
 }
+
+@media (min-width: 924px) and (max-width: 1511px) {
+  .w-\[1512px\] {
+    width: auto !important;
+  }
+  .w-\[790px\] {
+    width: auto !important;
+  }
+}
+@media (min-width: 930px) and (max-width: 1080px) {
+  html,
+  :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    width: fit-content !important;
+  }
+}
