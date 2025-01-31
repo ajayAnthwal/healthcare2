@@ -15,11 +15,64 @@ const Services = () => {
       title: "Deal of the week",
       imageSrc: medicine,
       description: "Vaccinations 45% off",
-    }
+    },
+    {
+      title: "Hot Offers",
+      imageSrc: customer,
+      description: "Physiotherapy services 40% off",
+    },
+    {
+      title: "Deal of the week",
+      imageSrc: medicine,
+      description: "Vaccinations 45% off",
+    },
+
+    {
+      title: "Hot Offers",
+      imageSrc: customer,
+      description: "Physiotherapy services 40% off",
+    },
+    {
+      title: "Deal of the week",
+      imageSrc: medicine,
+      description: "Vaccinations 45% off",
+    },
+    {
+      title: "Hot Offers",
+      imageSrc: customer,
+      description: "Physiotherapy services 40% off",
+    },
+    {
+      title: "Deal of the week",
+      imageSrc: medicine,
+      description: "Vaccinations 45% off",
+    },
+
+    {
+      title: "Hot Offers",
+      imageSrc: customer,
+      description: "Physiotherapy services 40% off",
+    },
+    {
+      title: "Deal of the week",
+      imageSrc: medicine,
+      description: "Vaccinations 45% off",
+    },
+    ,
+    {
+      title: "Hot Offers",
+      imageSrc: customer,
+      description: "Physiotherapy services 40% off",
+    },
+    {
+      title: "Deal of the week",
+      imageSrc: medicine,
+      description: "Vaccinations 45% off",
+    },
   ];
 
   return (
-    <div className="container mx-auto py-8 mt-12 mb-11">
+    <div className="container mx-auto py-8  mb-11">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {cardsData.map((card, index) => (
           <Book_Service

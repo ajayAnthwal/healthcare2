@@ -442,7 +442,7 @@ const ProductDetail = () => {
           {[...Array(5)].map((_, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-4 w-[90%] sm:w-auto mx-auto"
+              className="bg-white shadow-md rounded-lg p-4 w-[90%] sm:w-auto mx-auto flex flex-col items-center"
             >
               <Image
                 src={product}
