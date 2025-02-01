@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Tab, TabList } from "@headlessui/react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaArrowDown } from "react-icons/fa6";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const Tabs = ({ tabsData }) => {
   const [isClient, setIsClient] = useState(false);
@@ -51,12 +51,12 @@ const Tabs = ({ tabsData }) => {
         </TabList>
       ) : (
         <>
-          <div className="bg-[#009A9F]">
+          <div className="bg-[#009A9F]" onClick={() => setIsOpen(!isOpen)}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="bg-[#009A9F] text-white py-2 px-4  mb-4 mx-auto block"
+              className="bg-[#009A9F] text-white py-2 px-4 mb-4 mx-auto gap-2 flex items-center"
             >
-              {isOpen ? "Close" : ""} <FaArrowDown />
+              {isOpen ? "Close" : ""} {isOpen ? <FaArrowUp /> : <FaArrowDown />}
             </button>
           </div>
           <motion.div
