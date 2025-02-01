@@ -15,6 +15,7 @@ import ProductDetail from "@/components/Ecommerce/ProductDetail";
 import product2 from "@/assets/images/book/product2.png";
 import banerproduct from "@/assets/images/book/baner-product.png";
 import deal from "@/assets/images/book/deal.png";
+import Link from "next/link";
 
 const Ecommerce = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -274,44 +275,43 @@ const Ecommerce = () => {
               </div>
               <div className="grid grid-cols-3 gap-[20px]">
                 {products.map((product) => (
-                  <div
-                    key={product.id}
-                    className="bg-white rounded-lg shadow-lg p-4 relative"
-                  >
-                    <Image
-                      src={product.imageUrl}
-                      alt={product.name}
-                      width={328}
-                      height={244}
-                      className="rounded-lg"
-                    />
-                    <h2 className="text-[20px] font-medium mt-2 flex justify-between items-center text-[#484848] leading-normal py-2">
-                      {product.name}
-                      <div className="flex">
-                        {Array(product.rating)
-                          .fill()
-                          .map((_, i) => (
-                            <span key={i} className="text-black text-lg">
-                              ★
-                            </span>
-                          ))}
+                  <Link href="/book" key={product.id}>
+                    <div className="bg-white rounded-lg shadow-lg p-4 relative">
+                      <Image
+                        src={product.imageUrl}
+                        alt={product.name}
+                        width={328}
+                        height={244}
+                        className="rounded-lg"
+                      />
+                      <h2 className="text-[20px] font-medium mt-2 flex justify-between items-center text-[#484848] leading-normal py-2">
+                        {product.name}
+                        <div className="flex">
+                          {Array(product.rating)
+                            .fill()
+                            .map((_, i) => (
+                              <span key={i} className="text-black text-lg">
+                                ★
+                              </span>
+                            ))}
+                        </div>
+                      </h2>
+                      <p className="text-[#8A8A8A] text-[12px] font-medium leading-[12px]">
+                        {product.description}
+                      </p>
+                      <p className="text-[#8A8A8A] text-[12px] font-medium leading-[12px] py-5">
+                        {product.reviews}
+                      </p>
+                      <div className="flex justify-between items-center mt-2">
+                        <p className="text-[#484848] text-[24px] font-medium">
+                          {product.price}
+                        </p>
+                        <p className="text-[#FF4646] text-[12px] font-normal text-right">
+                          {product.status}
+                        </p>
                       </div>
-                    </h2>
-                    <p className="text-[#8A8A8A] text-[12px] font-medium leading-[12px]">
-                      {product.description}
-                    </p>
-                    <p className="text-[#8A8A8A] text-[12px] font-medium leading-[12px] py-5">
-                      {product.reviews}
-                    </p>
-                    <div className="flex justify-between items-center mt-2">
-                      <p className="text-[#484848] text-[24px] font-medium">
-                        {product.price}
-                      </p>
-                      <p className="text-[#FF4646] text-[12px] font-normal text-right">
-                        {product.status}
-                      </p>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </main>

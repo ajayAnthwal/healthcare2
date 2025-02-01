@@ -35,20 +35,7 @@ const Filters = () => {
           Filters
         </h3>
       </div>
-
-      <div className="mb-6">
-        <label className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            className="w-[20px] h-[20px] p-[3px] flex justify-center items-center border border-[#009A9F] bg-[#009A9F] rounded-md"
-          />
-
-          <span className="text-black  text-[14px] font-medium leading-[120%]">
-            As per my preferences
-          </span>
-        </label>
-      </div>
-      <div className="mb-8 ">
+      <div className="mb-8  mt-4">
         <h4 className="text-[#009A9F] font-poppins text-[16px] font-medium leading-[120%] mb-2 border-b border-[#D3D3D3]">
           Categories
         </h4>
