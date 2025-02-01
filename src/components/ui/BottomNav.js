@@ -233,22 +233,48 @@ const BottomNav = () => {
               </button>
             </div>
             <ul className="space-y-4">
-              <li className="border-b border-gray-600 pb-2">Long Term Care</li>
-              <li className="border-b border-gray-600 pb-2">Home Visit</li>
               <li className="border-b border-gray-600 pb-2">
-                Medical Equipments
+                <Link href="/long-term-care" className="hover:text-blue-500">
+                  Long Term Care
+                </Link>
               </li>
               <li className="border-b border-gray-600 pb-2">
-                Home Diagnostics
+                <Link href="/book" className="hover:text-blue-500">
+                  Home Visit
+                </Link>
               </li>
               <li className="border-b border-gray-600 pb-2">
-                Adult Vaccinations
+                <Link href="/ecommerce" className="hover:text-blue-500">
+                  Medical Equipments
+                </Link>
+              </li>
+              <li className="border-b border-gray-600 pb-2">
+                <Link href="/diagnostics" className="hover:text-blue-500">
+                  Home Diagnostics
+                </Link>
+              </li>
+              <li className="border-b border-gray-600 pb-2">
+                <Link href="/vacinnation" className="hover:text-blue-500">
+                  Adult Vaccinations
+                </Link>
               </li>
             </ul>
             <ul className="space-y-4 mt-8">
-              <li className="border-b border-gray-600 pb-2">About Us</li>
-              <li className="border-b border-gray-600 pb-2">Join Us</li>
-              <li className="border-b border-gray-600 pb-2">Partner With Us</li>
+              <li className="border-b border-gray-600 pb-2">
+                <Link href="/about" className="hover:text-blue-500">
+                  About Us
+                </Link>
+              </li>
+              <li className="border-b border-gray-600 pb-2">
+                <Link href="/career" className="hover:text-blue-500">
+                  Join Us
+                </Link>
+              </li>
+              <li className="border-b border-gray-600 pb-2">
+                <Link href="/partner" className="hover:text-blue-500">
+                  Partner With Us
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
