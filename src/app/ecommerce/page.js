@@ -182,7 +182,7 @@ const Ecommerce = () => {
             </div>
           </div>
 
-          <div className="flex  mt-6 gap-[20px] w-[1512px] mx-auto">
+          <div className="flex  mt-6 gap-[20px] w-[1512px] mx-auto mb-3">
             <div className="bg-[#E6F5F5] p-4 shadow-md rounded-lg w-full md:w-[269px] mt-[20px]">
               <h3 className="text-black font-poppins text-[20px] font-semibold leading-[120%]">
                 Filters
@@ -208,53 +208,6 @@ const Ecommerce = () => {
                     </label>
                   ))}
                 </div>
-              </div>
-              <div className="mb-6">
-                <h4
-                  className="text-[#000] font-poppins text-[18px] font-medium leading-[120%] mb-2 cursor-pointer flex justify-between"
-                  onClick={() => setIsBrandsOpen(!isBrandsOpen)}
-                >
-                  Brands <span>{isBrandsOpen ? "▲" : "▼"}</span>
-                </h4>
-                {isBrandsOpen && (
-                  <div className="flex flex-wrap gap-2 text-[#8A8A8A] text-[16px]">
-                    {[
-                      "Apollo",
-                      "Artemis",
-                      "Athena",
-                      "Hermes",
-                      "Zeus",
-                      "Hera",
-                    ].map((brand) => (
-                      <span
-                        key={brand}
-                        className="text-[#8A8A8A] text-[16px] font-[400] "
-                      >
-                        {brand}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <div>
-                <h4
-                  className="text-[#000] font-poppins text-[18px] font-medium leading-[120%] mb-2 cursor-pointer flex justify-between"
-                  onClick={() => setIsCollectionsOpen(!isCollectionsOpen)}
-                >
-                  Collections <span>{isCollectionsOpen ? "▲" : "▼"}</span>
-                </h4>
-                {isCollectionsOpen && (
-                  <div className="flex flex-col gap-2 text-[#8A8A8A] text-[16px] font-[400] ">
-                    {[
-                      "All products",
-                      "Best sellers",
-                      "Deal of the Day",
-                      "Other",
-                    ].map((collection) => (
-                      <span key={collection}>{collection}</span>
-                    ))}
-                  </div>
-                )}
               </div>
             </div>
             <main className="flex-1 p-5">
