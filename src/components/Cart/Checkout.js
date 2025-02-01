@@ -17,7 +17,6 @@ function Checkout() {
     { name: "Rahul (self)", image: Snehal },
     { name: "Neha", image: neha },
     { name: "Swastik", image: rahul },
-    { name: "Sneha", image: Swastik },
   ];
 
   const handlePayNow = () => {
@@ -158,7 +157,7 @@ function Checkout() {
             </div>
           </div>
 
-          <div className="lg:w-[320px] hidden lg:block">
+          <div className="lg:w-[320px] lg:block">
             <div className="sticky top-24">
               <div className="bg-white rounded-[20px] shadow-sm p-6">
                 <h2 className="text-[#333] text-xl font-semibold mb-6">
