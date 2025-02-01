@@ -159,67 +159,68 @@ function Checkout() {
           </div>
 
           <div className="lg:w-[320px] hidden lg:block">
-            <div className="bg-white rounded-[20px] shadow-sm p-6">
-              <h2 className="text-[#333] text-xl font-semibold mb-6">
-                Order Summary
-              </h2>
+            <div className="sticky top-24">
+              <div className="bg-white rounded-[20px] shadow-sm p-6">
+                <h2 className="text-[#333] text-xl font-semibold mb-6">
+                  Order Summary
+                </h2>
 
-              <div className="space-y-4">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Subtotal</span>
-                  <span className="font-semibold">₹20,00,000</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Discount (-20%)</span>
-                  <span className="text-red-500">₹20</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Delivery Fee</span>
-                  <span className="font-semibold">₹20,00,000</span>
-                </div>
-                <div className="border-t pt-4 mt-4">
+                <div className="space-y-4">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Total</span>
-                    <span className="text-[#009A9F] font-semibold">
-                      ₹20,00,000
-                    </span>
+                    <span className="text-gray-600">Subtotal</span>
+                    <span className="font-semibold">₹20,00,000</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Discount (-20%)</span>
+                    <span className="text-red-500">₹20</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Delivery Fee</span>
+                    <span className="font-semibold">₹20,00,000</span>
+                  </div>
+                  <div className="border-t pt-4 mt-4">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Total</span>
+                      <span className="text-[#009A9F] font-semibold">
+                        ₹20,00,000
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="mt-6">
-                <div className="flex items-center bg-gray-100 rounded-lg">
-                  <div className="flex-1 flex items-center px-3 py-2">
-                    <span className="text-gray-400 mr-2">🏷️</span>
-                    <input
-                      type="text"
-                      placeholder="Add promo code"
-                      className="bg-transparent w-full outline-none text-sm text-gray-600 placeholder-gray-400"
-                    />
+                <div className="mt-6">
+                  <div className="flex items-center bg-gray-100 rounded-lg">
+                    <div className="flex-1 flex items-center px-3 py-2">
+                      <span className="text-gray-400 mr-2">🏷️</span>
+                      <input
+                        type="text"
+                        placeholder="Add promo code"
+                        className="bg-transparent w-full outline-none text-sm text-gray-600 placeholder-gray-400"
+                      />
+                    </div>
+                    <button className="bg-[#009A9F] text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-[#008488] transition-colors">
+                      Apply
+                    </button>
                   </div>
-                  <button className="bg-[#009A9F] text-white px-4 py-2 rounded-r-lg text-sm font-medium hover:bg-[#008488] transition-colors">
-                    Apply
-                  </button>
                 </div>
+
+                <button
+                  onClick={() => setShowPaymentModal(true)}
+                  className="w-full bg-[#009A9F] text-white py-3 px-6 rounded-full mt-6 font-medium hover:bg-[#008488] transition-colors flex items-center justify-center"
+                >
+                  Go to Payment
+                  <span className="ml-2">→</span>
+                </button>
               </div>
-
-              <button
-                onClick={() => setShowPaymentModal(true)}
-                className="w-full bg-[#009A9F] text-white py-3 px-6 rounded-full mt-6 font-medium hover:bg-[#008488] transition-colors flex items-center justify-center"
-              >
-                Go to Payment
-                <span className="ml-2">→</span>
-              </button>
-            </div>
-
-            <div className="mt-6 bg-white rounded-[20px] shadow-sm p-6">
-              <h2 className="text-[#333] text-xl font-semibold mb-4">
-                Deliver Info
-              </h2>
-              <p className="text-gray-600">
-                Your Item will get to you by{" "}
-                <span className="font-semibold">7th Jan,25</span>
-              </p>
+              <div className="mt-6 bg-white rounded-[20px] shadow-sm p-6">
+                <h2 className="text-[#333] text-xl font-semibold mb-4">
+                  Deliver Info
+                </h2>
+                <p className="text-gray-600">
+                  Your Item will get to you by{" "}
+                  <span className="font-semibold">7th Jan, 25</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
