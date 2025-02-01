@@ -129,7 +129,7 @@ const LongTermCare = () => {
               </div>
               <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
                 <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-                <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
+                  <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
                     Care You Can Trust At Home
                     {/* <span className="text-gray-300 bg-gradient-to-r from-[#002729] to-[#FFF] bg-clip-text text-transparent">
                       &nbsp; Home
@@ -159,7 +159,7 @@ const LongTermCare = () => {
           </div>
 
           <div className="relative block md:hidden">
-            <div className="absolute top-0 left-[107px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
+            <div className="absolute top-0 left-[107px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px] -mt-3 -ml-2">
               Home &gt;&gt;&gt; Long Term Care
             </div>
           </div>
@@ -370,12 +370,11 @@ const LongTermCare = () => {
               </p>
             </div>
           </div>
-        </> 
+        </>
       )}
-<div className="my-5">
-<FooterCTA />
-</div>
-    
+      <div className="my-5">
+        <FooterCTA />
+      </div>
     </>
   );
 };

@@ -51,12 +51,14 @@ const Tabs = ({ tabsData }) => {
         </TabList>
       ) : (
         <>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="bg-[#003638] text-white py-2 px-4  mb-4 mx-auto block"
-          >
-            {isOpen ? "Close" : ""} <FaArrowDown />
-          </button>
+          <div className="bg-[#009A9F]">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="bg-[#009A9F] text-white py-2 px-4  mb-4 mx-auto block"
+            >
+              {isOpen ? "Close" : ""} <FaArrowDown />
+            </button>
+          </div>
           <motion.div
             initial={{ height: 0 }}
             animate={{ height: isOpen ? "auto" : 0 }}
