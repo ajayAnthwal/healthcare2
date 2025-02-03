@@ -564,7 +564,7 @@ const Header = () => {
         </div>
 
         <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[4rem]">
-          <div className="flex w-full max-w-[1352px] h-16 items-center mobile-hide">
+          <div className="flex w-full max-w-[1512px] pl-[54px] h-16 items-center mobile-hide">
             <nav className="flex justify-center items-center gap-10">
               <ul className="flex justify-center items-center gap-10">
                 {[

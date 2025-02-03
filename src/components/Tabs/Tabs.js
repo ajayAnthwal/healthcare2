@@ -23,7 +23,7 @@ const Tabs = ({ tabsData }) => {
   return (
     <div className={`md:bg-[#003638] ${isOpen ? "bg-[#333]" : ""}`}>
       {window.innerWidth > 770 ? (
-        <TabList className="md:flex gap-24 max-w-[1512px] mx-auto">
+        <TabList className="md:flex  max-w-[1512px] mx-auto ">
           {tabsData.map((tab, index) => (
             <Tab
               key={index}
