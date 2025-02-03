@@ -564,7 +564,7 @@ const Header = () => {
         </div>
 
         <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[4rem]">
-          <div className="flex w-full max-w-[1352px] h-16 px-8 items-center mobile-hide">
+          <div className="flex w-full max-w-[1352px] h-16 items-center mobile-hide">
             <nav className="flex justify-center items-center gap-10">
               <ul className="flex justify-center items-center gap-10">
                 {[
@@ -629,7 +629,7 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="pl-[50px] ml-5">
+            <div className="pl-[50px]">
               <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
