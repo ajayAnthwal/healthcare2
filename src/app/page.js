@@ -54,7 +54,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       console.log("changing index " + index);
       setIndex(index == 0 ? 1 : index == 1 ? 2 : 0);
-    }, 400000000000000000);
+    }, 4000);
     return () => clearInterval(intervalId);
   }, [index]);
 

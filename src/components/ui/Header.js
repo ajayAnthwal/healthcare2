@@ -578,10 +578,10 @@ const Header = () => {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%]  ${
+                      className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%]   ${
                         pathname === link.href
                           ? "bg-[#FF784B] text-white border border-[#FF784B] rounded"
-                          : "text-[#009A9F] hover:text-[#FF784B]"
+                          : "text-[#009A9F] hover:text-[#003638]"
                       }`}
                     >
                       {link.label}
