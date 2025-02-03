@@ -563,9 +563,9 @@ const Header = () => {
           </div>
         </div>
 
-        <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[5rem]">
-          <div className="flex w-full max-w-[1512px] h-16 px-8 items-center mobile-hide">
-            <nav className="flex justify-center items-center gap-10 pl-[135px]">
+        <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[4rem]">
+          <div className="flex w-full max-w-[1352px] h-16 px-8 items-center mobile-hide">
+            <nav className="flex justify-center items-center gap-10">
               <ul className="flex justify-center items-center gap-10">
                 {[
                   { href: "/", label: "Home" },
@@ -591,7 +591,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-12 mr-4">
+            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-[66px]">
               <Link
                 href="mailto:care@apollohomecare.com"
                 className="flex items-center space-x-2"
@@ -629,7 +629,7 @@ const Header = () => {
               </Link>
             </div>
 
-            <div className="pl-[50px]">
+            <div className="pl-[50px] ml-5">
               <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
