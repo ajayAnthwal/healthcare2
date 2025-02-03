@@ -591,7 +591,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-[66px]">
+            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-[100px]">
               <Link
                 href="mailto:care@apollohomecare.com"
                 className="flex items-center space-x-2"
