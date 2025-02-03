@@ -123,7 +123,7 @@ const LongTermCare = () => {
       {selectedIndex === -1 && (
         <>
           <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
-            <div className="relative w-[1512px] mx-auto h-[555px] flex flex-col items-center md:bg-cover bg-no-repeat">
+            <div className="relative w-[1512px] mx-auto h-[564px] flex flex-col items-center md:bg-cover bg-no-repeat">
               <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Long Term Care
               </div>
@@ -135,12 +135,12 @@ const LongTermCare = () => {
                       &nbsp; Home
                     </span> */}
                   </h1>
-                  <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px]">
+                  <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px] py-[35px]">
                     Expert care for your loved ones, combining medical <br />
                     excellence with the comfort of home.
                   </p>
 
-                  <button className="mt-4 px-5 py-3.5 bg-white text-[#003638] rounded-[10.08px] font-poppins text-[18.9px] font-medium leading-[39.06px] tracking-[-0.191px] flex justify-center items-center gap-[10.08px] shadow-md hover:bg-gray-200">
+                  <button className="px-[18.9px] py-[6.3px] bg-white text-[#003638] rounded-[10.08px] font-poppins text-[18.9px] font-medium leading-[39.06px] tracking-[-0.191px] flex justify-center items-center gap-[10.08px] shadow-md hover:bg-gray-200">
                     Enquire Now
                   </button>
                 </div>
