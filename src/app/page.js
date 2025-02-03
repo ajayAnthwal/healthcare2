@@ -54,7 +54,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       console.log("changing index " + index);
       setIndex(index == 0 ? 1 : index == 1 ? 2 : 0);
-    }, 4000);
+    }, 400000000000000000);
     return () => clearInterval(intervalId);
   }, [index]);
 
@@ -216,7 +216,7 @@ const Home = () => {
 
                 <p className="w-[696px] text-[#6C87AE] font-Poppins text-[16px] font-normal leading-[19.2px]">
                   Our dedicated caregivers are here to provide quality,
-                  personalized long-term care to ensure you or your loved ones
+                  personalized long-term care to <br/> ensure you or your loved ones
                   feel supported and comfortable at every stage of care.
                 </p>
 
