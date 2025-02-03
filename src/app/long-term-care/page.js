@@ -2,11 +2,13 @@
 import React, { useState } from "react";
 import { TabGroup, TabPanels, TabPanel } from "@headlessui/react";
 import Tabs from "@/components/Tabs/Tabs";
-import Nurse from "@/assets/images/longterm/Nurse.svg";
-import self_improvement from "@/assets/images/longterm/self_improvement.svg";
-import subscriptions from "@/assets/images/longterm/subscriptions.svg";
-import Vector from "@/assets/images/longterm/Vector.svg";
-import Vector_second from "@/assets/images/longterm/Vector_second.svg";
+import Capa_1 from "@/assets/images/longterm/Capa_1.png";
+import svg2400 from "@/assets/images/longterm/svg2400.png";
+import Frame from "@/assets/images/longterm/Frame.svg";
+import svg2547 from "@/assets/images/longterm/svg2547.png";
+import Layer_1 from "@/assets/images/longterm/Layer_1.png";
+import Capa_2 from "@/assets/images/longterm/Capa_2.png";
+import iconsltc from "@/assets/images/longterm/iconsltc.png";
 import NurseAtHome from "@/components/Long-term-care/Nurse_At_Home/NurseAtHome";
 import SpecializedNurseAtHome from "@/components/Long-term-care/SpecializedNurseAtHome";
 import NursAtHomeProduct from "@/components/Long-term-care/Nurse_At_Home/NursAtHomeProduct";
@@ -33,15 +35,13 @@ const LongTermCare = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const tabsData = [
-    { name: "ICU at Home", image: Nurse },
-    { name: "Specialized Nurse at Home", image: Vector },
-    { name: "Trained Attendant at Home", image: subscriptions },
-    { name: "Mother & Baby Care", image: Vector_second },
-    { name: "Senior Care Subscription", image: self_improvement },
-    { name: "Travel Nurses", image: Vector_second },
-    { name: "Specialty Rehab Packages", image: Vector_second },
-    { name: "Specialty Travel Nurses", image: Vector_second },
-    { name: "Specialty Travel Nurses", image: Vector_second },
+    { name: "ICU at Home", image: Capa_1 },
+    { name: "Specialized Nurse at Home", image: svg2547 },
+    { name: "Trained Attendant at Home", image: Frame },
+    { name: "Mother & Baby Care", image: Layer_1 },
+    { name: "Senior Care Subscription", image: svg2400 },
+    { name: "Travel Nurses", image: Capa_2 },
+    { name: "Specialty Rehab Packages", image: iconsltc },
   ];
 
   const services = [
@@ -110,13 +110,13 @@ const LongTermCare = () => {
                 </div>
               )}
             </TabPanel>
-            <TabPanel>
+            {/* <TabPanel>
               {selectedIndex === 8 && (
                 <div>
                   <Specially_Rehab_Packages />
                 </div>
               )}
-            </TabPanel>
+            </TabPanel> */}
           </TabPanels>
         </TabGroup>
       </div>

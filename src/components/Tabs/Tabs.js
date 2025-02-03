@@ -29,7 +29,7 @@ const Tabs = ({ tabsData }) => {
               key={index}
               onClick={handleTabClick}
               className={({ selected }) =>
-                `flex items-center text-center mx-auto justify-center flex-col py-5 gap-2 ${
+                `flex items-center text-center mx-auto justify-center flex-col py-5 gap-2  text-[14px] ${
                   selected ? "text-orange-500" : "text-white"
                 } `
               }
