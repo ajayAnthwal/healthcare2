@@ -73,6 +73,50 @@ const Ecommerce = () => {
       status: "Almost Sold Out",
       imageUrl: product2,
     },
+
+    {
+      id: 4,
+      name: "Oxygen Cylinder",
+      description: "Descriptions 1 day delivery",
+      price: "$95.50",
+      reviews: "(4.1k) Customer Reviews",
+      rating: 5,
+      status: "Almost Sold Out",
+      imageUrl: product2,
+    },
+
+    {
+      id: 5,
+      name: "Oxygen Cylinder",
+      description: "Descriptions 1 day delivery",
+      price: "$95.50",
+      reviews: "(4.1k) Customer Reviews",
+      rating: 5,
+      status: "Almost Sold Out",
+      imageUrl: product2,
+    },
+
+    {
+      id: 6,
+      name: "Oxygen Cylinder",
+      description: "Descriptions 1 day delivery",
+      price: "$95.50",
+      reviews: "(4.1k) Customer Reviews",
+      rating: 5,
+      status: "Almost Sold Out",
+      imageUrl: product2,
+    },
+
+    {
+      id: 7,
+      name: "Oxygen Cylinder",
+      description: "Descriptions 1 day delivery",
+      price: "$95.50",
+      reviews: "(4.1k) Customer Reviews",
+      rating: 5,
+      status: "Almost Sold Out",
+      imageUrl: product2,
+    },
   ];
 
   return (
@@ -139,8 +183,8 @@ const Ecommerce = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row mt-6 gap-5 w-full max-w-[1512px] mx-auto mb-3 px-4 md:px-0">
-            <div className="bg-[#E6F5F5] p-4 shadow-md rounded-lg w-full md:w-[269px]">
+          <div className="flex flex-col md:flex-row mt-8 gap-5 w-full max-w-[1512px] mx-auto mb-3 px-4 md:px-0">
+            <div className="bg-[#E6F5F5] p-4 shadow-md mt-[28px] rounded-lg w-full md:w-[269px] sticky top-[7rem] left-0 h-max">
               <h3 className="text-black font-poppins text-[20px] font-semibold">
                 Filters
               </h3>
@@ -181,7 +225,8 @@ const Ecommerce = () => {
                 ))}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-[20px]">
+              {/* Responsive grid for cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-[20px]">
                 {products.map((product) => (
                   <Link href="/book" key={product.id}>
                     <div className="bg-white rounded-lg shadow-lg p-4">
@@ -214,34 +259,6 @@ const Ecommerce = () => {
                 ))}
               </div>
             </main>
-          </div>
-
-          <div className="w-full bg-[#003638] py-8 md:py-10 px-4 md:px-0">
-            <div className="w-full md:w-[1512px] mx-auto flex flex-col md:flex-row">
-              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
-                <h1 className="text-[#fff] text-3xl md:text-[#fff] text-[46px] font-semibold font-[Poppins]">
-                  Deals Of The Month
-                </h1>
-                <p className="text-[#C1C1C1] text-sm md:text-base mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing <br />
-                  elit. Scelerisque duis ultrices sollicitudin aliquam sem.
-                  <br />
-                  Scelerisque duis ultrices sollicitudin
-                </p>
-                <button className="mt-4 w-[207px] h-[56px] bg-[#009A9F] text-white text-base font-normal font-[Poppins] rounded-[10px] shadow-lg shadow-[#009A9F]/30 hover:bg-[#007D82]">
-                  Buy Now
-                </button>
-              </div>
-              <div className="w-full md:w-1/2 flex items-center justify-center">
-                <Image
-                  src={deal}
-                  alt="Ventilator"
-                  className="w-full md:w-3/4 object-cover"
-                  width={669}
-                  height={458}
-                />
-              </div>
-            </div>
           </div>
         </div>
       )}

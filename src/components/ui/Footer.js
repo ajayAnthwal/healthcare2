@@ -172,16 +172,20 @@ export default async function Footer() {
 
       <hr className="mt-1" style={{ opacity: "0.28" }} />
       <div
-        className="mt-4 flex w-[1512px] mx-auto footer-container pl-[4rem] "
+        className="mt-4 flex w-[1512px] mx-auto footer-container pl-4 md:pl-4 sm:pl-1"
         style={{ opacity: "0.8" }}
       >
-        <div className=" inline-block">
-          <h1 className="inline-block font-semibold me-3">CONTACT US:</h1>
+        <div className="inline-block">
+          <h1 className="inline-block font-semibold me-3 text-sm sm:text-[14px] w-max">
+            CONTACT US:
+          </h1>
         </div>
         <div className="flex flex-wrap">
           {cities.map((item, index) => (
             <>
-              <p key={index}>{item}</p>
+              <p key={index} className="text-sm sm:text-[14px] font-[300]">
+                {item}
+              </p>
               {index !== cities.length - 1 && (
                 <hr
                   style={{
@@ -196,12 +200,13 @@ export default async function Footer() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 justify-center md:flex md:justify-start mt-4 w-[1512px] mx-auto footer-container pl-[4rem] ">
+
+      <div className="grid grid-cols-2 justify-center md:flex md:justify-start mt-4 mx-auto footer-container pl-4 md:pl-4 sm:px-4">
         {options.map((item, index) => (
           <div className="" key={index}>
             <p
               key={index}
-              className="me-8 font-semibold inline-block"
+              className="me-8 font-semibold inline-block text-sm sm:text-[14px]"
               style={{ opacity: ".8" }}
             >
               {item}
