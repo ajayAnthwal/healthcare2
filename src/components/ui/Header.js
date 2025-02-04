@@ -832,20 +832,21 @@ const Header = () => {
                   exit="exit"
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                 >
-                  <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-[375px] left-[60px]">
+                  <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-auto  left-[60px]">
                     {/* Close Button */}
-                    <div className="flex  items-center gap-[152px] bg-[#009A9F] p-[10px_20px_10px_10px] rounded-b-[20px]">
-                      <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] rounded-b-[20px] self-stretch p-4">
+                    <div className="flex items-center justify-between bg-[#009A9F] p-4 w-full rounded-b-[20px]">
+                      <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] flex-1">
                         Profile
                       </h3>
 
                       <button
-                        className="text-[#fff] font-bold text-[25px]"
+                        className="text-white font-bold text-[25px] ml-4 flex-shrink-0"
                         onClick={toggleMenu}
                       >
                         ×
                       </button>
                     </div>
+
                     <ul className="mt-1 flex flex-col gap-4 p-4">
                       <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
                         <svg
