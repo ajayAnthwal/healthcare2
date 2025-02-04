@@ -126,7 +126,7 @@ const Header = () => {
             isScrolled ? "shadow-md" : ""
           }`}
         >
-          <div className="max-w-[1512px] mx-auto px-4 flex items-center justify-between h-20 gap-6 ">
+          <div className="mx-auto px-[32px] flex items-center justify-between h-20 gap-6 ">
             <Link href="/">
               <Image
                 src={logo}
@@ -139,9 +139,8 @@ const Header = () => {
 
             <div className="flex-1 flex items-center gap-6">
               <div className="relative" ref={cityRef}>
-                {/* Location Selector */}
                 <div
-                  className="flex items-center text-[#FF784B] font-medium cursor-pointer"
+                  className="flex items-center text-[#FF784B] font-medium cursor-pointer w-max"
                   onClick={handleCityToggle}
                 >
                   <Image src={location} alt="Location" width={19} height={19} />
@@ -198,10 +197,17 @@ const Header = () => {
 
               {/* drop  */}
 
-              <div className="relative" ref={searchRef}>
+              <div
+                className="relative"
+                ref={searchRef}
+                style={{
+                  width: "100% !important",
+                }}
+              >
                 <div
-                  className="flex items-center gap-0 h-[44px] w-[790px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
+                  className="flex items-center gap-0 h-[44px] pl-4 border border-[#1AE2E9] rounded-[10px] bg-white shadow-sm"
                   style={{
+                    width: "100% !important",
                     boxShadow: "0px 1px 10px rgba(0, 247, 255, 0.25)",
                   }}
                 >
@@ -563,10 +569,10 @@ const Header = () => {
           </div>
         </div>
 
-        <header className="flex justify-center items-center gap-12 bg-[#E6F5F5] py-3 mt-[4rem]">
-          <div className="flex w-full max-w-[1512px] pl-[110px] h-16 items-center mobile-hide">
-            <nav className="flex justify-center items-center gap-10">
-              <ul className="flex justify-center items-center gap-10">
+        <header className="flex justify-center items-center bg-[#E6F5F5] py-3 mt-[4rem] px-[80px]">
+          <div className="flex items-center h-16 px-[80px] gap-x-10 w-full mobile-hide">
+            <nav className="flex flex-grow">
+              <ul className="flex gap-[33px]">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/long-term-care", label: "Long term care" },
@@ -578,7 +584,7 @@ const Header = () => {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%]   ${
+                      className={`inline-flex justify-center items-center gap-2.5 px-[10px] py-1 text-base font-normal leading-[120%] ${
                         pathname === link.href
                           ? "bg-[#FF784B] text-white border border-[#FF784B] rounded"
                           : "text-[#009A9F] hover:text-[#003638]"
@@ -591,11 +597,8 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="w-[37px] h-[32px] flex justify-center items-center rounded-full ml-[100px]">
-              <Link
-                href="mailto:care@apollohomecare.com"
-                className="flex items-center space-x-2"
-              >
+            <div className="flex gap-x-6">
+              <Link href="mailto:care@apollohomecare.com">
                 <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -605,53 +608,38 @@ const Header = () => {
                     fill="none"
                     className="fill-[#FF784B]"
                   >
-                    <path
-                      d="M0.207397 1.00235V11.0061L5.20928 6.00423L0.207397 1.00235Z"
-                      fill="#FF784B"
-                    />
-                    <path
-                      d="M1.20129 0L7.53376 6.33247C8.33353 7.13223 9.72835 7.13223 10.5281 6.33247L16.8606 0H1.20129Z"
-                      fill="#FF784B"
-                    />
-                    <path
-                      d="M11.5262 7.33059C10.8605 7.99694 9.97395 8.3647 9.03089 8.3647C8.08783 8.3647 7.20125 7.99694 6.5356 7.33059L6.20736 7.00235L1.20972 12H16.8521L11.8544 7.00235L11.5262 7.33059Z"
-                      fill="#FF784B"
-                    />
-                    <path
-                      d="M12.8525 6.00423L17.8544 11.0061V1.00235L12.8525 6.00423Z"
-                      fill="#FF784B"
-                    />
+                    <path d="M0.207397 1.00235V11.0061L5.20928 6.00423L0.207397 1.00235Z" />
+                    <path d="M1.20129 0L7.53376 6.33247C8.33353 7.13223 9.72835 7.13223 10.5281 6.33247L16.8606 0H1.20129Z" />
+                    <path d="M11.5262 7.33059C10.8605 7.99694 9.97395 8.3647 9.03089 8.3647C8.08783 8.3647 7.20125 7.99694 6.5356 7.33059L6.20736 7.00235L1.20972 12H16.8521L11.8544 7.00235L11.5262 7.33059Z" />
+                    <path d="M12.8525 6.00423L17.8544 11.0061V1.00235L12.8525 6.00423Z" />
                   </svg>
                   <span className="text-[#FF784B] text-base font-medium leading-[120%]">
                     Email
                   </span>
                 </button>
               </Link>
-            </div>
 
-            <div className="pl-[50px]">
-              <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="12"
-                  viewBox="0 0 13 12"
-                  fill="none"
-                  className="fill-[#FF784B]"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M3.32042 0.557908C3.08199 0.0277909 2.83095 0.0171788 2.6041 0.00790379C2.41856 -5.52933e-05 2.20615 0.000433081 1.99408 0.000433081C1.78183 0.000433081 1.43694 0.0801935 1.14528 0.398726C0.853444 0.717259 0.0310059 1.4873 0.0310059 3.05341C0.0310059 4.61969 1.17181 6.13308 1.33082 6.34564C1.49 6.55789 3.533 9.87451 6.76853 11.1504C9.45753 12.2108 10.0047 11.9999 10.5884 11.9468C11.1721 11.8938 12.4717 11.177 12.737 10.4336C13.0023 9.69043 13.0023 9.05339 12.9227 8.92023C12.8431 8.78758 12.6309 8.70798 12.3125 8.5488C11.9942 8.38962 10.4292 7.61942 10.1374 7.5133C9.84555 7.40717 9.63331 7.35411 9.42106 7.67282C9.20882 7.99118 8.59911 8.70798 8.4134 8.92023C8.22769 9.13296 8.04198 9.15949 7.72362 9.0003C7.40525 8.84064 6.38002 8.50485 5.16378 7.42042C4.21748 6.57675 3.57859 5.53477 3.39288 5.21609C3.20717 4.89773 3.37297 4.72528 3.53266 4.56659C3.67559 4.42398 3.85102 4.19499 4.01021 4.00911C4.16905 3.82323 4.22211 3.69058 4.32823 3.47834C4.43435 3.26576 4.38129 3.0799 4.3017 2.92071C4.22211 2.76153 3.60347 1.18733 3.32042 0.557908Z"
-                  />
-                </svg>
-                <Link
-                  href="tel:+918001088586"
-                  className="text-[#FF784B] text-base font-medium leading-[120%]"
-                >
-                  1800 108 8586
-                </Link>
-              </button>
+              <Link href="tel:+918001088586">
+                <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px] w-max">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13"
+                    height="12"
+                    viewBox="0 0 13 12"
+                    fill="none"
+                    className="fill-[#FF784B]"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M3.32042 0.557908C3.08199 0.0277909 2.83095 0.0171788 2.6041 0.00790379C2.41856 -5.52933e-05 2.20615 0.000433081 1.99408 0.000433081C1.78183 0.000433081 1.43694 0.0801935 1.14528 0.398726C0.853444 0.717259 0.0310059 1.4873 0.0310059 3.05341C0.0310059 4.61969 1.17181 6.13308 1.33082 6.34564C1.49 6.55789 3.533 9.87451 6.76853 11.1504C9.45753 12.2108 10.0047 11.9999 10.5884 11.9468C11.1721 11.8938 12.4717 11.177 12.737 10.4336C13.0023 9.69043 13.0023 9.05339 12.9227 8.92023C12.8431 8.78758 12.6309 8.70798 12.3125 8.5488C11.9942 8.38962 10.4292 7.61942 10.1374 7.5133C9.84555 7.40717 9.63331 7.35411 9.42106 7.67282C9.20882 7.99118 8.59911 8.70798 8.4134 8.92023C8.22769 9.13296 8.04198 9.15949 7.72362 9.0003C7.40525 8.84064 6.38002 8.50485 5.16378 7.42042C4.21748 6.57675 3.57859 5.53477 3.39288 5.21609C3.20717 4.89773 3.37297 4.72528 3.53266 4.56659C3.67559 4.42398 3.85102 4.19499 4.01021 4.00911C4.16905 3.82323 4.22211 3.69058 4.32823 3.47834C4.43435 3.26576 4.38129 3.0799 4.3017 2.92071C4.22211 2.76153 3.60347 1.18733 3.32042 0.557908Z"
+                    />
+                  </svg>
+                  <span className="text-[#FF784B] text-base font-medium leading-[120%]">
+                    1800 108 8586
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </header>

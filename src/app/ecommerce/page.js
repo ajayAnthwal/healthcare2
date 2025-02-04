@@ -183,28 +183,68 @@ const Ecommerce = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row mt-8 gap-5 w-full max-w-[1512px] mx-auto mb-3 px-4 md:px-0">
-            <div className="bg-[#E6F5F5] p-4 shadow-md mt-[28px] rounded-lg w-full md:w-[269px] sticky top-[7rem] left-0 h-max">
-              <h3 className="text-black font-poppins text-[20px] font-semibold">
-                Filters
-              </h3>
-              <div className="mb-6 mt-3">
-                <h4 className="text-[#000] font-poppins text-[18px] font-medium mb-2 py-2">
-                  Prices
+          <div className="flex flex-col md:flex-row mt-8 gap-5 w-full  mx-auto mb-3 px-4 md:px-0">
+            <div className="bg-[#E6F5F5] p-4 mt-[28px] rounded-[0px_20px_20px_0px] w-full md:w-[275px] sticky top-[7rem] left-0 h-max border border-[#018F93] shadow-[1px_2px_10px_rgba(16,204,204,0.25)]">
+              {/* Filters Header */}
+              <div className="flex items-center gap-2 mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_4221_10104"
+                    style={{ maskType: "alpha" }}
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="24"
+                    height="24"
+                  >
+                    <rect width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_4221_10104)">
+                    <path
+                      d="M10 18V16H14V18H10ZM6 13V11H18V13H6ZM3 8V6H21V8H3Z"
+                      fill="#1C1B1F"
+                    />
+                  </g>
+                </svg>
+                <h3 className="text-black font-poppins text-[20px] font-semibold">
+                  Filters
+                </h3>
+              </div>
+
+              {/* Quick Link Section */}
+              <div className="mb-4">
+                <h4 className="text-[#101828] font-poppins text-[18px] font-semibold mb-2 border-b border-[#D3D3D3] py-[5px]">
+                  Quick Link
                 </h4>
-                <div className="flex flex-col gap-2">
+                <ul className="space-y-1">
                   {[
-                    "$0-$50",
-                    "$50-$100",
-                    "$100-$150",
-                    "$150-$200",
-                    "$300-$400",
-                  ].map((price) => (
-                    <label key={price} className="text-[#8A8A8A] text-[16px]">
-                      {price}
-                    </label>
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                    "Wheelchair",
+                  ].map((item, index) => (
+                    <li
+                      key={index}
+                      className="text-[#009A9F] font-medium text-[16px] cursor-pointer"
+                    >
+                      - {item}
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
 
