@@ -2,6 +2,7 @@ import React from "react";
 import ServiceInquiryForm from "../ServiceInquiryForm";
 import nurseAtHome from "@/assets/images/longterm/nurse-at-home.png";
 import ServiceCards from "./ServiceCards ";
+import F_A_Q from "../F_A_Q";
 const NurseAtHome = () => {
   const formFields = [
     { type: "text", placeholder: "Name" },
@@ -26,6 +27,7 @@ const NurseAtHome = () => {
         fields={formFields}
       />
       <ServiceCards />
+      <F_A_Q />
     </>
   );
 };

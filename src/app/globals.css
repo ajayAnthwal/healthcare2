@@ -139,3 +139,17 @@
     width: fit-content !important;
   }
 }
+
+
+.custom-left {
+  left: 13rem !important;
+}
+
+/* Jab screen size 1512px ya usse zyada ho to left: 3rem ho jaye */
+@media (min-width: 1512px) {
+  .custom-left {
+    left: 3rem !important;
+  }
+}
+
+
