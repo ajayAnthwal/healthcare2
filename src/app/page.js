@@ -21,6 +21,7 @@ import relax from "@/assets/images/homepage/relax.png";
 import emoji_people from "@/assets/images/homepage/emoji_people.png";
 import star from "@/assets/images/homepage/star.svg";
 import strawhat from "@/assets/images/homepage/iconstart.svg";
+import cityIcon from "@/assets/images/homepage/city.png";
 
 // Animation assets
 import arrows from "@/assets/images/homepage/animation1/arrows.png";
@@ -60,16 +61,16 @@ const Home = () => {
   }, []);
 
   const cities = [
-    { name: "Hyderabad", icon: "/icons/hyderabad.png" },
-    { name: "Kolkata", icon: "/icons/kolkata.png" },
-    { name: "Delhi NCR", icon: "/icons/delhi-ncr.png" },
-    { name: "Chennai", icon: "/icons/chennai.png" },
-    { name: "Bangalore", icon: "/icons/bangalore.png" },
-    { name: "Pune", icon: "/icons/pune.png" },
-    { name: "Madurai", icon: "/icons/madurai.png" },
-    { name: "Indore", icon: "/icons/indore.png" },
-    { name: "Mumbai", icon: "/icons/mumbai.png" },
-    { name: "Guwahati", icon: "/icons/guwahati.png" },
+    { name: "Hyderabad", icon: cityIcon },
+    { name: "Kolkata", icon: cityIcon },
+    { name: "Delhi NCR", icon: cityIcon },
+    { name: "Chennai", icon: cityIcon },
+    { name: "Bangalore", icon: cityIcon },
+    { name: "Pune", icon: cityIcon },
+    { name: "Madurai", icon: cityIcon },
+    { name: "Indore", icon: cityIcon },
+    { name: "Mumbai", icon: cityIcon },
+    { name: "Guwahati", icon: cityIcon },
   ];
 
   useEffect(() => {
@@ -456,22 +457,39 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md p-4">
-          <h2 className="text-center text-black text-[18px] font-semibold leading-[21.6px]">
-            Cities
-          </h2>
-          <div className="grid grid-cols-5 gap-4 mt-4">
-            {cities.map((city, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <Image src={city.icon} alt={city.name} width={50} height={50} />
-                <p className="text-black text-[16px] font-normal leading-[19.2px] mt-2">
-                  {city.name}
-                </p>
+      <div>
+        {showPopup && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="relative w-[615px] h-[302px] mx-auto bg-white rounded-xl shadow-md py-5 px-10">
+              {/* Close Button */}
+              <button
+                className="absolute top-3 right-3 text-black text-xl font-bold"
+                onClick={() => setShowPopup(false)}
+              >
+                ✖
+              </button>
+
+              <h2 className="text-center text-black text-[18px] font-semibold leading-[21.6px]">
+                Cities
+              </h2>
+              <div className="grid grid-cols-5 gap-4 mt-5">
+                {cities.map((city, index) => (
+                  <div key={index} className="flex flex-col items-center">
+                    <Image
+                      src={city.icon}
+                      alt={city.name}
+                      width={60}
+                      height={60}
+                    />
+                    <p className="text-black text-[16px] font-normal leading-[19.2px] mt-2">
+                      {city.name}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
 
       <div className="overflow-x-hidden">
