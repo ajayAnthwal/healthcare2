@@ -40,7 +40,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="flex bg-gray-100 py-4">
+      <div className="flex bg-gray-100 py-4 gap-[40px]">
         <div className="w-auto sticky top-4 h-fit space-y-4">
           <div className="md:block bg-[#E6F5F5] px-3 py-5 shadow-md rounded-lg border border-r border-[#1AE2E9] w-[264px]">
             <div className="border-b border-gray-300 pt-4">
