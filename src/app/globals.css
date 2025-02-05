@@ -81,7 +81,35 @@
     font-feature-settings: normal;
     font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
-    width: fit-content;
+    width: fit-content !important;
+  }
+
+  .slider-banner-home {
+    display: none !important;
+  }
+}
+
+@media (min-width: 820px) and (max-width: 1180px) {
+  html,
+  :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    width: fit-content !important;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 924px) {
+  .container {
+    max-width: 100%;
+    overflow-x: hidden; /* Prevent extra scroll */
   }
 }
 
@@ -148,5 +176,24 @@
 @media (min-width: 1512px) {
   .custom-left {
     left: 3rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1022px) {
+  .services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-5 {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
