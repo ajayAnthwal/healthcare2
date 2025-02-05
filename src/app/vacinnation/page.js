@@ -306,8 +306,8 @@ const Vacinnation = () => {
                     well-being.
                   </li>
                   <li>
-                    With Apollo's trusted expertise, protecting your health has
-                    never been easier or more reliable.
+                    With Apollo&apos;s trusted expertise, protecting your health
+                    has never been easier or more reliable.
                   </li>
                 </ul>
               </div>
