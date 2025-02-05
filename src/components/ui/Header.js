@@ -569,10 +569,10 @@ const Header = () => {
           </div>
         </div>
 
-        <header className="flex justify-center items-center bg-[#E6F5F5] py-3 mt-[4rem] px-[80px]">
+        <header className="flex justify-center items-center bg-[#E6F5F5] py-3 mt-[4rem] pr-[80px] pl-[10px]">
           <div className="flex items-center h-16 px-[80px] gap-x-10 w-full mobile-hide">
             <nav className="flex flex-grow">
-              <ul className="flex gap-[33px]">
+              <ul className="flex gap-[33px] w-max">
                 {[
                   { href: "/", label: "Home" },
                   { href: "/long-term-care", label: "Long term care" },
