@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import ltc from "@/assets/images/longterm/ltc.png";
+import apollo from "@/assets/images/header/apollo.png";
 import Image from "next/image";
 
 const Blog = () => {
@@ -17,27 +17,29 @@ const Blog = () => {
   return (
     <div>
       <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
-        <div className="relative w-[1512px] mx-auto h-[564px] flex flex-col items-center md:bg-cover bg-no-repeat">
-          <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
-            <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-              <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
-                Choosing the Apollo <br />
-                Homecare’s wheelchair
+        <div className="relative mx-auto h-[454px] flex flex-col items-center bg-no-repeat pl-[45px]">
+          <div className="hidden md:flex w-full items-center justify-between gap-10">
+            {/* Left Side - Text */}
+            <div className="flex-1 text-center md:text-left space-y-4">
+              <h1 className="text-5xl md:text-[60px] font-medium leading-[105px] tracking-[-1.2px] font-poppins text-white">
+                Choosing the Apollo <br /> Homecare’s wheelchair
               </h1>
             </div>
 
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            {/* Right Side - Image */}
+            <div className="flex-1 flex justify-center md:justify-end">
               <Image
-                src={ltc}
+                src={apollo}
                 alt="Care at Home"
-                width={604}
-                height={555}
+                width={494}
+                height={454}
                 className="rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
       </div>
+
       <div className="flex bg-gray-100 py-4">
         <div className="w-auto sticky top-4 h-fit space-y-4">
           <div className="md:block bg-[#E6F5F5] px-3 py-5 shadow-md rounded-lg border border-r border-[#1AE2E9] w-[264px]">
