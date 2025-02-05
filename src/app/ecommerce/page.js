@@ -246,6 +246,25 @@ const Ecommerce = () => {
                   ))}
                 </ul>
               </div>
+
+              <div className="border-t border-gray-300 pt-4 mt-4">
+                <h4 className="text-[#009A9F] text-lg font-medium mb-2 border-b pb-2">
+                  Price
+                </h4>
+                {["INR 10K–15K", "INR 15K–20K", "INR 20K+"].map(
+                  (price, index) => (
+                    <label key={index} className="flex items-center gap-2 mb-2">
+                      <input
+                        type="checkbox"
+                        className="w-5 h-5 accent-[#009A9F]"
+                      />
+                      <span className="text-black text-[14px] font-medium">
+                        {price}
+                      </span>
+                    </label>
+                  )
+                )}
+              </div>
             </div>
 
             <main className="flex-1 p-4 md:p-5">

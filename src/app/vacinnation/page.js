@@ -175,18 +175,18 @@ const Vacinnation = () => {
             <h2 className="text-[28px] font-semibold text-[#031432] text-left font-poppins leading-normal">
               Benefits of Apollo Adult Vaccination at Home
             </h2>
-            <div className="mt-5 grid grid-cols-1 gap-1">
+            <ul className="mt-5 space-y-4 list-disc list-inside">
               {pillars.map((pillar, index) => (
-                <div key={index}>
-                  <h3 className="text-[16px] font-semibold text-[#031432] text-left font-poppins leading-normal">
+                <li key={index} className="text-[#333]">
+                  <span className="font-semibold text-[16px] font-poppins leading-normal text-[#333]">
                     {pillar.title}
-                  </h3>
-                  <p className="text-[16px] font-normal text-[#6C87AE] text-justify leading-[24px]">
+                  </span>
+                  <p className="text-[16px] font-normal text-[#333] leading-[24px] ml-5">
                     {pillar.description}
                   </p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           <section className="bg-white container mx-auto px-4">
@@ -289,15 +289,27 @@ const Vacinnation = () => {
                 <h2 className="text-[24px] font-semibold text-left text-[#031432] font-poppins leading-normal">
                   What Apollo Homecare Offers
                 </h2>
-                <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-4">
-                  A comprehensive range of vaccines for adults, seniors and
-                  high-risk groups. Expert administration by trained healthcare
-                  professionals following strict safety protocols. Customized
-                  vaccination plans based on your specific needs.Post
-                  vaccination follow-up and support to ensure your well-being.
-                  With Apollo&apos;s trusted expertise, protecting your health
-                  has never been easier or more reliable.
-                </p>
+                <ul className="list-disc text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-4 pl-5">
+                  <li>
+                    A comprehensive range of vaccines for adults, seniors and
+                    high-risk groups.
+                  </li>
+                  <li>
+                    Expert administration by trained healthcare professionals
+                    following strict safety protocols.
+                  </li>
+                  <li>
+                    Customized vaccination plans based on your specific needs.
+                  </li>
+                  <li>
+                    Post vaccination follow-up and support to ensure your
+                    well-being.
+                  </li>
+                  <li>
+                    With Apollo's trusted expertise, protecting your health has
+                    never been easier or more reliable.
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
