@@ -2,8 +2,29 @@ import React from "react";
 import doctor from "@/assets/images/book/doctor.png";
 import homevisit from "@/assets/images/book/homevisit.png";
 import Image from "next/image";
+import service1 from "@/assets/images/homepage/service1.png";
+import service2 from "@/assets/images/homepage/service2.png";
+import service3 from "@/assets/images/homepage/service3.png";
+import service4 from "@/assets/images/homepage/service4.png";
+import service5 from "@/assets/images/homepage/service5.png";
+import service6 from "@/assets/images/homepage/service6.png";
+import service7 from "@/assets/images/homepage/service7.png";
+import service8 from "@/assets/images/homepage/service8.png";
+import service9 from "@/assets/images/homepage/service9.png";
 
 const Home_Visit = () => {
+  const services = [
+    { title: "ICU Setup at Home", image: service1 },
+    { title: "Specialised Nurse at home", image: service2 },
+    { title: "Trained Attendant at home", image: service3 },
+    { title: "Mother & Child Care", image: service4 },
+    { title: "Senior Care Subscription", image: service5 },
+    { title: "Travel Nurses", image: service6 },
+    { title: "Specialty Rehab Packages", image: service7 },
+    { title: "Doctor Home Consult", image: service8 },
+    { title: "Physiotherapy at home", image: service9 },
+  ];
+
   return (
     <div>
       <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
@@ -13,7 +34,7 @@ const Home_Visit = () => {
           </div>
           <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
             <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-            <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
+              <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
                 Expert Healthcare, Right at <br /> Your Doorstep
               </h1>
               <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px]">
@@ -39,25 +60,93 @@ const Home_Visit = () => {
         </div>
       </div>
 
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-center text-2xl md:text-4xl font-bold text-[#031432] mb-10">
+          Our Comprehensive Services
+        </h1>
+
+        {/* First Row - 4 Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center">
+          {services.slice(0, 4).map((service, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-[20px] p-3 md:p-4 flex flex-col items-center text-center w-auto h-auto md:w-[231px] md:h-[316px]"
+            >
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="mb-3 w-20 h-20 md:w-[150px] md:h-[150px]"
+              />
+              <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
+                {service.title}
+              </h3>
+              <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
+                Enquire Now
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Second Row - 4 Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center mt-6">
+          {services.slice(4, 8).map((service, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-[20px] p-3 md:p-4 flex flex-col items-center text-center w-auto h-auto md:w-[231px] md:h-[316px]"
+            >
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="mb-3 w-20 h-20 md:w-[150px] md:h-[150px]"
+              />
+              <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
+                {service.title}
+              </h3>
+              <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
+                Enquire Now
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Third Row - 1 Card */}
+        <div className="flex justify-center mt-6">
+          {services.slice(8, 9).map((service, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-md rounded-[20px] p-3 md:p-4 flex flex-col items-center text-center w-auto h-auto md:w-[231px] md:h-[316px]"
+            >
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="mb-3 w-20 h-20 md:w-[150px] md:h-[150px]"
+              />
+              <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
+                {service.title}
+              </h3>
+              <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
+                Enquire Now
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <section className="bg-white py-10">
         <div className="container mx-auto">
           <h2 className="text-[#031432] text-center font-poppins text-[32px] font-semibold leading-normal mb-12">
             Home Visit
           </h2>
-          <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]">
+          <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px]">
             A home visit is a professional healthcare service where medical
             experts provide personalized care directly at the patient&apos;s
-            home, reducing the need <br /> for clinic or hospital visits.
-          </p>
-
-          <p className="text-center text-[#525252] text-[16px] font-normal leading-[24px]">
-            Apollo&apos;s Home Visit service is provided by a team of dedicated
-            and trained team providing medical care with a focus on the
-            satisfaction and well-being <br /> of our patients. Our home visit
-            doctors service guarantees that you receive prompt, professional
-            healthcare solutions at your leisure,
-            <br /> regardless of whether you require specialised care or
-            ordinary medical attention.
+            home, reducing the need for clinic or hospital visits. Apollo&apos;s
+            Home Visit service is provided by a team of dedicated and trained
+            team providing medical care with a focus on the satisfaction and
+            well-being of our patients. Our home visit doctors service
+            guarantees that you receive prompt, professional healthcare
+            solutions at your leisure, regardless of whether you require
+            specialised care or ordinary medical attention.
           </p>
         </div>
       </section>
@@ -75,7 +164,7 @@ const Home_Visit = () => {
           </h2>
           <div className="flex flex-wrap items-center mb-12">
             <div className="w-full md:w-1/2 px-4">
-              <ol className="list-decimal pl-5 text-[#2A2A2A] text-base font-normal">
+              <ol className="list-decimal text-[#2A2A2A] text-base font-normal">
                 <li className=" text-[#2A2A2A] text-[16px] font-normal leading-[24px]">
                   <span className="text-[#2A2A2A] text-[16px] font-semibold leading-[24px]">
                     Convenience
@@ -134,20 +223,17 @@ const Home_Visit = () => {
 
       <section className="py-10 container mx-auto">
         <div className="text-center py-10">
-          <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px]">
+          <p className="text-[#525252] text-justify text-[16px] font-normal leading-[24px]">
             Apollo Home Care provides a variety of medical services, such as
             acute care, palliative care, post-operative care, elderly care, and
-            primary care, all <br /> of which are delivered by our licensed and
-            skilled physicians. Whether you need regular check-ups, quick care
-            for common illnesses, specialized <br /> post-operative care,
-            assistance with senior health needs, or compassionate palliative
-            care, our doctor home visits provide individualized care <br />{" "}
-            catered to your unique health requirements and preferences.
-          </p>
-          <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px]">
-            A few of the Apollo Home Visit categories include- Doctors,
-            Physiotherapist, Nurse, Respiratory Therapist, Speech Therapist and
-            Dietitian at home
+            primary care, all of which are delivered by our licensed and skilled
+            physicians. Whether you need regular check-ups, quick care for
+            common illnesses, specialized post-operative care, assistance with
+            senior health needs, or compassionate palliative care, our doctor
+            home visits provide individualized care catered to your unique
+            health requirements and preferences. A few of the Apollo Home Visit
+            categories include- Doctors, Physiotherapist, Nurse, Respiratory
+            Therapist, Speech Therapist and Dietitian at home
           </p>
         </div>
 

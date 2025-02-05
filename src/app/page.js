@@ -50,6 +50,28 @@ const Home = () => {
   const [currentTestimony, setCurrentTestimony] = useState(0);
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [index, setIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const cities = [
+    { name: "Hyderabad", icon: "/icons/hyderabad.png" },
+    { name: "Kolkata", icon: "/icons/kolkata.png" },
+    { name: "Delhi NCR", icon: "/icons/delhi-ncr.png" },
+    { name: "Chennai", icon: "/icons/chennai.png" },
+    { name: "Bangalore", icon: "/icons/bangalore.png" },
+    { name: "Pune", icon: "/icons/pune.png" },
+    { name: "Madurai", icon: "/icons/madurai.png" },
+    { name: "Indore", icon: "/icons/indore.png" },
+    { name: "Mumbai", icon: "/icons/mumbai.png" },
+    { name: "Guwahati", icon: "/icons/guwahati.png" },
+  ];
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       console.log("changing index " + index);
@@ -216,8 +238,8 @@ const Home = () => {
 
                 <p className="w-[696px] text-[#6C87AE] font-Poppins text-[16px] font-normal leading-[19.2px]">
                   Our dedicated caregivers are here to provide quality,
-                  personalized long-term care to <br/> ensure you or your loved ones
-                  feel supported and comfortable at every stage of care.
+                  personalized long-term care to <br /> ensure you or your loved
+                  ones feel supported and comfortable at every stage of care.
                 </p>
 
                 <button className="px-10 py-5 text-2xl rounded-full text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] shadow-[0px_8px_23px_0px_rgba(65,132,247,0.24)]">
@@ -430,6 +452,24 @@ const Home = () => {
                 backgroundColor: index == 2 ? "#00718a" : "white",
               }}
             />
+          </div>
+        </div>
+      </div>
+
+      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md p-4">
+          <h2 className="text-center text-black text-[18px] font-semibold leading-[21.6px]">
+            Cities
+          </h2>
+          <div className="grid grid-cols-5 gap-4 mt-4">
+            {cities.map((city, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <Image src={city.icon} alt={city.name} width={50} height={50} />
+                <p className="text-black text-[16px] font-normal leading-[19.2px] mt-2">
+                  {city.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
