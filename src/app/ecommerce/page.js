@@ -13,7 +13,7 @@ import Book_banner from "@/assets/images/book/book-banner.png";
 import ProductPage from "@/components/Ecommerce/ProductPage";
 import ProductDetail from "@/components/Ecommerce/ProductDetail";
 import product2 from "@/assets/images/book/product2.png";
-import banerproduct from "@/assets/images/book/baner-product.png";
+import banerproduct from "@/assets/images/book/Hero.png";
 import deal from "@/assets/images/book/deal.png";
 import Link from "next/link";
 
@@ -124,6 +124,30 @@ const Ecommerce = () => {
       status: "Almost Sold Out",
       imageUrl: product2,
     },
+
+    {
+      id: 8,
+      name: "Oxygen Cylinder",
+      description: "Descriptions 1 day delivery",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
+      reviews: "(4.1k) Customer Reviews",
+      rating: 5,
+      status: "Almost Sold Out",
+      imageUrl: product2,
+    },
+
+    {
+      id: 9,
+      name: "Oxygen Cylinder",
+      description: "Descriptions 1 day delivery",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
+      reviews: "(4.1k) Customer Reviews",
+      rating: 5,
+      status: "Almost Sold Out",
+      imageUrl: product2,
+    },
   ];
 
   return (
@@ -158,40 +182,17 @@ const Ecommerce = () => {
 
       {selectedIndex === -1 && (
         <div>
-          <div className="flex w-full flex-wrap flex-col md:flex-row">
-            <div className="relative w-full md:w-1/2 bg-[#E6F5F5] flex items-center justify-center">
-              <Image
-                src={banerproduct}
-                alt="Ventilator"
-                className="w-3/4 object-cover"
-                width={500}
-                height={500}
-              />
-            </div>
-            <div className="w-full md:w-1/2 bg-[#B0E0E1] p-6 md:p-10 flex flex-col justify-center">
-              <p className="text-[#767676] text-base font-normal">
-                Respiratory
-              </p>
-              <h1 className="text-[#484848] text-3xl md:text-[46px] font-semibold font-[Poppins]">
-                Ventilator
-              </h1>
-              <p className="text-black text-base font-normal underline mt-2">
-                DESCRIPTION
-              </p>
-              <p className="text-[#767676] text-sm md:text-base mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-              </p>
-              <p className="text-black text-xl md:text-[28px] font-medium mt-4">
-                $100.00
-              </p>
-              <button className="mt-4 w-full md:w-[207px] h-[50px] md:h-[56px] bg-[#009A9F] text-white text-base font-normal font-[Poppins] rounded-[10px] shadow-lg hover:bg-[#007D82]">
-                Buy Now
-              </button>
-            </div>
+          <div className="relative w-full h-[610px] banner">
+            <Image
+              src={banerproduct}
+              alt="Banner Product"
+              layout="fill"
+              quality={100}
+            />
           </div>
 
-          <div className="flex flex-col md:flex-row mt-8 gap-5 w-full  mx-auto mb-3 px-4 md:px-0">
-            <div className="bg-[#E6F5F5] p-4 mt-[28px] rounded-[0px_20px_20px_0px] w-full md:w-[275px] sticky top-[7rem] left-0 h-max border border-[#018F93] shadow-[1px_2px_10px_rgba(16,204,204,0.25)]">
+          <div className="relative flex flex-col md:flex-row mt-8 gap-5 w-full  mx-auto mb-3 px-4 md:px-0">
+            <div className="bg-[#E6F5F5] p-4 mt-[28px] rounded-[0px_20px_20px_0px] w-full md:w-[275px] sticky top-[7rem] left-0 border border-[#018F93] shadow-[1px_2px_10px_rgba(16,204,204,0.25)] h-max">
               {/* Filters Header */}
               <div className="flex items-center gap-2 mb-4">
                 <svg

@@ -27,7 +27,7 @@ const Home_Visit = () => {
 
   return (
     <div>
-      <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
+      <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center banner">
         <div className="relative mx-auto h-auto flex flex-col items-center md:bg-cover bg-no-repeat">
           <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
             Home &gt;&gt;&gt; Home Visit

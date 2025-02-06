@@ -260,3 +260,16 @@ body {
     width: auto !important;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product_card {
+    flex-wrap: wrap !important;
+    display: flex !important;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1171px) {
+  .banner {
+   display: none !important;
+  }
+}

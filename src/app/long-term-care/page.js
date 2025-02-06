@@ -122,7 +122,7 @@ const LongTermCare = () => {
       </div>
       {selectedIndex === -1 && (
         <>
-          <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
+          <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center banner">
             <div className="relative  mx-auto h-auto flex flex-col items-center bg-no-repeat pl-8">
               <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Long Term Care
@@ -165,7 +165,7 @@ const LongTermCare = () => {
               <h1 className="text-center text-2xl mt-12 md:text-4xl font-bold text-[#031432] mb-10">
                 Our Services
               </h1>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center">
+              <div className="product_card grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center">
                 {services.slice(0, 4).map((service, index) => (
                   <div
                     key={index}
