@@ -222,7 +222,7 @@ const Mother_Baby_Care = () => {
                 <li>
                   Nurses who provide love and affection like grandmothers,
                   guiding you on baby massage, bathing, holding techniques to
-                  prevent crying, nail cutting, and ensuring the newborn's
+                  prevent crying, nail cutting, and ensuring the newborn&apos;s
                   comfort.
                 </li>
               </ul>
@@ -301,7 +301,7 @@ const Mother_Baby_Care = () => {
                     needed.
                   </li>
                   <li>
-                    Customized support to meet your family's unique needs.
+                    Customized support to meet your family&apos;s unique needs.
                   </li>
                   <li>24/7 consultation and advice available.</li>
                   <li>Nurse facility at home when needed.</li>
