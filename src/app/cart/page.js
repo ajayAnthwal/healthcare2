@@ -125,7 +125,7 @@ function Cart() {
             </div>
           </div>
 
-          <div className="lg:w-[320px] hidden lg:block">
+          <div className="lg:w-[320px] lg:block">
             <div className="bg-white rounded-[20px] shadow-sm p-6">
               <h2 className="text-[#333] text-xl font-semibold mb-6">
                 Order Summary
