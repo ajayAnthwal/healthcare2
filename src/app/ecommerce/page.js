@@ -182,14 +182,12 @@ const Ecommerce = () => {
 
       {selectedIndex === -1 && (
         <div>
-          <div className="relative w-full h-[610px] banner hidden md:block">
+          <div className="relative w-full h-[610px] banner mobile-hide">
             <Image
               src={banerproduct}
               alt="Banner Product"
-              width={1920}
-              height={610}
+              layout="fill"
               quality={100}
-              className="object-cover"
             />
           </div>
 

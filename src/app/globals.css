@@ -49,6 +49,9 @@ body {
   .widget-1 {
     display: none;
   }
+  .mobile-hide{
+    display: none;
+  }
   .custom-button {
     width: Fill (95.42px) px;
     height: Hug (23.62px) px;
