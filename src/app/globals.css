@@ -236,20 +236,27 @@ body {
 @media (max-width: 1300px) and (min-width: 768px) {
   .tab-nav {
     position: relative;
-    left: -81px !important;
+    left: -65px !important;
   }
 
   .tab-hide-email {
     display: none !important;
   }
-
-  /* .tab-nav ul {
-    gap: 10px !important;
-  } */
 }
 
 @media (max-width: 900px) and (min-width: 768px) {
   .tab-nav ul {
     gap: 10px !important;
+  }
+}
+@media (max-width: 1053px) and (min-width: 768px) {
+  .tab-profile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 924px) {
+  .footer-container {
+    width: auto !important;
   }
 }

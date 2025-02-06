@@ -144,7 +144,7 @@ const Header = () => {
                   onClick={handleCityToggle}
                 >
                   <Image src={location} alt="Location" width={19} height={19} />
-                  <p className="ms-2 text-[16px]">New Delhi, Delhi</p>
+                  <p className="ms-2 text-[16px] tab-profile">New Delhi, Delhi</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -316,7 +316,7 @@ const Header = () => {
                   </g>
                 </svg>
 
-                <span className="text-white font-poppins text-[16px]">
+                <span className="text-white font-poppins text-[16px] tab-profile">
                   Cart
                 </span>
 
@@ -358,7 +358,7 @@ const Header = () => {
                       />
                     </g>
                   </svg>
-                  <span className="text-white font-poppins text-[16px]">
+                  <span className="text-white font-poppins text-[16px] tab-profile">
                     Hi, Rahul
                   </span>
                   <svg

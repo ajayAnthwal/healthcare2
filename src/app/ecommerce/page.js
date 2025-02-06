@@ -296,6 +296,66 @@ const Ecommerce = () => {
                 {products.map((product) => (
                   <Link href="/book" key={product.id}>
                     <div className="bg-white rounded-lg shadow-lg p-4">
+                      <div className="absolute -mt-1 -ml-4">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="150"
+                          height="40"
+                          viewBox="0 0 170 50"
+                          fill="none"
+                        >
+                          <g filter="url(#filter0_d_4369_7557)">
+                            <path
+                              d="M10 6L160 6C160 6 152.583 11.1316 136.833 21.3947C131.272 25.0185 114.865 36 114.865 36H10V6Z"
+                              fill="#FF784B"
+                            />
+                          </g>
+                          <defs>
+                            <filter
+                              id="filter0_d_4369_7557"
+                              x="0.8"
+                              y="0.8"
+                              width="168.4"
+                              height="48.4"
+                              filterUnits="userSpaceOnUse"
+                              colorInterpolationFilters="sRGB"
+                            >
+                              <feFlood
+                                floodOpacity="0"
+                                result="BackgroundImageFix"
+                              />
+                              <feColorMatrix
+                                in="SourceAlpha"
+                                type="matrix"
+                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                                result="hardAlpha"
+                              />
+                              <feOffset dy="4" />
+                              <feGaussianBlur stdDeviation="4.6" />
+                              <feComposite in2="hardAlpha" operator="out" />
+                              <feColorMatrix
+                                type="matrix"
+                                values="0 0 0 0 0.293333 0 0 0 0 0.07755 0 0 0 0 0.00562219 0 0 0 0.24 0"
+                              />
+                              <feBlend
+                                mode="hard-light"
+                                in2="BackgroundImageFix"
+                                result="effect1_dropShadow_4369_7557"
+                              />
+                              <feBlend
+                                mode="normal"
+                                in="SourceGraphic"
+                                in2="effect1_dropShadow_4369_7557"
+                                result="shape"
+                              />
+                            </filter>
+                          </defs>
+                        </svg>
+                        <span className="absolute top-[6px] left-[21px] text-white font-[Poppins] text-[14px] font-normal">
+                          Bestseller
+                        </span>
+                      </div>
+
                       <Image
                         src={product.imageUrl}
                         alt={product.name}
@@ -309,9 +369,6 @@ const Ecommerce = () => {
                       <p className="text-[#8A8A8A] text-[12px]">
                         {product.description}
                       </p>
-                      <p className="text-[#8A8A8A] text-[12px] py-3">
-                        {product.reviews}
-                      </p>
                       <div className="flex justify-between items-center mt-2">
                         <div className="flex items-center gap-2">
                           <p className="text-[#484848] text-lg md:text-[24px] font-medium">
@@ -321,10 +378,6 @@ const Ecommerce = () => {
                             {product.originalPrice}
                           </p>
                         </div>
-
-                        <p className="text-[#FF4646] text-[12px]">
-                          {product.status}
-                        </p>
                       </div>
                     </div>
                   </Link>
