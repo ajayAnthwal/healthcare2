@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const ServiceInquiryForm = ({ imageSrc, formTitle, fields }) => {
   return (
-    <div className="container mx-auto mt-10 flex flex-col md:flex-row bg-[#E6F5F5] space-y-6 md:space-y-0 md:space-x-6 rounded-[15px_0_0_0] p-4 md:p-0">
+    <div className="container mx-auto flex flex-col md:flex-row bg-[#E6F5F5] space-y-6 md:space-y-0 md:space-x-6 rounded-[15px_0_0_0] p-4 md:p-0">
       <div className="w-full md:w-1/2">
         <Image
           src={imageSrc}

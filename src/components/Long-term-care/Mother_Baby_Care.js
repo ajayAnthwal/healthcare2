@@ -35,176 +35,119 @@ const Mother_Baby_Care = () => {
           fields={formFields}
         />
       </div>
-      <section className="bg-white py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            What is mother and baby care?
-          </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto">
-            Our Apollo mother and baby care services involve providing
-            professional support to ensure the health, safety and well-being of
-            both mother and baby during the parental, postnatal and infant
-            stages. This includes medical help, emotional support, guidance on
-            nutrition and assistance with baby care practices. Apollo have
-            skilled and experienced nurses who are trained to provide love and
-            care to babies and mothers, teach them how to handle the newborn and
-            the mother and also train the mother on how to care for the baby.
-          </p>
+
+      <section className="bg-white mt-7 px-4">
+        <div className="container mx-auto">
+          <div className="mb-10">
+            <h2 className="text-[32px] font-semibold text-left text-[#031432] font-poppins leading-normal">
+              What is mother and baby care?
+            </h2>
+            <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-5">
+              Our Apollo mother and baby care services involve providing
+              professional support to ensure the health, safety and well-being
+              of both mother and baby during the parental, postnatal and infant
+              stages. This includes medical help, emotional support, guidance on
+              nutrition and assistance with baby care practices. Apollo have
+              skilled and experienced nurses who are trained to provide love and
+              care to babies and mothers, teach them how to handle the newborn
+              and the mother and also train the mother on how to care for the
+              baby.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="bg-[#E9F8F9] py-12">
-        <div className="container mx-auto px-4">
-          <h2 className="text-[#000] text-center font-poppins text-[32px] font-semibold leading-normal mb-8">
+      <section className="bg-[#E9F8F9] py-5">
+        <div className="container mx-auto">
+          <h2 className="text-[#031432] text-center font-poppins text-[32px] font-semibold leading-normal mb-3">
             How to Care for a Newborn Baby and Mother
           </h2>
-          <div className="flex flex-wrap items-center mb-12">
+          <div className="flex flex-wrap items-center mb-10">
             <div className="w-full md:w-1/2 px-4">
-              <h3 className="text-[#000] font-poppins text-[24px] font-semibold mb-4">
+              <h3 className="text-[#031432] font-poppins text-[20px] font-semibold mb-4">
                 What Does a Newborn Baby Need?
               </h3>
-              <ul className="text-[#6C87AE] text-base font-normal leading-6 list-disc pl-5">
+              <p className="text-[#2A2A2A] text-[16px] font-semibold leading-6 list-disc">
+                Basic Requirements:
+              </p>
+              <ul className="text-[#2A2A2A] text-[16px] font-normal leading-6 list-disc pl-5">
                 <li>
-                  Feeding requirements: feeding bottles, clean clothes, and
-                  fresh diapers.
+                  Use sterilized feeding bottles, clean clothes, and fresh
+                  diapers.
                 </li>
                 <li>
-                  Regular health checkups and timely vaccinations scheduled by
-                  the doctors.
+                  Regular breastfeeding or formula feeding as advised by the
+                  doctor.
                 </li>
                 <li>
-                  Ensuring proper hygiene and keeping the baby warm and cozy.
+                  Gentle baby baths and ensuring the umbilical cord stays dry.
                 </li>
-                <li>Monitoring the baby&rsquo;s sleeping habits.</li>
-                <li>Providing a safe and caring environment.</li>
-                <li>Using baby-safe cleaning products and toys.</li>
-                <li>Calm, soothing, and comfortable surroundings.</li>
+                <li>Maintain hydration and avoid overheating during summer.</li>
+                <li>Dress them in light, breathable clothes in hot weather.</li>
+                <li>
+                  Keep babies warm in winter but avoid overheating with too many
+                  layers.
+                </li>
+                <li>
+                  Use a humidifier to prevent dry air discomfort in winter.
+                </li>
+                <li>Follow a consistent sleep schedule for better sleep.</li>
+                <li>
+                  Create a calm, quiet, and comfortable sleep environment.
+                </li>
               </ul>
             </div>
-            <div className="w-full md:w-1/2 px-4">
+            <div className="w-full md:w-1/2 px-4 py-4">
               <Image
                 src={mother}
                 alt="Newborn baby care"
                 className="mx-auto w-[277px]"
-                width={277}
+                width={400}
                 height={308}
               />
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center mb-12">
+          <div className="flex flex-wrap items-center mb-10">
             <div className="w-full md:w-1/2 px-4 md:order-1">
               <Image
                 src={motherson}
                 alt="Newborn baby care"
                 className="mx-auto w-full max-w-sm"
                 width={400}
-                height={300}
+                height={400}
               />
             </div>
             <div className="w-full md:w-1/2 px-4 md:order-2">
-              <h3 className="text-[#000] font-poppins text-[24px] font-semibold mb-4">
-                What Does a Mother Need?
+              <h3 className="text-[#031432] font-poppins text-[20px] font-semibold mb-4">
+                What does a mother need?
               </h3>
-              <ul className="text-[#6C87AE] text-base font-normal leading-6 list-disc pl-5">
+
+              <ul className="text-[#2A2A2A] text-[16px] font-normal leading-6 list-disc pl-5">
                 <li>
                   After giving birth to a child, the mother also needs to pay
-                  special attention to her diet.
+                  special attention to her diet. The mother should include those
+                  items in her diet that are nutritious:
                 </li>
                 <li>
-                  A balanced diet with proteins, vitamins, and carbohydrates is
-                  necessary.
+                  A balanced diet rich in protein, calcium and iron, which helps
+                  in breastfeeding and recovery.
                 </li>
                 <li>
-                  Take care of her health by consuming foods like fruits,
-                  vegetables, and whole grains.
-                </li>
-                <li>Get plenty of rest and maintain hydration.</li>
-                <li>
-                  Regular light exercises for physical and mental well-being.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="text-center mb-8">
-            <h3 className="text-[#000] font-poppins text-[24px] font-semibold mb-4">
-              When Do You Need Apollo&rsquo;s Service?
-            </h3>
-
-            <p className="text-[#6C87AE] text-base font-normal leading-6 max-w-3xl mx-auto">
-              Our Apollo Home Nurse at Home service provides professional
-              support to ensure the health, safety, and comfort of both mother
-              and child. We are equipped with skilled nurses to handle the
-              recovery period and help with newborn baby care practices. Apollo
-              focuses on personalized care and attention to ease the stress for
-              mothers, boosting them to heal faster and bond better with their
-              little ones.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-start">
-            <div className="w-full md:w-1/2 px-4">
-              <h4 className="text-[#000] font-poppins text-[20px] font-semibold mb-4">
-                When do you need Apollo&rsquo;s service?
-              </h4>
-              <ul className="text-[#6C87AE] text-base font-normal leading-6 list-disc pl-5">
-                <li>After delivery, during the post-recovery period.</li>
-                <li>
-                  For assistance with physical recovery and breastfeeding.
+                  Hydration is very important to overcome weakness after
+                  delivery - for this, consume plenty of fluids like water, milk
+                  and soup. Include seasonal fruits, vegetables, whole grains
+                  and healthy fats in your diet.
                 </li>
                 <li>
-                  Help in managing the baby&rsquo;s feeding, sleep, and hygiene
-                  routines.
+                  Emotional support: Encourage yourself to rest and relax from
+                  the fatigue and stress after delivery.
                 </li>
-                <li>After delivery, during the postnatal recovery period.</li>
+                <li>Provide counselling or mental health support if needed.</li>
                 <li>
-                  If you&rsquo;re a first-time parent seeking expert guidance.
-                </li>
-                <li>
-                  When the mother or baby needs special medical attention or
-                  personalized care.
-                </li>
-                <li>
-                  For support in managing the baby&rsquo;s feeding, sleep, and
-                  hygiene routines.
-                </li>
-              </ul>
-            </div>
-            <div className="w-full md:w-1/2 px-4">
-              <h4 className="text-[#000] font-poppins text-[20px] font-semibold mb-4">
-                Our Apollo Features
-              </h4>
-              <ul className="text-[#6C87AE] text-base font-normal leading-6 list-disc pl-5">
-                <li>
-                  Trained and experienced nurses: Compassionate and skilled
-                  nurses who provide round-the-clock care at home.
-                </li>
-                <li>
-                  Gynaecologist consultations: Regular visits or consultations
-                  with specialists to monitor the health of mother and baby.
-                </li>
-                <li>
-                  Personalized care: Tailored plans for mothers and babies.
-                </li>
-                <li>
-                  Customized care plans: Customized care routines based on
-                  individual health conditions and family preferences.
-                </li>
-                <li>
-                  On-demand assistance: Flexible and readily available support.
-                </li>
-                <li>
-                  Comprehensive care: Covers both medical and emotional aspects.
-                </li>
-                <li>
-                  Newborn-specific expertise: Help with effective feeding,
-                  diapering, bathing, and soothing your baby.
-                </li>
-                <li>
-                  Nurses who provide love and affection like grandmas and
-                  grandmothers who teach you how to massage, bathe, how to hold
-                  the baby so that he does not cry, when to cut nails and how to
-                  do it so that the newborn does not face any discomfort.
+                  Postpartum recovery care: Regular gynaecologist checkups.
+                  Physical exercises should be done to strengthen the body, for
+                  which you will be guided by your physician.
                 </li>
               </ul>
             </div>
@@ -212,64 +155,138 @@ const Mother_Baby_Care = () => {
         </div>
       </section>
 
-      <div>
-        <section className="py-10 bg-[#eaf8f8]">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-center text-[#000] font-poppins text-2xl sm:text-[32px] font-semibold leading-normal mb-6">
-              How Apollo support you at home
+      <section className="bg-white mt-7 px-4">
+        <div className="container mx-auto">
+          <div className="mb-10">
+            <h2 className="text-[32px] font-semibold text-left text-[#031432] font-poppins leading-normal">
+              When do you need Apollo&apos;s this service?
             </h2>
+            <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-5">
+              Our Apollo mother and baby care services involve providing
+              professional support to ensure the health, safety and well-being
+              of both mother and baby during the parental, postnatal and infant
+              stages. This includes medical help, emotional support, guidance on
+              nutrition and assistance with baby care practices. Apollo have
+              skilled and experienced nurses who are trained to provide love and
+              care to babies and mothers, teach them how to handle the newborn
+              and the mother and also train the mother on how to care for the
+              baby.
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <div className="space-y-4 text-gray-700">
-              <div className="mt-4 mb-6">
-                <h3 className="text-black text-center font-poppins text-2xl font-semibold leading-normal">
-                  Apollo Home Nursing Services
-                </h3>
-                <p className="text-[#6C87AE] text-center  text-base font-normal leading-6">
-                  Our nurses assist mothers in all aspects of newborn care,
-                  postpartum recovery and feeding routines
-                </p>
-              </div>
-              <div className="mt-4 mb-6">
-                <h3 className="text-black text-center font-poppins text-2xl font-semibold leading-normal">
-                  Medical Monitoring
-                </h3>
-                <p className="text-[#6C87AE] text-center  text-base font-normal leading-6">
-                  Monitoring vital signs of mother and baby health and ensuring
-                  that mother and baby are in the best possible health.
-                </p>
-              </div>
-              <div className="mt-4 mb-6">
-                <h3 className="text-black text-center font-poppins text-2xl font-semibold leading-normal">
-                  Parent Education
-                </h3>
-                <p className="text-[#6C87AE] text-center  text-base font-normal leading-6">
-                  Teaching both parent safe ways to handle a newborn after the
-                  birth of a newborn, breastfeeding techniques and postpartum
-                  care tips.
-                </p>
-              </div>
-              <div className="mt-4 mb-6">
-                <h3 className="text-black text-center font-poppins text-2xl font-semibold leading-normal">
-                  Emotional Comfort
-                </h3>
-                <p className="text-[#6C87AE] text-center  text-base font-normal leading-6">
-                  Providing compassionate, safe and patient-centred care to make
-                  the transition to work and life after becoming a parent smooth
-                  and easy.
-                </p>
-              </div>
+      <div className="mb-10">
+        <section className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h2 className="text-[#031432] font-poppins text-[32px] font-semibold leading-normal mb-2">
+                When do you need Apollo&apos;s this service?
+              </h2>
+              <ul className="list-disc pl-5 text-[#525252] text-[16px] font-normal leading-[24px] mt-2">
+                <li>After delivery, during the postnatal recovery period.</li>
+                <li>
+                  If you&apos;re a first-time parent seeking expert guidance.
+                </li>
+                <li>
+                  When the mother or baby needs special medical attention or
+                  personalized care.
+                </li>
+                <li>
+                  For support in managing the baby&apos;s feeding, sleep, and
+                  hygiene routines.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-[#031432] font-poppins text-[32px] font-semibold leading-normal mb-2">
+                Our Apollo Features
+              </h2>
+              <ul className="list-disc pl-5 text-[#525252] text-[16px] font-normal leading-[24px] mt-2">
+                <li>
+                  Trained and experienced nurses: Compassionate and skilled
+                  nurses who provide round-the-clock care at home.
+                </li>
+                <li>
+                  Gynaecologist consultations: Regular visits or consultations
+                  with specialists to monitor the health of the mother and baby.
+                </li>
+                <li>
+                  Customized care plans: Personalized care routines based on
+                  individual health conditions and family preferences.
+                </li>
+                <li>
+                  Newborn-specific expertise: Assistance with feeding,
+                  diapering, bathing, and soothing the baby.
+                </li>
+                <li>
+                  Nurses who provide love and affection like grandmothers,
+                  guiding you on baby massage, bathing, holding techniques to
+                  prevent crying, nail cutting, and ensuring the newborn's
+                  comfort.
+                </li>
+              </ul>
             </div>
           </div>
         </section>
+      </div>
 
-        <section className="bg-[#fff] py-12">
+      <div className="mb-10">
+        <div className="container mx-auto">
+          <div className="mt-8 mb-8">
+            <h2 className="text-[24px] font-semibold text-left text-[#031432] font-poppins leading-normal">
+              How Apollo support you at home
+            </h2>
+            <ul className="list-disc text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-4 pl-5">
+              <li>
+                <span className="text-[#2A2A2A] text-[16px] font-semibold leading-[24px]">
+                  Apollo Home Nursing Services:
+                </span>
+                Our nurses assist mothers in all aspects of newborn care,
+                postpartum recovery, and feeding routines.
+              </li>
+              <li>
+                <span className="text-[#2A2A2A] text-[16px] font-semibold leading-[24px]">
+                  Medical Monitoring:
+                </span>
+                Monitoring vital signs of mother and baby to ensure their best
+                possible health.
+              </li>
+              <li>
+                <span className="text-[#2A2A2A] text-[16px] font-semibold leading-[24px]">
+                  Parent Education:
+                </span>
+                Teaching both parents safe ways to handle a newborn,
+                breastfeeding techniques, and postpartum care tips.
+              </li>
+              <li>
+                <span className="text-[#2A2A2A] text-[16px] font-semibold leading-[24px]">
+                  Emotional Comfort:
+                </span>
+                Providing compassionate, safe, and patient-centered care to make
+                the transition to parenthood smooth and easy.
+              </li>
+              <li>
+                <span className="text-[#2A2A2A] text-[16px] font-semibold leading-[24px]">
+                  Flexibility:
+                </span>
+                Care plans can be adjusted to meet the changing needs of the
+                patient.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <section className="bg-[#fff] py-10">
           <div className="container mx-auto px-4">
-            <h2 className="text-[#000] text-center font-poppins text-[32px] font-semibold leading-normal mb-8">
+            <h2 className="text-[#031432] text-center font-poppins text-[32px] font-semibold leading-normal mb-8">
               Why choose us?
             </h2>
             <div className="flex flex-wrap items-center mb-12">
               <div className="w-full md:w-1/2 px-4">
-                <ul className="text-[#6C87AE] text-base font-normal leading-6 list-disc pl-5">
+                <ul className="list-disc pl-5 text-[#525252] text-[16px] font-normal leading-[24px] mt-2">
                   <li>
                     Certified and experienced staff who provide a loving and
                     family-friendly service to mother and newborn.
@@ -284,9 +301,8 @@ const Mother_Baby_Care = () => {
                     needed.
                   </li>
                   <li>
-                    Customized support to meet your family&apos;s unique needs.
+                    Customized support to meet your family's unique needs.
                   </li>
-
                   <li>24/7 consultation and advice available.</li>
                   <li>Nurse facility at home when needed.</li>
                 </ul>
@@ -295,50 +311,11 @@ const Mother_Baby_Care = () => {
                 <Image
                   src={choose}
                   alt="Newborn baby care"
-                  className="mx-auto w-[277px]"
-                  width={277}
-                  height={308}
+                  className="mx-auto w-[400px]"
+                  width={400}
+                  height={400}
                 />
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-10 bg-[#eaf8f8]">
-          <div className="container mx-auto px-4">
-            <h2 className="text-[#031432] text-center font-poppins text-[32px] font-semibold leading-normal mb-6">
-              FAQ
-            </h2>
-
-            <div className="space-y-4">
-              <details className="bg-[#009A9F] p-4 rounded-lg flex justify-between items-center">
-                <summary className="text-white text-center font-poppins text-base font-medium leading-6 cursor-pointer">
-                  What is ICU at Home?
-                </summary>
-                <p className="text-[#003638] font-poppins text-sm font-semibold leading-6 mt-2">
-                  ICU at home is a program that allows patients to receive
-                  intensive care services in the comfort of their own home.
-                </p>
-              </details>
-              <details className="bg-[#009A9F] p-4 rounded-lg flex justify-between items-center">
-                <summary className="text-white text-center font-poppins text-base font-medium leading-6 cursor-pointer">
-                  Why should someone consider ICU at Home?
-                </summary>
-                <p className="text-[#003638] font-poppins text-sm font-semibold leading-6 mt-2">
-                  It provides benefits like improved recovery rates, reduced
-                  infection risks, and more affordable services than hospital
-                  stays.
-                </p>
-              </details>
-              <details className="bg-[#009A9F] p-4 rounded-lg flex justify-between items-center">
-                <summary className="text-white text-center font-poppins text-base font-medium leading-6 cursor-pointer">
-                  Are the services available 24/7?
-                </summary>
-                <p className="text-[#003638] font-poppins text-sm font-semibold leading-6 mt-2">
-                  Yes, our services include 24/7 medical support and emergency
-                  response.
-                </p>
-              </details>
             </div>
           </div>
         </section>
