@@ -77,7 +77,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       console.log("changing index " + index);
       setIndex(index == 0 ? 1 : index == 1 ? 2 : 0);
-    }, 4000);
+    }, 40000000000);
     return () => clearInterval(intervalId);
   }, [index]);
 
@@ -159,7 +159,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-[#e6f5f5] mb-[-31px] md:mb-[88px] slider-banner-home">
+      <div className="bg-[#e6f5f5] mb-[-31px] md:mb-[88px] slider-banner-home home_banner">
         <div
           style={{
             width: "100%",
@@ -208,8 +208,8 @@ const Home = () => {
               transitionDuration: "2s",
               width: index == 0 || index == 1 ? "5rem" : "0rem",
               visibility: index == 0 || index == 1 ? "visible" : "hidden",
-              top: index == 0 ? "23.5rem" : "20.3rem",
-              right: index == 0 ? "30.5rem" : index == 1 ? "38rem" : "0rem",
+              top: index == 0 ? "23.5rem" : "17.3rem",
+              right: index == 0 ? "30.5rem" : index == 1 ? "47rem" : "0rem",
               transform: index == 1 ? "rotate(90deg)" : "",
               position: "absolute",
             }}
@@ -227,17 +227,18 @@ const Home = () => {
               transitionDuration: "2s",
               width: "40rem",
               top: "15.5rem",
-              left: index == 1 || index == 0 ? "12.55%" : "55%",
+              left: index == 1 || index == 0 ? "3%" : "50%",
               position: "absolute",
             }}
+            className="slider_banner-text"
           >
             {index == 0 ? (
-              <div className="space-y-4">
+              <div className="space-y-4 home_banner_content">
                 <h1 className="font-Poppins text-[40px] font-bold bg-gradient-to-r from-[#00DDE5] via-[#019196] to-[#03676A] bg-clip-text text-transparent">
                   Compassionate Long-Term Care Tailored to Your Needs
                 </h1>
 
-                <p className="w-[696px] text-[#6C87AE] font-Poppins text-[16px] font-normal leading-[19.2px]">
+                <p className=" text-[#6C87AE] font-Poppins text-[16px] font-normal leading-[19.2px]">
                   Our dedicated caregivers are here to provide quality,
                   personalized long-term care to <br /> ensure you or your loved
                   ones feel supported and comfortable at every stage of care.
@@ -248,7 +249,7 @@ const Home = () => {
                 </button>
               </div>
             ) : index == 1 ? (
-              <div className="space-y-4">
+              <div className="space-y-4 home_banner_content">
                 <h1 className="font-Poppins text-[40px] font-bold bg-gradient-to-r from-[#00DDE5] via-[#019196] to-[#03676A] bg-clip-text text-transparent">
                   Book Essential Pathology Services at Your Convenience
                 </h1>
@@ -300,7 +301,7 @@ const Home = () => {
                 </button>
               </div>
             ) : (
-              <div className="space-y-4">
+              <div className="space-y-4 home_banner_content">
                 <h1 className="font-Poppins text-[40px] font-bold bg-gradient-to-r from-[#00DDE5] via-[#019196] to-[#03676A] bg-clip-text text-transparent">
                   Buy or Rent Top-Quality Medical Equipment with Ease
                 </h1>

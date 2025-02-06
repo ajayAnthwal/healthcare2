@@ -49,7 +49,7 @@ body {
   .widget-1 {
     display: none;
   }
-  .mobile-hide{
+  .mobile-hide {
     display: none;
   }
   .custom-button {
@@ -270,9 +270,32 @@ body {
   }
 }
 
-
 @media (min-width: 768px) and (max-width: 1171px) {
   .banner {
-   display: none !important;
+    display: none !important;
+  }
+}
+@media (min-width: 926px) and (max-width: 1140px) {
+  .home_banner {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1400px) {
+  .home_banner_content {
+    width: 570px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1295px) {
+  .home_banner h1 {
+    font-size: 31px !important;
+  }
+  .home_banner_content {
+    max-width: 434px !important;
+  }
+}
+
+@media (min-width: 1512px) and (max-width: 1900px) {
+  .slider_banner-text {
+    width: 45rem !important;
   }
 }
