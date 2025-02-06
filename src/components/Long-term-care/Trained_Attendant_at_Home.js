@@ -31,49 +31,60 @@ const Trained_Attendant_at_Home = () => {
           fields={formFields}
         />
       </div>
-      <section className="bg-white py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Long-Term Support Care
-          </h2>
-          <p className="text-[#6C87AE] text-base font-normal leading-6 text-center max-w-4xl mx-auto">
-            At Apollo Home Nursing, our Nurse at Home program provides
-            comprehensive and tailored solutions for patients requiring
-            long-term, in-home nursing assistance. The program is specifically
-            designed to meet the needs of individuals with complex medical
-            conditions and diverse daily needs. Our goal is to enhance quality
-            of life and provide independence through carefully crafted,
-            patient-focused care plans.
-          </p>
-          <p className="text-[#6C87AE] text-base font-normal leading-6 text-center max-w-4xl mx-auto">
-            Our team of highly skilled and compassionate nurses specializes in
-            providing a wide range of professional services, including:
-          </p>
-          <p className="text-[#6C87AE] text-base font-normal leading-6 text-center max-w-4xl mx-auto">
-            Critical Care Nursing: Advanced support for patients with serious
-            medical conditions.
-            <br />
-            Tracheostomy Nursing: Expert care for patients requiring respiratory
-            support.
-            <br />
-            Palliative Care: Comfort-focused support for people with
-            life-limiting illnesses.
-            <br />
-            Mother and Baby Care Nursing: Support for new mothers and newborns.
-            <br />
-            Travel Abroad Nursing: Specialized care for patients traveling
-            internationally.
-            <br />
-            Geriatric Nursing: Comprehensive care for elderly individuals to
-            ensure their comfort and dignity.
-          </p>
-          <p className="text-[#6C87AE] text-base font-normal leading-6 text-center max-w-4xl mx-auto mt-4">
-            Each nurse in our program is carefully selected and extensively
-            trained to provide a unique combination of clinical excellence,
-            empathy, and professionalism. Focusing on patient comfort and
-            overall well-being, we ensure that our care is as effective as it is
-            nurturing.
-          </p>
+      <section className="bg-white mt-7 px-4">
+        <div className="container mx-auto">
+          <div className="mb-10">
+            <h2 className="text-[32px] font-semibold text-[#031432] font-poppins leading-normal">
+              Long-Term Support Care
+            </h2>
+            <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-5">
+              At Apollo Home Nursing, our Nurse at Home program provides
+              comprehensive and tailored solutions for patients requiring
+              long-term, in-home nursing assistance. The program is specifically
+              designed to meet the needs of individuals with complex medical
+              conditions and diverse daily needs. Our goal is to enhance quality
+              of life and provide independence through carefully crafted,
+              patient-focused care plans.
+            </p>
+            <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-5">
+              Our team of highly skilled and compassionate nurses specializes in
+              providing a wide range of professional services, including:
+            </p>
+
+            <ul className="list-disc pl-5 text-[#525252] text-[16px] font-normal leading-[24px] mt-2">
+              <li>
+                Critical Care Nursing: Advanced support for patients with
+                serious medical conditions.
+              </li>
+              <li>
+                Tracheostomy Nursing: Expert care for patients requiring
+                respiratory support.
+              </li>
+              <li>
+                Palliative Care: Comfort-focused support for people with
+                life-limiting illnesses.
+              </li>
+              <li>
+                Mother and Baby Care Nursing: Support for new mothers and
+                newborns.
+              </li>
+              <li>
+                Travel Abroad Nursing: Specialized care for patients traveling
+                internationally.
+              </li>
+              <li>
+                Geriatric Nursing: Comprehensive care for elderly individuals to
+                ensure their comfort and dignity.
+              </li>
+            </ul>
+            <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px] mx-auto mt-5">
+              Each nurse in our program is carefully selected and extensively
+              trained to provide a unique combination of clinical excellence,
+              empathy, and professionalism. Focusing on patient comfort and
+              overall well-being, we ensure that our care is as effective as it
+              is nurturing.
+            </p>
+          </div>
         </div>
       </section>
     </div>
