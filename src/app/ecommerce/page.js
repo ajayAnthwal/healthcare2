@@ -47,7 +47,8 @@ const Ecommerce = () => {
       id: 1,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -57,7 +58,8 @@ const Ecommerce = () => {
       id: 2,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -67,7 +69,8 @@ const Ecommerce = () => {
       id: 3,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -78,7 +81,8 @@ const Ecommerce = () => {
       id: 4,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -89,7 +93,8 @@ const Ecommerce = () => {
       id: 5,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -100,7 +105,8 @@ const Ecommerce = () => {
       id: 6,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -111,7 +117,8 @@ const Ecommerce = () => {
       id: 7,
       name: "Oxygen Cylinder",
       description: "Descriptions 1 day delivery",
-      price: "$95.50",
+      discountedPrice: "$95.50",
+      originalPrice: "$195.50",
       reviews: "(4.1k) Customer Reviews",
       rating: 5,
       status: "Almost Sold Out",
@@ -306,9 +313,15 @@ const Ecommerce = () => {
                         {product.reviews}
                       </p>
                       <div className="flex justify-between items-center mt-2">
-                        <p className="text-[#484848] text-lg md:text-[24px] font-medium">
-                          {product.price}
-                        </p>
+                        <div className="flex items-center gap-2">
+                          <p className="text-[#484848] text-lg md:text-[24px] font-medium">
+                            {product.discountedPrice}
+                          </p>
+                          <p className="text-[#8A8A8A] text-[20px] line-through">
+                            {product.originalPrice}
+                          </p>
+                        </div>
+
                         <p className="text-[#FF4646] text-[12px]">
                           {product.status}
                         </p>

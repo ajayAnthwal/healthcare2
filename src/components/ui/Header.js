@@ -569,7 +569,7 @@ const Header = () => {
           </div>
         </div>
 
-        <header className="flex justify-center items-center bg-[#E6F5F5] py-3 mt-[4rem] pr-[80px] pl-[10px]">
+        <header className="flex justify-center items-center bg-[#E6F5F5] py-3 mt-[4rem] pr-[80px] pl-[10px] tab-nav">
           <div className="flex items-center h-16 px-[80px] gap-x-10 w-full mobile-hide">
             <nav className="flex flex-grow">
               <ul className="flex gap-[33px] w-max">
@@ -597,7 +597,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="flex gap-x-6">
+            <div className="flex gap-x-6 tab-hide-email">
               <Link href="mailto:care@apollohomecare.com">
                 <button className="flex items-center gap-2 px-4 py-2 border border-[#FF784B] rounded-[25px]">
                   <svg

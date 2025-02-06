@@ -222,3 +222,34 @@ body {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 }
+
+/* Tab (Tablet) screen */
+@media (max-width: 996px) and (min-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+  .mobile-footer {
+    display: block;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+  .tab-nav {
+    position: relative;
+    left: -81px !important;
+  }
+
+  .tab-hide-email {
+    display: none !important;
+  }
+
+  /* .tab-nav ul {
+    gap: 10px !important;
+  } */
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  .tab-nav ul {
+    gap: 10px !important;
+  }
+}

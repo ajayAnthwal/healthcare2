@@ -123,7 +123,7 @@ const LongTermCare = () => {
       {selectedIndex === -1 && (
         <>
           <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
-            <div className="relative  mx-auto h-[564px] flex flex-col items-center bg-no-repeat pl-8">
+            <div className="relative  mx-auto h-auto flex flex-col items-center bg-no-repeat pl-8">
               <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Long Term Care
               </div>
