@@ -6,6 +6,17 @@
   width: 1198px !important;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .custom-button {
   display: flex;
   align-items: center;
@@ -103,7 +114,6 @@
     -webkit-tap-highlight-color: transparent;
     width: fit-content !important;
   }
-
 }
 
 @media (min-width: 768px) and (max-width: 924px) {
@@ -153,6 +163,21 @@
   }
 }
 @media (min-width: 1512px) and (max-width: 1512px) {
+  html,
+  :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-tap-highlight-color: transparent;
+    width: fit-content !important;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1512px) {
   html,
   :host {
     line-height: 1.5;

@@ -123,17 +123,14 @@ const LongTermCare = () => {
       {selectedIndex === -1 && (
         <>
           <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
-            <div className="relative w-[1512px] mx-auto h-[564px] flex flex-col items-center md:bg-cover bg-no-repeat">
+            <div className="relative  mx-auto h-[564px] flex flex-col items-center bg-no-repeat pl-8">
               <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Long Term Care
               </div>
-              <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
-                <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-                  <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
+              <div className="hidden md:flex w-full flex-col md:flex-row items-center">
+                <div className="flex-1 text-center md:text-left">
+                  <h1 className="text-5xl md:text-[60px] font-medium leading-[105px] tracking-[-1.2px] font-poppins text-white">
                     Care You Can Trust At Home
-                    {/* <span className="text-gray-300 bg-gradient-to-r from-[#002729] to-[#FFF] bg-clip-text text-transparent">
-                      &nbsp; Home
-                    </span> */}
                   </h1>
                   <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px] py-[35px]">
                     Expert care for your loved ones, combining medical <br />
@@ -144,8 +141,7 @@ const LongTermCare = () => {
                     Enquire Now
                   </button>
                 </div>
-
-                <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+                <div className="flex-1 flex justify-center md:justify-end">
                   <Image
                     src={ltc}
                     alt="Care at Home"

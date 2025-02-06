@@ -6,12 +6,14 @@ import BottomNav from "@/components/ui/BottomNav";
 
 export const metadata = {
   title: "healthcare ",
-  description: "Explore a range of healthcare services tailored to meet your needs",
+  description:
+    "Explore a range of healthcare services tailored to meet your needs",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <head>
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"

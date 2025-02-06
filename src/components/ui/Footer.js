@@ -201,7 +201,7 @@ export default async function Footer() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 justify-center md:flex md:justify-start mt-4 mx-auto footer-container pl-4 md:pl-4 sm:px-4">
+      <div className="grid grid-cols-2 justify-center md:flex md:justify-start mt-4 w-[1512px] mx-auto footer-container pl-4 md:pl-4 sm:px-4">
         {options.map((item, index) => (
           <div className="" key={index}>
             <p

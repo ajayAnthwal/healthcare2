@@ -38,22 +38,22 @@ const Diagnostics = () => {
       {selectedIndex === -1 && (
         <div>
           <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center">
-            <div className="relative w-[1512px] mx-auto h-[526px] flex flex-col items-center md:bg-cover bg-no-repeat">
+            <div className="relative  mx-auto h-auto flex flex-col items-center md:bg-cover bg-no-repeat">
               <div className="absolute top-0 left-[93px] transform -translate-x-1/2 bg-white text-gray-700 text-sm px-4 py-1 shadow-md rounded-br-[37px]">
                 Home &gt;&gt;&gt; Home Diagnostics
               </div>
-              <div className="hidden md:flex max-w-[1512px] flex-col md:flex-row items-center w-full pl-8">
-                <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
-                  <h1 className="w-max text-5xl md:text-6xl font-medium leading-[1.2] md:leading-[1.1] tracking-[-1.2px] font-poppins text-white">
-                    Accurate Diagnostics, <br /> Right at Home
+              <div className="hidden md:flex flex-col md:flex-row items-center w-full pl-8">
+                <div className="w-full md:w-1/2 text-center md:text-left">
+                  <h1 className="text-5xl md:text-[60px] font-medium leading-[105px] tracking-[-1.2px] font-poppins text-white">
+                    Accurate Diagnostics, Right at Home
                   </h1>
 
-                  <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px]">
+                  <p className="text-white text-xl font-normal leading-[39.06px] tracking-[-0.002px] py-[35px]">
                     Simplifying your health check-ups with trusted diagnostics{" "}
                     <br /> delivered to your doorstep.
                   </p>
 
-                  <button className="mt-4 px-5 py-3.5 bg-white text-[#003638] rounded-[10.08px] font-poppins text-[18.9px] font-medium leading-[39.06px] tracking-[-0.191px] flex justify-center items-center gap-[10.08px] shadow-md hover:bg-gray-200">
+                  <button className="px-[18.9px] py-[6.3px] bg-white text-[#003638] rounded-[10.08px] font-poppins text-[18.9px] font-medium leading-[39.06px] tracking-[-0.191px] flex justify-center items-center gap-[10.08px] shadow-md hover:bg-gray-200">
                     Enquire Now
                   </button>
                 </div>
