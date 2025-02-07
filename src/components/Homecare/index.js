@@ -14,7 +14,7 @@ const Homecare = () => {
             Why is Homecare Important These Days?
           </h1>
 
-          <p className="w-full mx-auto lg:text-[16px] text-[14px] md:text-[16px]  font-normal md:leading-[24px] text-center opacity-80 sm:w-[676px]">
+          <p className="homecar_thease_days w-full mx-auto lg:text-[16px] text-[14px] md:text-[16px]  font-normal md:leading-[24px] text-center opacity-80 sm:w-[676px]">
             In today’s fast-paced world, the importance of receiving medical
             care at home has never been greater. Homecare offers a comfortable,
             safe, and personalized approach to healthcare, providing support for

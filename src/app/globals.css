@@ -52,6 +52,9 @@ body {
   .mobile-hide {
     display: none;
   }
+  .homecar_thease_days {
+    width: auto !important;
+  }
   .footer-responsive-mobile {
     height: 1100px !important;
   }
@@ -302,16 +305,21 @@ body {
     width: 45rem !important;
   }
 }
+@media (min-width: 768px) and (max-width: 1025px) {
+  .homecar_thease_days {
+    width: auto !important;
+  }
+}
 @media (min-width: 1135px) and (max-width: 1422px) {
   .home_visit {
     position: absolute !important;
     right: 0 !important;
     bottom: 2px !important;
   }
-  .home_visit-text h1{
+  .home_visit-text h1 {
     font-size: 44px !important;
   }
-  .home_visit-text{
+  .home_visit-text {
     padding: 19px !important;
   }
 }
