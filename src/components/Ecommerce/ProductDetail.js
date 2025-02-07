@@ -92,6 +92,36 @@ const ProductDetail = () => {
                 </span>
               </div>
 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="135"
+                height="33"
+                viewBox="0 0 135 33"
+                fill="none"
+              >
+                <path
+                  d="M0 0H135L109.397 16.5L135 33H0V0Z"
+                  fill="url(#gradient)"
+                />
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="-8.61487"
+                    y1="-1.65"
+                    x2="47.0984"
+                    y2="128.033"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#FFD439" />
+                    <stop offset="0.39047" stopColor="#FF7A00" />
+                    <stop offset="0.972852" stopColor="#E95709" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span className="absolute top-[7px] left-3 text-white font-poppins text-[15.6px] font-medium leading-[22.1px]">
+                Bestseller
+              </span>
+
               <div className="text-[28px] font-bold text-[#FF784B] font-inter leading-[36.4px]">
                 ₹20,000 (Fix)
               </div>

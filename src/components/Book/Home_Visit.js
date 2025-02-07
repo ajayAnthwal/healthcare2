@@ -33,7 +33,7 @@ const Home_Visit = () => {
             Home &gt;&gt;&gt; Home Visit
           </div>
           <div className="hidden md:flex  flex-col md:flex-row items-center w-full pl-8">
-            <div className="w-full md:w-1/2 text-center md:text-left">
+            <div className="w-full md:w-1/2 text-center md:text-left home_visit-text">
               <h1 className="text-5xl md:text-[60px] font-medium leading-[105px] tracking-[-1.2px] font-poppins text-white">
                 Expert Healthcare, Right at Your Doorstep
               </h1>
@@ -46,7 +46,7 @@ const Home_Visit = () => {
               </button>
             </div>
 
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+            <div className="home_visit w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
                 src={homevisit}
                 alt="Care at Home"

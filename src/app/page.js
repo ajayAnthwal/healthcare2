@@ -77,7 +77,7 @@ const Home = () => {
     const intervalId = setInterval(() => {
       console.log("changing index " + index);
       setIndex(index == 0 ? 1 : index == 1 ? 2 : 0);
-    }, 40000000000);
+    }, 4000);
     return () => clearInterval(intervalId);
   }, [index]);
 
@@ -365,17 +365,15 @@ const Home = () => {
           <Image
             alt=""
             src={index === 1 ? doctors : wheelchair}
-            className={`transition-all duration-[2000ms] ${
-              index === 1 || index === 2
-                ? "w-[564px] h-[564px] visible"
-                : "w-0 h-0 invisible"
-            } absolute top-[3.5rem] ${
-              index === 1
-                ? "right-[10.5%]"
-                : index === 2
-                ? "right-[55%]"
-                : "right-0"
-            }`}
+            className={`transition-all duration-[2000ms] 
+    ${
+      index === 1 || index === 2
+        ? "w-[564px] h-[564px] visible mt-[51px]"
+        : "w-0 h-0 invisible"
+    } 
+    absolute top-[3.5rem] 
+    ${index === 1 ? "right-[10.5%]" : index === 2 ? "right-[55%]" : "right-0"}
+  `}
           />
 
           <Image
@@ -386,7 +384,7 @@ const Home = () => {
               width: index == 2 ? "15rem" : "0rem",
               visibility: index == 2 ? "visible" : "hidden",
               top: "3.5rem",
-              right: index == 2 ? "45%" : "0rem",
+              right: index == 2 ? "49%" : "0rem",
               position: "absolute",
             }}
           />

@@ -51,7 +51,7 @@ export default async function Footer() {
   ];
   return (
     <footer
-      className="w-full p-4 pt-10 mt-5"
+      className="w-full p-4 pt-10 mt-5 footer-responsive-mobile"
       style={{ backgroundColor: "#002122", color: "white" }}
     >
       <div className="flex flex-col w-[1512px] mx-auto footer-container md:flex-row ">
@@ -220,7 +220,7 @@ export default async function Footer() {
 
 const MobileFooter = () => {
   return (
-    <footer className="bg-dark text-white py-6 px-4 sm:hidden">
+    <footer className="bg-dark text-white py-6 px-4 footer-responsive-mobile sm:hidden">
       {" "}
       {/* Only visible on mobile */}
       <div className="grid grid-cols-2 gap-4 text-sm">
