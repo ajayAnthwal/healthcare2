@@ -54,8 +54,8 @@ export default async function Footer() {
       className="w-full p-4 pt-10 mt-5 footer-responsive-mobile"
       style={{ backgroundColor: "#002122", color: "white" }}
     >
-      <div className="flex flex-col w-[1512px] mx-auto footer-container md:flex-row ">
-        <div className="grid grid-cols-2 md:flex container mx-auto gap-2">
+      <div className="flex flex-col w-auto mx-auto footer-container md:flex-row ">
+        <div className="grid grid-cols-2 md:flex container  gap-2">
           {/* <div className="grid grid-cols-3 gap-4 p-4"> */}
           {items.map((item, index) => (
             <>
@@ -172,7 +172,7 @@ export default async function Footer() {
 
       <hr className="mt-1" style={{ opacity: "0.28" }} />
       <div
-        className="mt-4 flex w-[1512px] mx-auto footer-container pl-4 md:pl-4 sm:pl-1 items-start lg:items-center"
+        className="mt-4 flex  mx-auto footer-container pl-4 md:pl-4 sm:pl-1 items-start lg:items-center"
         style={{ opacity: "0.8" }}
       >
         <div className="inline-block">
@@ -201,8 +201,7 @@ export default async function Footer() {
         </div>
       </div>
 
-      <div className="footer_links grid grid-cols-2 justify-center md:flex md:justify-start mt-4 w-[1512px] mx-auto footer-container pl-4 md:pl-4">
-
+      <div className="footer_links grid grid-cols-2 justify-center md:flex md:justify-start mt-4 w-auto mx-auto footer-container pl-4 md:pl-4">
         {options.map((item, index) => (
           <div className="" key={index}>
             <p
