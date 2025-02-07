@@ -4,9 +4,10 @@ import Link from "next/link";
 const ErrorPage = () => {
   return (
     <div className="flex flex-col items-center justify-center h-[70vh] text-center px-4">
-      <h1 className="text-[#000] text-center font-poppins text-[60px] font-semibold leading-[105.84px] tracking-[-1.2px]">
-        Oops! Page Not Found
-      </h1>
+      <h1 className="text-[#000] text-center font-poppins text-[40px] sm:text-[50px] md:text-[60px] font-semibold leading-[1.2] tracking-[-1.2px]">
+  Oops! Page Not Found
+</h1>
+
 
       <p className="text-[#000] text-[20px] font-normal leading-[39.06px] tracking-[-0.002px]">
         Looks like you&#39;ve taken a wrong turn. But don’t worry, we’re here to

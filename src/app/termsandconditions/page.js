@@ -4,7 +4,7 @@ const TermsAndConditions = () => {
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Heading */}
-      <h1 className="text-[#000] text-center font-poppins text-[60px] font-semibold leading-[105.84px] tracking-[-1.2px]">
+      <h1 className="text-[#000] text-center font-poppins text-[40px] sm:text-[50px] md:text-[60px] font-semibold leading-[1.2] tracking-[-1.2px]">
         Terms and Conditions
       </h1>
 
