@@ -298,7 +298,6 @@ const Ecommerce = () => {
                   </button>
                 ))}
               </div>
-              {/* Responsive grid for cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-[20px]">
                 {products.map((product) => (
                   <Link href="/book" key={product.id} className="h-full">
@@ -374,13 +373,9 @@ const Ecommerce = () => {
                       <h2 className="text-[18px] md:text-[20px] font-medium mt-2 text-[#484848] py-2">
                         {product.name}
                       </h2>
-
-                      {/* Default 2-line description */}
                       <p className="text-[#8A8A8A] text-[12px] line-clamp-2">
                         {product.description}
                       </p>
-
-                      {/* Hover par full description popup with motion effect */}
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -390,8 +385,6 @@ const Ecommerce = () => {
                       >
                         {product.description}
                       </motion.div>
-
-                      {/* Price section should always stay at the bottom */}
                       <div className="flex justify-between items-center mt-auto pt-2">
                         <div className="flex items-center gap-2">
                           <p className="text-[#484848] text-lg md:text-[24px] font-medium">
