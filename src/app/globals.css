@@ -89,26 +89,23 @@ body {
   }
 }
 
-
 .custom-scrollbar::-webkit-scrollbar {
-  width: 5px; 
+  width: 5px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #009A9F; 
+  background: #009a9f;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #00787c; 
+  background: #00787c;
 }
-
-
 
 @media (min-width: 767px) and (max-width: 925px) {
   html,
