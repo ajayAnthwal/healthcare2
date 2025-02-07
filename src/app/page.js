@@ -209,7 +209,7 @@ const Home = () => {
               width: index == 0 || index == 1 ? "5rem" : "0rem",
               visibility: index == 0 || index == 1 ? "visible" : "hidden",
               top: index == 0 ? "23.5rem" : "17.3rem",
-              right: index == 0 ? "30.5rem" : index == 1 ? "47rem" : "0rem",
+              right: index == 0 ? "41.5rem" : index == 1 ? "47rem" : "0rem",
               transform: index == 1 ? "rotate(90deg)" : "",
               position: "absolute",
             }}
