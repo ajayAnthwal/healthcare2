@@ -54,7 +54,10 @@ const Tabs = ({ tabsData }) => {
           </TabList>
         ) : (
           <>
-            <div className="bg-[#009A9F]" onClick={() => setIsOpen(!isOpen)}>
+            <div
+              className="bg-[#009A9F] mt-[47px]"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="bg-[#009A9F] text-white py-2 px-4 mb-4 mx-auto gap-2 flex items-center"

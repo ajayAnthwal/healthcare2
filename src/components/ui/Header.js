@@ -649,7 +649,7 @@ const Header = () => {
 
       {/* Mobile Header */}
       <div className="relative">
-        <div className="md:hidden block py-2 sticky top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9]">
+        <div className="md:hidden block py-2 fixed top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9]">
           <header className=" flex items-center justify-between px-[20px]">
             <Image
               alt="logo"
