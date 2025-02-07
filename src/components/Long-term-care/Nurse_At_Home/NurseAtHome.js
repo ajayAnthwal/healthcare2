@@ -22,7 +22,7 @@ const NurseAtHome = () => {
   return (
     <>
       <div className="container mx-auto pt-7 pb-5">
-        <p className="text-left text-[#031432] font-poppins text-[20px] font-semibold leading-normal">
+        <p className="text-left text-[#031432] font-poppins text-[20px] font-semibold leading-normal top_section">
           Apollo ICU at Home
         </p>
       </div>
