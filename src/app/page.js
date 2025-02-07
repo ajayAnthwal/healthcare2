@@ -493,7 +493,7 @@ const Home = () => {
 
       <div className="overflow-x-hidden">
         {/* <Image src={banner} alt="banner" className="hidden md:block w-full z-1" /> */}
-        <div className="flex flex-col items-center mt-5 container w-full mx-auto md:px-4 px-2">
+        <div className="flex flex-col items-center mt-5 container w-full mx-auto pt-[3.5rem] sm:pt-0 md:px-4 px-2">
           <ComprehensiveServices />
         </div>
         <BannerCarousel />

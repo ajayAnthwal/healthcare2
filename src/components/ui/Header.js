@@ -144,7 +144,9 @@ const Header = () => {
                   onClick={handleCityToggle}
                 >
                   <Image src={location} alt="Location" width={19} height={19} />
-                  <p className="ms-2 text-[16px] tab-profile">New Delhi, Delhi</p>
+                  <p className="ms-2 text-[16px] tab-profile">
+                    New Delhi, Delhi
+                  </p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -646,8 +648,8 @@ const Header = () => {
       </div>
 
       {/* Mobile Header */}
-      <div className="md:hidden block bg-[#e6f5f5] py-2">
-        <header className="flex items-center justify-between px-[20px]">
+      <div className="md:hidden block py-2 fixed top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9]">
+        <header className=" flex items-center justify-between px-[20px]">
           <Image
             alt="logo"
             loading="lazy"
