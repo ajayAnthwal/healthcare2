@@ -79,7 +79,7 @@ const Career = () => {
             <h1 className="text-[32px] font-semibold text-[#031432] leading-normal text-center font-poppins">
               Careers
             </h1>
-            <ul className="flex justify-center space-x-8">
+            <ul className="flex justify-center space-x-8 flex-wrap gap-3 md:flex-nowrap">
               <Link href="#legacy">
                 <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
                   Current Opportunities

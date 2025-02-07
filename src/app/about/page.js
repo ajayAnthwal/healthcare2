@@ -9,11 +9,11 @@ const About = () => {
     <div>
       <div className="text-gray-800 container mx-auto">
         <div>
-          <nav className="flex flex-col items-center gap-5 py-4">
+          <nav className="flex flex-col items-center gap-5 py-4 ">
             <h1 className="text-[32px] font-semibold text-[#031432] leading-normal text-center font-poppins">
               ABOUT
             </h1>
-            <ul className="flex justify-center space-x-8">
+            <ul className="flex justify-center space-x-8 flex-wrap gap-4 md:flex-nowrap">
               <Link href="#legacy">
                 <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
                   Legacy

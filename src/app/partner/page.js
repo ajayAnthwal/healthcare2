@@ -83,7 +83,7 @@ const Partner = () => {
             <h2 className="text-[32px] font-semibold text-center text-[#031432] font-poppins leading-normal">
               PARTNER WITH US
             </h2>
-            <nav className="flex flex-col items-center gap-5 py-4">
+            <nav className="flex flex-col items-center gap-5 py-4 ">
               <ul className="flex justify-center space-x-8">
                 <Link href="#legacy">
                   <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">

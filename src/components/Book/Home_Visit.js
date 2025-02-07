@@ -132,7 +132,7 @@ const Home_Visit = () => {
       </div>
 
       <section className="bg-white py-10">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-3 md:px-0">
           <h2 className="text-[#031432] text-center font-poppins text-[32px] font-semibold leading-normal mb-12">
             Home Visit
           </h2>
@@ -221,7 +221,7 @@ const Home_Visit = () => {
       </section>
 
       <section className="py-10 container mx-auto">
-        <div className="text-center py-10">
+        <div className="text-center py-10 px-3 md:px-0">
           <p className="text-[#525252] text-justify text-[16px] font-normal leading-[24px]">
             Apollo Home Care provides a variety of medical services, such as
             acute care, palliative care, post-operative care, elderly care, and
@@ -241,7 +241,7 @@ const Home_Visit = () => {
             DOCTORS AT HOME
           </h2>
 
-          <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px]">
+          <p className="text-[#525252] text-center text-[16px] font-normal leading-[24px] px-3 md:px-0">
             Apollo Home Care&apos;s Doctor at Home Service brings expert medical
             care to your doorstep, ensuring convenience, comfort, and peace of
             mind. Our <br /> skilled doctors provide a range of services,
@@ -253,7 +253,7 @@ const Home_Visit = () => {
         </div>
       </section>
 
-      <section className="bg-[#E6F5F5] py-8">
+      <section className="bg-[#E6F5F5] py-8 px-3 md:px-0">
         <div>
           <h2 className="text-[#000000] text-center font-poppins text-[32px] font-semibold leading-normal">
             Book your Apollo Doctor at home
@@ -264,7 +264,7 @@ const Home_Visit = () => {
             convenience of your home
           </p>
 
-          <div className="flex flex-wrap items-start container mx-auto my-8">
+          <div className="flex flex-wrap items-start container mx-auto my-8 ">
             <div className="w-full md:w-1/2 px-4">
               <h4 className="text-[#000] text-center font-poppins text-[24px] font-semibold leading-normal">
                 TELE VISIT
@@ -652,7 +652,7 @@ const Home_Visit = () => {
       </section>
 
       <div>
-        <section>
+        <section className="px-3 md:px-0">
           <div className="mt-8 text-center">
             <h3 className="text-center text-[28px] font-poppins font-semibold leading-normal text-[#031432]">
               Benefits of Dietitian at Home

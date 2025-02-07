@@ -177,7 +177,7 @@ const Diagnostics = () => {
             </div>
           </section>
 
-          <section className="py-10 container mx-auto">
+          <section className="py-10 container mx-auto px-3 md:px-0">
             <div className="text-center my-8">
               <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px]">
                 Apollo Home Care provides a variety of medical services, such as
