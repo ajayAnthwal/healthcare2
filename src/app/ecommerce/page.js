@@ -16,6 +16,7 @@ import product2 from "@/assets/images/book/product2.png";
 import banerproduct from "@/assets/images/book/Hero.png";
 import deal from "@/assets/images/book/deal.png";
 import Link from "next/link";
+import { TbLineDashed } from "react-icons/tb";
 
 const Ecommerce = () => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -192,7 +193,7 @@ const Ecommerce = () => {
           </div>
 
           <div className="relative flex flex-col md:flex-row mt-8 gap-5 w-full  mx-auto mb-3 px-4 md:px-0">
-            <div className="bg-[#E6F5F5] p-4 mt-[28px] rounded-[0px_20px_20px_0px] w-full md:w-[275px] sticky top-[7rem] left-0 border border-[#018F93] shadow-[1px_2px_10px_rgba(16,204,204,0.25)] h-max">
+            <div className="bg-[#E6F5F5] p-4 mt-[28px] rounded-[0px_20px_20px_0px] w-full md:w-[300px] sticky top-[7rem] left-0 border border-[#018F93] shadow-[1px_2px_10px_rgba(16,204,204,0.25)] h-max">
               {/* Filters Header */}
               <div className="flex items-center gap-2 mb-4">
                 <svg
@@ -230,9 +231,9 @@ const Ecommerce = () => {
                 <h4 className="text-[#101828] font-poppins text-[18px] font-semibold mb-2 border-b border-[#D3D3D3] py-[5px]">
                   Quick Link
                 </h4>
-                <ul className="space-y-1">
+                <ul className="space-y-1 max-h-60 overflow-y-auto rounded-lg p-2 custom-scrollbar">
                   {[
-                    "Wheelchair",
+                    "Wheelchair Wheelchair Wheelchair Wheelchair ",
                     "Wheelchair",
                     "Wheelchair",
                     "Wheelchair",
@@ -247,9 +248,10 @@ const Ecommerce = () => {
                   ].map((item, index) => (
                     <li
                       key={index}
-                      className="text-[#009A9F] font-medium text-[16px] cursor-pointer"
+                      className="py-2 flex items-center gap-2 text-[#009A9F]  text-[16px] cursor-pointer transition-all duration-300 hover:text-[#00787c] hover:underline"
                     >
-                      - {item}
+                      <TbLineDashed className="text-lg text-[#009A9F] transition-all duration-300 hover:text-[#00787c]" />
+                      {item}
                     </li>
                   ))}
                 </ul>
