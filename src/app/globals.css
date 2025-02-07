@@ -52,6 +52,9 @@ body {
   .mobile-hide {
     display: none;
   }
+  .footer_links {
+    padding: 0px 43px !important;
+  }
   .homecar_thease_days {
     width: auto !important;
   }
