@@ -648,289 +648,291 @@ const Header = () => {
       </div>
 
       {/* Mobile Header */}
-      <div className="md:hidden block py-2 fixed top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9]">
-        <header className=" flex items-center justify-between px-[20px]">
-          <Image
-            alt="logo"
-            loading="lazy"
-            width={25}
-            height={28}
-            decoding="async"
-            src={logoMobile}
-          />
-          <div
-            className="flex items-center text-[#009A9F] font-medium text-sm cursor-pointer"
-            onClick={handleCityToggle}
-          >
-            <Image src={location_on} alt="location" height={15} width={15} />
-            <p className="mx-1 text-[12px]">New Delhi, Delhi</p>
+      <div className="relative">
+        <div className="md:hidden block py-2 sticky top-0 inset-x-0 z-50 w-full bg-[#e6f5f5] border-b-[1px] border-[#C9C9C9]">
+          <header className=" flex items-center justify-between px-[20px]">
             <Image
-              src={keyboard_arrow_down}
-              alt="arrow down"
-              height={15}
-              width={15}
-              className={`transform transition-transform ${
-                city ? "rotate-180" : "rotate-0"
-              }`}
+              alt="logo"
+              loading="lazy"
+              width={25}
+              height={28}
+              decoding="async"
+              src={logoMobile}
             />
-          </div>
-
-          <div className="flex gap-[10px]">
-            <Image
-              src={search}
-              alt="search"
-              height={24}
-              width={24}
-              onClick={() => setIsOpen(!isOpen)}
-            />
-            {isOpen && (
-              <div className="absolute top-[57px] left-0 w-full mt-2 bg-white rounded-[10px] shadow-lg border border-gray-100 py-4 z-50">
-                <div className="px-4">
-                  <div className="w-full  mx-auto">
-                    <div className="flex items-center space-x-2 mb-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="cursor-pointer"
-                      >
-                        <path
-                          d="M15 18L9 12L15 6"
-                          stroke="black"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <h2 className="text-lg font-semibold">Search</h2>
-                    </div>
-                    <div
-                      className="flex items-center border border-gray-500 w-full p-2 rounded-md "
-                      ref={searchRef}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="text-gray-500 mr-2"
-                      >
-                        <path
-                          d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
-                          fill="#B3B3B3"
-                        />
-                      </svg>
-                      <input
-                        ref={inputRef}
-                        type="text"
-                        placeholder='try searching something "my subscriptions"'
-                        className="flex-grow text-gray-800 focus:outline-none bg-transparent placeholder-gray-400"
-                        onFocus={() => setIsOpen(true)}
-                      />
-
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="text-black cursor-pointer ml-2"
-                      >
-                        <path
-                          d="M8.4 17L7 15.6L10.6 12L7 8.42502L8.4 7.02502L12 10.625L15.575 7.02502L16.975 8.42502L13.375 12L16.975 15.6L15.575 17L12 13.4L8.4 17Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <h3 className="text-[#00979C] text-base font-medium mb-3 mt-2">
-                    Most Search - Product
-                  </h3>
-                  <div className="space-y-4">
-                    {searchResults.product.map((item, index) => (
-                      <div
-                        key={`product-${index}`}
-                        className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-2 rounded"
-                      >
-                        <span className="text-gray-900 font-semibold text-sm">
-                          {item.title}
-                        </span>
-                        <span className="text-gray-500 text-xs">
-                          {item.subtitle}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="mt-6 px-4">
-                  <h3 className="text-[#00979C] text-base font-medium mb-3">
-                    Most Search - Blog
-                  </h3>
-                  <div className="space-y-4">
-                    {searchResults.blog.map((item, index) => (
-                      <div
-                        key={`blog-${index}`}
-                        className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-2 rounded"
-                      >
-                        <span className="text-gray-900 font-semibold text-sm">
-                          {item.title}
-                        </span>
-                        <span className="text-gray-500 text-xs">
-                          {item.subtitle}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F]">
+            <div
+              className="flex items-center text-[#009A9F] font-medium text-sm cursor-pointer"
+              onClick={handleCityToggle}
+            >
+              <Image src={location_on} alt="location" height={15} width={15} />
+              <p className="mx-1 text-[12px]">New Delhi, Delhi</p>
               <Image
-                src={shoppingCart}
-                alt="shopping cart"
-                height={12}
-                width={12}
+                src={keyboard_arrow_down}
+                alt="arrow down"
+                height={15}
+                width={15}
+                className={`transform transition-transform ${
+                  city ? "rotate-180" : "rotate-0"
+                }`}
               />
             </div>
-            <div className="relative">
-              <div
-                className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F] cursor-pointer"
-                onClick={toggleMenu}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="19"
-                  width="19"
-                  fill="white"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3 7.5 5.015 7.5 7.5 9.515 12 12 12zm0 2c-3.314 0-6 2.686-6 6v2h12v-2c0-3.314-2.686-6-6-6z" />
-                </svg>
-              </div>
 
-              {/* Dropdown Menu */}
-              {menuOpen && (
-                <motion.div
-                  className="fixed inset-0 bg-white z-30 h-screen overflow-y-auto w-[375px] left-[60px]"
-                  variants={popupVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                >
-                  <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-auto  left-[60px]">
-                    {/* Close Button */}
-                    <div className="flex items-center justify-between bg-[#009A9F] p-4 w-full rounded-b-[20px]">
-                      <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] flex-1">
-                        Profile
-                      </h3>
-
-                      <button
-                        className="text-white font-bold text-[25px] ml-4 flex-shrink-0"
-                        onClick={toggleMenu}
+            <div className="flex gap-[10px]">
+              <Image
+                src={search}
+                alt="search"
+                height={24}
+                width={24}
+                onClick={() => setIsOpen(!isOpen)}
+              />
+              {isOpen && (
+                <div className="absolute top-[57px] left-0 w-full mt-2 bg-white rounded-[10px] shadow-lg border border-gray-100 py-4 z-50">
+                  <div className="px-4">
+                    <div className="w-full  mx-auto">
+                      <div className="flex items-center space-x-2 mb-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="cursor-pointer"
+                        >
+                          <path
+                            d="M15 18L9 12L15 6"
+                            stroke="black"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <h2 className="text-lg font-semibold">Search</h2>
+                      </div>
+                      <div
+                        className="flex items-center border border-gray-500 w-full p-2 rounded-md "
+                        ref={searchRef}
                       >
-                        ×
-                      </button>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="text-gray-500 mr-2"
+                        >
+                          <path
+                            d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                            fill="#B3B3B3"
+                          />
+                        </svg>
+                        <input
+                          ref={inputRef}
+                          type="text"
+                          placeholder='try searching something "my subscriptions"'
+                          className="flex-grow text-gray-800 focus:outline-none bg-transparent placeholder-gray-400"
+                          onFocus={() => setIsOpen(true)}
+                        />
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="text-black cursor-pointer ml-2"
+                        >
+                          <path
+                            d="M8.4 17L7 15.6L10.6 12L7 8.42502L8.4 7.02502L12 10.625L15.575 7.02502L16.975 8.42502L13.375 12L16.975 15.6L15.575 17L12 13.4L8.4 17Z"
+                            fill="black"
+                          />
+                        </svg>
+                      </div>
                     </div>
-
-                    <ul className="mt-1 flex flex-col gap-4 p-4">
-                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="20"
-                          width="20"
-                          viewBox="0 0 24 24"
-                          fill="black"
+                    <h3 className="text-[#00979C] text-base font-medium mb-3 mt-2">
+                      Most Search - Product
+                    </h3>
+                    <div className="space-y-4">
+                      {searchResults.product.map((item, index) => (
+                        <div
+                          key={`product-${index}`}
+                          className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-2 rounded"
                         >
-                          <path d="M16 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm1 1h-2v1h-2v1h6v-1h-2v-1zm-7 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-1.78 0-4.7.92-4.7 2.7V18h9.4v-1.3c0-1.78-2.92-2.7-4.7-2.7z" />
-                        </svg>
-                        Family Profiles
-                      </li>
-                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="20"
-                          width="20"
-                          viewBox="0 0 24 24"
-                          fill="black"
-                        >
-                          <path d="M13 11h-2v2h2v-2zm0-4h-2v2h2V7zm-1-5C5.92 2 2 6.48 2 11c0 4.52 3.92 9 10 9s10-4.48 10-9c0-4.52-3.92-9-10-9zm0 16c-4.34 0-8-3.28-8-7s3.66-7 8-7 8 3.28 8 7-3.66 7-8 7z" />
-                        </svg>
-                        My Health Files
-                      </li>
-                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="20"
-                          width="20"
-                          viewBox="0 0 24 24"
-                          fill="black"
-                        >
-                          <path d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10zm-3-3H8v-2h8v2z" />
-                        </svg>
-                        Payment Method
-                      </li>
-                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="20"
-                          width="20"
-                          viewBox="0 0 24 24"
-                          fill="black"
-                        >
-                          <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm-.001 6C9.794 10 9 10.791 9 12h2v1h-1v1h1v1h-1v1h2v-1c0-.577.373-.875.738-1.111.292-.19.512-.398.762-.683C13.624 11.597 14 10.932 14 10c0-1.105-.895-2-2.001-2zM13 13h-1v-1h1v1z" />
-                        </svg>
-                        Help & Support
-                      </li>
-                      <li className="flex items-center gap-3 cursor-pointer text-[14px] text-[#FF784B]">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          height="20"
-                          width="20"
-                          viewBox="0 0 24 24"
-                          fill="#FF784B"
-                        >
-                          <path d="M10 9v6H5v4h14v-4h-5v-6h5V5H5v4h5zm1-6h-7v16h7v-3h7V6h-7V3z" />
-                        </svg>
-                        Logout
-                      </li>
-                    </ul>
+                          <span className="text-gray-900 font-semibold text-sm">
+                            {item.title}
+                          </span>
+                          <span className="text-gray-500 text-xs">
+                            {item.subtitle}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </motion.div>
+                  <div className="mt-6 px-4">
+                    <h3 className="text-[#00979C] text-base font-medium mb-3">
+                      Most Search - Blog
+                    </h3>
+                    <div className="space-y-4">
+                      {searchResults.blog.map((item, index) => (
+                        <div
+                          key={`blog-${index}`}
+                          className="flex items-center justify-between cursor-pointer hover:bg-gray-50 p-2 rounded"
+                        >
+                          <span className="text-gray-900 font-semibold text-sm">
+                            {item.title}
+                          </span>
+                          <span className="text-gray-500 text-xs">
+                            {item.subtitle}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               )}
-            </div>
-          </div>
-        </header>
 
-        {/* Mobile Dropdown */}
-        {city && (
-          <div className="bg-white shadow-lg p-4 rounded-lg absolute top-[50px] left-0 right-0 mx-auto z-10 w-[184px]">
-            <h3 className="text-black font-semibold text-[14px] mb-2">
-              Select City
-            </h3>
-            <ul className="flex flex-col gap-2">
-              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
-                Delhi
-              </li>
-              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
-                Noida
-              </li>
-              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
-                Gurgaon
-              </li>
-              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
-                Faridabad
-              </li>
-              <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
-                Ghaziabad
-              </li>
-            </ul>
-          </div>
-        )}
+              <div className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F]">
+                <Image
+                  src={shoppingCart}
+                  alt="shopping cart"
+                  height={12}
+                  width={12}
+                />
+              </div>
+              <div className="relative">
+                <div
+                  className="w-[24px] h-[24px] flex justify-center items-center rounded-full bg-[#009A9F] cursor-pointer"
+                  onClick={toggleMenu}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="19"
+                    width="19"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3 7.5 5.015 7.5 7.5 9.515 12 12 12zm0 2c-3.314 0-6 2.686-6 6v2h12v-2c0-3.314-2.686-6-6-6z" />
+                  </svg>
+                </div>
+
+                {/* Dropdown Menu */}
+                {menuOpen && (
+                  <motion.div
+                    className="fixed inset-0 bg-white z-30 h-screen overflow-y-auto w-[375px] left-[60px]"
+                    variants={popupVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <div className="fixed inset-0 bg-white z-30 h-screen  overflow-y-auto w-auto  left-[60px]">
+                      {/* Close Button */}
+                      <div className="flex items-center justify-between bg-[#009A9F] p-4 w-full rounded-b-[20px]">
+                        <h3 className="text-white font-poppins text-[16px] font-normal leading-[1.2] flex-1">
+                          Profile
+                        </h3>
+
+                        <button
+                          className="text-white font-bold text-[25px] ml-4 flex-shrink-0"
+                          onClick={toggleMenu}
+                        >
+                          ×
+                        </button>
+                      </div>
+
+                      <ul className="mt-1 flex flex-col gap-4 p-4">
+                        <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            width="20"
+                            viewBox="0 0 24 24"
+                            fill="black"
+                          >
+                            <path d="M16 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm1 1h-2v1h-2v1h6v-1h-2v-1zm-7 0c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm0 2c-1.78 0-4.7.92-4.7 2.7V18h9.4v-1.3c0-1.78-2.92-2.7-4.7-2.7z" />
+                          </svg>
+                          Family Profiles
+                        </li>
+                        <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            width="20"
+                            viewBox="0 0 24 24"
+                            fill="black"
+                          >
+                            <path d="M13 11h-2v2h2v-2zm0-4h-2v2h2V7zm-1-5C5.92 2 2 6.48 2 11c0 4.52 3.92 9 10 9s10-4.48 10-9c0-4.52-3.92-9-10-9zm0 16c-4.34 0-8-3.28-8-7s3.66-7 8-7 8 3.28 8 7-3.66 7-8 7z" />
+                          </svg>
+                          My Health Files
+                        </li>
+                        <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            width="20"
+                            viewBox="0 0 24 24"
+                            fill="black"
+                          >
+                            <path d="M19 4H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H5V8h14v10zm-3-3H8v-2h8v2z" />
+                          </svg>
+                          Payment Method
+                        </li>
+                        <li className="flex items-center gap-3 cursor-pointer text-[14px] text-black hover:text-[#FF784B]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            width="20"
+                            viewBox="0 0 24 24"
+                            fill="black"
+                          >
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8zm-.001 6C9.794 10 9 10.791 9 12h2v1h-1v1h1v1h-1v1h2v-1c0-.577.373-.875.738-1.111.292-.19.512-.398.762-.683C13.624 11.597 14 10.932 14 10c0-1.105-.895-2-2.001-2zM13 13h-1v-1h1v1z" />
+                          </svg>
+                          Help & Support
+                        </li>
+                        <li className="flex items-center gap-3 cursor-pointer text-[14px] text-[#FF784B]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="20"
+                            width="20"
+                            viewBox="0 0 24 24"
+                            fill="#FF784B"
+                          >
+                            <path d="M10 9v6H5v4h14v-4h-5v-6h5V5H5v4h5zm1-6h-7v16h7v-3h7V6h-7V3z" />
+                          </svg>
+                          Logout
+                        </li>
+                      </ul>
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            </div>
+          </header>
+
+          {/* Mobile Dropdown */}
+          {city && (
+            <div className="bg-white shadow-lg p-4 rounded-lg absolute top-[50px] left-0 right-0 mx-auto z-10 w-[184px]">
+              <h3 className="text-black font-semibold text-[14px] mb-2">
+                Select City
+              </h3>
+              <ul className="flex flex-col gap-2">
+                <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                  Delhi
+                </li>
+                <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                  Noida
+                </li>
+                <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                  Gurgaon
+                </li>
+                <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                  Faridabad
+                </li>
+                <li className="hover:text-[#FF784B] cursor-pointer text-[14px] text-black">
+                  Ghaziabad
+                </li>
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
