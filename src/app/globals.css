@@ -95,6 +95,8 @@ body {
   }
 }
 
+
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 5px;
 }
@@ -112,6 +114,7 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #00787c;
 }
+
 
 @media (min-width: 767px) and (max-width: 925px) {
   html,
@@ -309,7 +312,7 @@ body {
   }
 }
 @media (min-width: 1700px) and (max-width: 4000px) {
-  .container {
+  .container3 {
     width: -webkit-fill-available !important;
   }
 }

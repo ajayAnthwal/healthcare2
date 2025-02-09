@@ -301,7 +301,7 @@ const Ecommerce = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-[20px]">
                 {products.map((product) => (
                   <Link href="/book" key={product.id} className="h-full">
-                    <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col h-full relative group">
+                    <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col h-full relative group transition-transform duration-300 hover:shadow-2xl hover:scale-105">
                       <div className="absolute -mt-1 -ml-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -376,15 +376,7 @@ const Ecommerce = () => {
                       <p className="text-[#8A8A8A] text-[12px] line-clamp-2">
                         {product.description}
                       </p>
-                      <motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.3 }}
-                        className="w-[30rem] absolute bg-white text-black p-3 shadow-lg rounded-md border left-0 -top-[-14rem] -translate-x-1/2  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
-                      >
-                        {product.description}
-                      </motion.div>
+                    
                       <div className="flex justify-between items-center mt-auto pt-2">
                         <div className="flex items-center gap-2">
                           <p className="text-[#484848] text-lg md:text-[24px] font-medium">
