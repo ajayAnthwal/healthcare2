@@ -165,25 +165,27 @@ const LongTermCare = () => {
               <h1 className="text-center text-2xl mt-12 md:text-4xl font-bold text-[#031432] mb-10">
                 Our Services
               </h1>
-              <div className="product_card grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 justify-center">
-                {services.slice(0, 4).map((service, index) => (
-                  <div
-                    key={index}
-                    className="bg-white shadow-md rounded-[20px] p-3 md:p-4 flex flex-col items-center text-center w-auto h-auto md:w-[231px] md:h-[316px]"
-                  >
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      className="mb-3 w-20 h-20 md:w-[150px] md:h-[150px]"
-                    />
-                    <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
-                      {service.title}
-                    </h3>
-                    <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
-                      Enquire Now
-                    </button>
-                  </div>
-                ))}
+              <div className="flex justify-center mt-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                  {services.slice(0, 4).map((service, index) => (
+                    <div
+                      key={index}
+                      className="bg-white shadow-md rounded-[20px] p-3 md:p-4 flex flex-col items-center text-center w-auto h-auto md:w-[231px] md:h-[316px]"
+                    >
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        className="mb-3 w-20 h-20 md:w-[150px] md:h-[150px]"
+                      />
+                      <h3 className="text-sm md:text-[20px] font-semibold text-[#031432] mb-3 md:mb-4">
+                        {service.title}
+                      </h3>
+                      <button className="w-full md:w-[211px] mt-auto flex items-center justify-center gap-2 text-xs md:text-[16px] text-[#009A9F] border border-[#009A9F] rounded-full px-2 md:p-4 py-1 hover:bg-[#009A9F] hover:text-white">
+                        Enquire Now
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </div>
               <div className="flex justify-center mt-8">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
