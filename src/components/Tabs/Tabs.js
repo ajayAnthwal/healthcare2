@@ -55,7 +55,7 @@ const Tabs = ({ tabsData }) => {
         ) : (
           <>
             <div
-              className="bg-[#009A9F] mt-[47px]"
+              className="bg-[#009A9F] mt-[44px]"
               onClick={() => setIsOpen(!isOpen)}
             >
               <button

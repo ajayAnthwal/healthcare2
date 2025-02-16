@@ -376,13 +376,13 @@ const Ecommerce = () => {
                       <p className="text-[#8A8A8A] text-[12px] line-clamp-2">
                         {product.description}
                       </p>
-                    
-                      <div className="flex justify-between items-center mt-auto pt-2">
-                        <div className="flex items-center gap-2">
-                          <p className="text-[#484848] text-lg md:text-[24px] font-medium">
+
+                      <div className="flex flex-wrap items-center justify-between mt-auto pt-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <p className="text-[#484848] text-sm sm:text-lg md:text-[24px] font-medium">
                             {product.discountedPrice}
                           </p>
-                          <p className="text-[#8A8A8A] text-[20px] line-through">
+                          <p className="text-[#8A8A8A] text-xs sm:text-sm md:text-[20px] line-through">
                             {product.originalPrice}
                           </p>
                         </div>
@@ -391,36 +391,37 @@ const Ecommerce = () => {
                   </Link>
                 ))}
               </div>
-
             </main>
           </div>
-          <div className="w-full bg-[#003638] py-8 md:py-10 px-4 md:px-0">
-            <div className="w-full md:w-[1512px] mx-auto flex flex-col md:flex-row">
-              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
-                <h1 className="text-[#fff] text-3xl md:text-[#fff] text-[46px] font-semibold font-[Poppins]">
-                  Deals Of The Month
-                </h1>
-                <p className="text-[#C1C1C1] text-sm md:text-base mt-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing <br />
-                  elit. Scelerisque duis ultrices sollicitudin aliquam sem.
-                  <br />
-                  Scelerisque duis ultrices sollicitudin
-                </p>
-                <button className="mt-4 w-[207px] h-[56px] bg-[#009A9F] text-white text-base font-normal font-[Poppins] rounded-[10px] shadow-lg shadow-[#009A9F]/30 hover:bg-[#007D82]">
-                  Buy Now
-                </button>
-              </div>
-              <div className="w-full md:w-1/2 flex items-center justify-center">
-                <Image
-                  src={deal}
-                  alt="Ventilator"
-                  className="w-full md:w-3/4 object-cover"
-                  width={669}
-                  height={458}
-                />
-              </div>
-            </div>
-          </div>
+          <div className="w-full bg-[#003638] py-8 md:py-10 px-6 sm:px-8 md:px-0">
+  <div className="w-full max-w-[1512px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
+    {/* Left Section (Text) */}
+    <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col justify-center text-center md:text-left">
+      <h1 className="text-[#fff] text-2xl sm:text-3xl md:text-[46px] font-semibold font-[Poppins]">
+        Deals Of The Month
+      </h1>
+      <p className="text-[#C1C1C1] text-sm md:text-base mt-2 leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br className="hidden md:block" />
+        Scelerisque duis ultrices sollicitudin aliquam sem.
+      </p>
+      <button className="mt-4 w-[180px] sm:w-[207px] h-[48px] sm:h-[56px] bg-[#009A9F] text-white text-base font-normal font-[Poppins] rounded-lg shadow-lg shadow-[#009A9F]/30 hover:bg-[#007D82] mx-auto md:mx-0">
+        Buy Now
+      </button>
+    </div>
+
+    {/* Right Section (Image) */}
+    <div className="w-full md:w-1/2 flex items-center justify-center overflow-hidden">
+      <Image
+        src={deal}
+        alt="Ventilator"
+        className="w-full max-w-full md:max-w-[90%] h-auto object-contain"
+        width={669}
+        height={458}
+      />
+    </div>
+  </div>
+</div>
+
         </div>
       )}
     </>

@@ -460,7 +460,6 @@ const Home = () => {
         {showPopup && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="relative w-[615px] h-[302px] mx-auto bg-white rounded-xl shadow-md py-5 px-10">
-              {/* Close Button */}
               <button
                 className="absolute top-3 right-3 text-black text-xl font-bold"
                 onClick={() => setShowPopup(false)}
@@ -473,13 +472,26 @@ const Home = () => {
               </h2>
               <div className="grid grid-cols-5 gap-4 mt-5">
                 {cities.map((city, index) => (
-                  <div key={index} className="flex flex-col items-center">
-                    <Image
-                      src={city.icon}
-                      alt={city.name}
-                      width={60}
-                      height={60}
-                    />
+                  <div
+                    key={index}
+                    className="flex flex-col items-center group cursor-pointer"
+                  >
+                    <div className="relative w-[60px] h-[60px]">
+                      <Image
+                        src={city.icon}
+                        alt={city.name}
+                        width={60}
+                        height={60}
+                        className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-0"
+                      />
+                      <Image
+                        src={city.icon}
+                        alt={city.name}
+                        width={60}
+                        height={60}
+                        className="absolute inset-0 filter brightness-0 invert sepia saturate-300 contrast-100 hue-rotate-[160deg] opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:drop-shadow-[0_0_2px_#009A9F]"
+                      />
+                    </div>
                     <p className="text-black text-[16px] font-normal leading-[19.2px] mt-2">
                       {city.name}
                     </p>
