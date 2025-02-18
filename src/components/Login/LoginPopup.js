@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Login from "@/app/login/page";
 
-const FloatingContactWidget = () => {
+const LoginPopup = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const openPopup = () => setIsPopupOpen(true);
@@ -78,4 +79,4 @@ const FloatingContactWidget = () => {
   );
 };
 
-export default FloatingContactWidget;
+export default LoginPopup;
