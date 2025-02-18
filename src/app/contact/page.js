@@ -41,9 +41,9 @@ export default function Contact() {
           <h1 className="text-[32px] font-semibold text-[#031432] leading-normal text-center font-poppins">
             Contact us
           </h1>
-          <ul className="flex justify-center space-x-8 flex-wrap gap-4 md:flex-nowrap">
+          <ul className="flex justify-center items-center space-x-8 flex-wrap gap-4 md:flex-nowrap">
             <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
+              <li className="flex items-center justify-center gap-2 p-[10px_20px] rounded-[10px] bg-[#009A9F] text-white text-center font-poppins text-[16px] font-semibold leading-normal cursor-pointer hover:underline">
                 HYDERBAD
               </li>
             </Link>
@@ -109,8 +109,8 @@ export default function Contact() {
         </p>
 
         <p className="text-[#3A3A3A] text-center  text-base font-normal leading-6 mt-4">
-          Our Apollo&apos;s compassionate professionals are here to assist you or a
-          loved one with regular responsibilities, personal care, or home
+          Our Apollo&apos;s compassionate professionals are here to assist you
+          or a loved one with regular responsibilities, personal care, or home
           safety. To ensure a safer and more comfortable life at home, we offer
           personalized, professional home care services that serve to improve
           comfort, independence, and overall health.
