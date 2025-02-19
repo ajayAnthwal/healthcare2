@@ -152,7 +152,7 @@ const BlogPage = () => {
             </div>
           </div>
 
-          <div className="mt-6 p-4 bg-white rounded-lg border-t border-gray-300 flex justify-between gap-4 items-start">
+          <div className="mt-6 p-4 bg-white rounded-lg border-t border-gray-300 flex flex-col md:flex-row justify-between gap-4 items-start">
             <div className="w-[150px] h-[150px] rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ const BlogPage = () => {
         </div>
 
         {/* Sidebar Section */}
-        <div className="w-[264px] space-y-6">
+        <div className="w-[350px] md:w-[264px]  space-y-6">
           <div className="bg-gray-100 p-4 rounded-lg shadow-md">
             <h4 className="text-lg font-semibold text-gray-800 mb-4">
               Related Blogs
@@ -225,8 +225,8 @@ const BlogPage = () => {
             ))}
           </div>
 
-          <div className="hidden md:block w-auto sticky top-4 h-fit space-y-4">
-            <div className="bg-[#E6F5F5] px-3 py-5 shadow-md rounded-lg border border-[#1AE2E9] w-full md:w-[264px]">
+          <div className="md:block w-auto sticky top-4 h-fit space-y-4">
+            <div className="bg-[#E6F5F5] px-3 py-5 shadow-md rounded-lg border border-[#1AE2E9] w-[350px] md:w-[264px]">
               <div className="flex h-11 px-2 justify-between items-center border-b border-gray-500 bg-white">
                 <input
                   type="text"
