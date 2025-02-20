@@ -7,7 +7,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <div>
-      <div className="text-gray-800 container mx-auto">
+     <div className="text-gray-800 container mx-auto mt-9">
         <div>
           <nav className="flex flex-col items-center gap-5 py-4 ">
             <h1 className="text-[32px] font-semibold text-[#031432] leading-normal text-center font-poppins">
