@@ -105,24 +105,24 @@ const Partner = () => {
         <h2 className="text-[32px] font-semibold text-[#031432] text-center font-poppins leading-normal">
           For Corporates
         </h2>
-        <p className="text-[#3A3A3A] text-center  text-[16px] italic font-normal leading-[24px] py-4">
+        <p className="text-[#3A3A3A] text-left text-[16px] italic font-normal leading-[24px] py-4">
           Empowering Organizations with Tailored Healthcare Solutions
         </p>
-        <p className="text-[#3A3A3A] text-center  text-[16px] italic font-normal leading-[24px]">
+        <p className="text-[#3A3A3A] text-left text-[16px] font-normal leading-[24px]">
           Apollo HomeCare collaborates with corporates to design and deliver
           customized healthcare programs that promote employee wellness, enhance
           productivity, and support organizational goals.
         </p>
-        <p className="text-[#3A3A3A] text-center  text-[16px] italic font-normal leading-[24px] pt-4">
+        <p className="text-[#3A3A3A] text-left text-[16px] font-normal leading-[24px] pt-4">
           Corporate Partnership Opportunities:
         </p>
-        <div className="mt-8 grid grid-cols-1 gap-8">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {pillars.map((pillar, index) => (
-            <div key={index}>
-              <h3 className="text-[24px] font-semibold text-[#031432] text-center font-poppins leading-normal">
+            <div key={index} className="text-left">
+              <h3 className="text-[20px] font-semibold text-[#031432] font-poppins leading-normal">
                 {pillar.title}
               </h3>
-              <p className="mt-2 text-[16px] font-normal text-[#6C87AE] text-center  leading-[24px]">
+              <p className="mt-2 text-[16px] font-normal text-[#6C87AE] leading-[24px]">
                 {pillar.description}
               </p>
             </div>
@@ -130,7 +130,7 @@ const Partner = () => {
         </div>
       </section>
 
-      <section className=" container mx-auto mt-3">
+      <section className=" container mx-auto mt-3 p-4 md:p-1">
         <h2 className="text-[32px] font-semibold text-[#031432] text-center font-poppins leading-normal">
           Benefits for Doctors
         </h2>
@@ -149,6 +149,25 @@ const Partner = () => {
         </div>
       </section>
 
+      <section className="py-10 px-6 bg-[#BFE6E1] container mx-auto text-center mt-4">
+        <h2 className="text-[24px] font-semibold text-[#031432] font-poppins leading-normal">
+          How to Get Started
+        </h2>
+        <div className="mt-4 text-left max-w-2xl mx-auto">
+          <h3 className="text-[20px] font-semibold text-[#031432] font-poppins leading-normal">
+            For Corporates
+          </h3>
+          <p className="text-[16px] font-normal text-[#3A3A3A] leading-[24px] mt-2">
+            Reach out to our Corporate Relations Team at{" "}
+            <strong>corporates@apollohomecare.com</strong>.
+          </p>
+          <p className="text-[16px] font-normal text-[#3A3A3A] leading-[24px] mt-1">
+            Call <strong>1800-XXX-XXXX</strong> to schedule a consultation and
+            explore tailored healthcare solutions.
+          </p>
+        </div>
+      </section>
+
       <section className="py-5 px-6 bg-white container mx-auto mt-8">
         <h2 className="text-[32px] font-semibold text-[#031432] text-center font-poppins leading-normal">
           For Doctors
@@ -159,9 +178,9 @@ const Partner = () => {
         <p className="text-[#3A3A3A] text-center  text-[16px] italic font-normal leading-[24px]">
           Apollo HomeCare invites doctors to partner with us to expand their
           practice and provide patients with seamless, hospital-quality care at
-          home. With access to Apollo&apos;s advanced infrastructure and expertise,
-          doctors can deliver enhanced care experiences while focusing on their
-          core clinical responsibilities.
+          home. With access to Apollo&apos;s advanced infrastructure and
+          expertise, doctors can deliver enhanced care experiences while
+          focusing on their core clinical responsibilities.
         </p>
         <p className="text-[#3A3A3A] text-center  text-[16px] italic font-normal leading-[24px] pt-4">
           Partnership Opportunities for Doctors:
