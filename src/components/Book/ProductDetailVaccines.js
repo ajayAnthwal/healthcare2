@@ -6,6 +6,8 @@ import product from "@/assets/images/book/product.png";
 import chair from "@/assets/images/book/chair.png";
 import vaccines from "@/assets/images/book/image1.png";
 import Link from "next/link";
+import { FiShare2 } from "react-icons/fi"; // Share icon
+
 
 const ProductDetailVaccines = () => {
   const [quantity, setQuantity] = useState(1);
@@ -35,13 +37,47 @@ const ProductDetailVaccines = () => {
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Product Detail</h1>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-1">
-          <Image
-            src={vaccines}
-            alt="Brand C Wheelchair"
-            width={600}
-            height={400}
-            className="rounded-lg"
-          />
+          <div className="relative w-fit">
+            {/* Image */}
+            <Image
+              src={vaccines}
+              alt="Brand C Wheelchair"
+              width={600}
+              height={400}
+              className="rounded-lg"
+            />
+
+            {/* Share Icon */}
+            <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer hover:scale-105 transition-all">
+            <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <mask
+            id="mask0_4671_17783"
+            style={{ maskType: "luminance" }}
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="24"
+            height="24"
+          >
+            <path d="M0 0H24V24H0V0Z" fill="white" />
+          </mask>
+          <g mask="url(#mask0_4671_17783)">
+            <path
+              d="M0.703125 24V19.3137C0.703125 12.0648 6.57919 6.1882 13.8281 6.1875V1.5L22.8967 9L13.8281 16.5V11.8125H12.8906C6.15966 11.8125 0.703125 17.269 0.703125 24Z"
+              stroke="#009A9F"
+              strokeWidth="1.40625"
+              strokeMiterlimit="10"
+            />
+          </g>
+        </svg>
+            </div>
+          </div>
           <div className="flex mt-4 space-x-2 overflow-x-auto">
             {[...Array(5)].map((_, index) => (
               <Image
