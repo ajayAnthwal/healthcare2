@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import apollo from "@/assets/images/header/apollo.png";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
 
 const BlogPage = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -18,11 +17,11 @@ const BlogPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="hidden bg-[url('/bg.png')] bg-cover bg-center md:block">
-        <div className="relative mx-auto h-[454px] flex flex-col items-center bg-no-repeat pl-[20px] md:pl-[45px]">
-          <div className="hidden md:flex w-full items-center justify-between gap-6 md:gap-10">
-            <div className="flex-1 text-center md:text-left space-y-3 md:space-y-4">
-              <h1 className="text-3xl md:text-[60px] font-medium leading-[40px] md:leading-[105px] tracking-[-1.2px] font-poppins text-white">
+      <div className="hidden md:block bg-[url('/bg.png')] bg-cover bg-center banner">
+        <div className="relative  mx-auto h-auto flex flex-col items-center bg-no-repeat pl-8">
+          <div className="hidden md:flex w-full flex-col md:flex-row items-center">
+            <div className="flex-1 text-center md:text-left">
+              <h1 className="text-5xl md:text-[60px] font-medium leading-[105px] tracking-[-1.2px] font-poppins text-white">
                 Choosing the Apollo <br /> Homecare’s wheelchair
               </h1>
             </div>
@@ -30,17 +29,17 @@ const BlogPage = () => {
               <Image
                 src={apollo}
                 alt="Care at Home"
-                width={320}
-                height={280}
-                className="rounded-lg shadow-lg md:w-[494px] md:h-[454px]"
+                width={604}
+                height={555}
+                className="rounded-lg shadow-lg"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className=" flex flex-col md:flex-row gap-6 px-4 md:px-[55px] py-10">
-        <div className="hidden md:flex flex-col gap-4">
+      <div className="flex md:flex-row gap-6 px-4 py-10 flex-col">
+        <div className=" hidden md:flex flex-col gap-4">
           <div className="flex items-center gap-2 cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +71,7 @@ const BlogPage = () => {
             </svg>
           </div>
         </div>
-        <div className="flex-1 space-y-6">
+        <div className="  space-y-6">
           <div className="flex justify-between text-center">
             <div>
               <p className="text-lg text-gray-800 leading-relaxed">
@@ -152,7 +151,7 @@ const BlogPage = () => {
             </div>
           </div>
 
-          <div className="mt-6 p-4 bg-white rounded-lg border-t border-gray-300 flex flex-col md:flex-row justify-between gap-4 items-start">
+          <div className="mt-6 p-4 bg-white rounded-lg border-t border-gray-300 flex flex-col md:flex-col justify-between gap-4 items-start">
             <div className="w-[150px] h-[150px] rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -180,39 +179,34 @@ const BlogPage = () => {
                 tempor incididunt ut labore et dolore madipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna{" "}
               </p>
+              <div className="grid grid-cols-2 gap-6 mt-10 p-4">
+                <div className="group bg-[#EAF7F7] p-6 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
+                  <span className="text-gray-500 text-sm">Previous post</span>
+                  <div className="flex items-center gap-3 font-bold text-[#002D26] text-lg leading-snug">
+                    <div className="transition-transform duration-300 group-hover:-translate-x-1">
+                      <FaArrowLeft size={18} />
+                    </div>
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                  </div>
+                </div>
+                <div className="group bg-[#EAF7F7] p-6 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
+                  <span className="text-gray-500 text-sm">Next post</span>
+                  <div className="flex items-center gap-3 font-bold text-[#002D26] text-lg leading-snug">
+                    <span>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    </span>
+                    <div className="transition-transform duration-300 group-hover:translate-x-1">
+                      <FaArrowRight size={18} />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="flex justify-between items-center container gap-5 mt-10  p-4">
-            <Link
-              href="/previous-post"
-              className="bg-teal-100 p-4 rounded-xl w-1/2 flex flex-col"
-            >
-              <span className="text-gray-500 text-sm">Previous post</span>
-              <div className="flex items-center gap-2 font-bold text-gray-900">
-                <FaArrowLeft size={18} />
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </span>
-              </div>
-            </Link>
-            <Link
-              href="/next-post"
-              className="bg-teal-100 p-4 rounded-xl w-1/2 flex flex-col text-left"
-            >
-              <span className="text-gray-500 text-sm">Next post</span>
-              <div className="flex items-center gap-2 justify-start font-bold text-gray-900">
-                <span>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                </span>
-                <FaArrowRight size={18} />
-              </div>
-            </Link>
-          </div>
         </div>
-
-        {/* Sidebar Section */}
-        <div className="w-[350px] md:w-[264px]  space-y-6">
+        <div className=" max-w-[300px] min-w-[300px] space-y-6">
           <div className="bg-gray-100 p-4 rounded-lg shadow-md">
             <h4 className="text-lg font-semibold text-gray-800 mb-4">
               Related Blogs
@@ -226,7 +220,7 @@ const BlogPage = () => {
           </div>
 
           <div className="md:block w-auto sticky top-4 h-fit space-y-4">
-            <div className="bg-[#E6F5F5] px-3 py-5 shadow-md rounded-lg border border-[#1AE2E9] w-[350px] md:w-[264px]">
+            <div className="bg-[#E6F5F5] px-3 py-5 shadow-md rounded-lg border border-[#1AE2E9] ">
               <div className="flex h-11 px-2 justify-between items-center border-b border-gray-500 bg-white">
                 <input
                   type="text"
