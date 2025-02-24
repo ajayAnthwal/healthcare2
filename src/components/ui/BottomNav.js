@@ -51,7 +51,7 @@ const BottomNav = () => {
         {isPopupOpen && (
           <div
             id="popup-overlay"
-            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-end mb-[70px]"
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-end mb-[55px]"
             onClick={handleClosePopup}
           >
             <motion.div
