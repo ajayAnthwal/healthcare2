@@ -89,7 +89,7 @@ export default async function Footer() {
         </div>
         <div className="mt-8 md:mt-0 flex flex-col justify-center items-center">
           <Button
-            className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FF784B] shadow-lg text-white"
+            className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FF784B] shadow-lg text-white w-max"
             style={{
               boxShadow: "0px 8px 23px 0px rgba(65, 132, 247, 0.24)",
             }}
@@ -98,7 +98,7 @@ export default async function Footer() {
           </Button>
 
           <Button
-            className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FF784B] shadow-lg text-white mt-3  "
+            className="flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FF784B] shadow-lg text-white mt-3 w-max "
             style={{
               boxShadow: "0px 8px 23px 0px rgba(65, 132, 247, 0.24)",
             }}
