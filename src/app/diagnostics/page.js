@@ -64,7 +64,7 @@ const Diagnostics = () => {
                     alt="Care at Home"
                     width={822}
                     height={563}
-                    className="rounded-lg shadow-lg"
+                    className="rounded-lg"
                   />
                 </div>
               </div>
@@ -121,7 +121,7 @@ const Diagnostics = () => {
           </section>
 
           <section
-            className="py-10"
+            className="py-10  px-4"
             style={{
               background:
                 "linear-gradient(189deg, #E6F5F5 -74.5%, #C1EFEF 160.14%)",
@@ -177,7 +177,7 @@ const Diagnostics = () => {
             </div>
           </section>
 
-          <section className="py-10 container mx-auto px-3 md:px-0">
+          <section className="py-10 container mx-auto px-4 md:px-4">
             <div className="text-center my-8">
               <p className="text-justify text-[#525252] text-[16px] font-normal leading-[24px]">
                 Apollo Home Care provides a variety of medical services, such as
