@@ -147,7 +147,7 @@ const LongTermCare = () => {
                     alt="Care at Home"
                     width={604}
                     height={555}
-                    className="rounded-lg shadow-lg"
+                    className="rounded-lg"
                   />
                 </div>
               </div>

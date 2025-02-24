@@ -394,34 +394,34 @@ const Ecommerce = () => {
             </main>
           </div>
           <div className="w-full bg-[#003638] py-8 md:py-10 px-6 sm:px-8 md:px-0">
-  <div className="w-full max-w-[1512px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
-    {/* Left Section (Text) */}
-    <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col justify-center text-center md:text-left">
-      <h1 className="text-[#fff] text-2xl sm:text-3xl md:text-[46px] font-semibold font-[Poppins]">
-        Deals Of The Month
-      </h1>
-      <p className="text-[#C1C1C1] text-sm md:text-base mt-2 leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br className="hidden md:block" />
-        Scelerisque duis ultrices sollicitudin aliquam sem.
-      </p>
-      <button className="mt-4 w-[180px] sm:w-[207px] h-[48px] sm:h-[56px] bg-[#009A9F] text-white text-base font-normal font-[Poppins] rounded-lg shadow-lg shadow-[#009A9F]/30 hover:bg-[#007D82] mx-auto md:mx-0">
-        Buy Now
-      </button>
-    </div>
+            <div className="w-full max-w-[1512px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between overflow-hidden">
+              {/* Left Section (Text) */}
+              <div className="w-full md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col justify-center text-center md:text-left">
+                <h1 className="text-[#fff] text-2xl sm:text-3xl md:text-[46px] font-semibold font-[Poppins]">
+                  Deals Of The Month
+                </h1>
+                <p className="text-[#C1C1C1] text-sm md:text-base mt-2 leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+                  <br className="hidden md:block" />
+                  Scelerisque duis ultrices sollicitudin aliquam sem.
+                </p>
+                <button className="mt-4 w-[180px] sm:w-[207px] h-[48px] sm:h-[56px] bg-[#009A9F] text-white text-base font-normal font-[Poppins] rounded-lg shadow-lg shadow-[#009A9F]/30 hover:bg-[#007D82] mx-auto md:mx-0">
+                  Buy Now
+                </button>
+              </div>
 
-    {/* Right Section (Image) */}
-    <div className="w-full md:w-1/2 flex items-center justify-center overflow-hidden">
-      <Image
-        src={deal}
-        alt="Ventilator"
-        className="w-full max-w-full md:max-w-[90%] h-auto object-contain"
-        width={669}
-        height={458}
-      />
-    </div>
-  </div>
-</div>
-
+              {/* Right Section (Image) */}
+              <div className="w-full md:w-1/2 flex items-center justify-center overflow-hidden">
+                <Image
+                  src={deal}
+                  alt="Ventilator"
+                  className="w-full max-w-full md:max-w-[90%] h-auto object-contain"
+                  width={669}
+                  height={458}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </>

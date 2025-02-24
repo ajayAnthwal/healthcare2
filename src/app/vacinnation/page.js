@@ -75,7 +75,7 @@ const Vacinnation = () => {
                     alt="Care at Home"
                     width={822}
                     height={563}
-                    className="rounded-lg shadow-lg"
+                    className="rounded-lg"
                   />
                 </div>
               </div>

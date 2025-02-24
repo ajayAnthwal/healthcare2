@@ -23,16 +23,32 @@ const ServiceInquiryForm = ({ imageSrc, formTitle, fields }) => {
           {fields.map((field, index) => {
             if (field.type === "select") {
               return (
-                <select
-                  key={index}
-                  className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-full md:w-[400px] h-[50px] md:h-[60px] p-3 text-[#B5B5B5] text-[16px] font-normal leading-[24px]"
-                >
-                  {field.options.map((option, optionIndex) => (
-                    <option key={optionIndex} value={option}>
-                      {option}
-                    </option>
-                  ))}
-                </select>
+                <div className="relative w-full">
+                  <select
+                    key={index}
+                    className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-full h-[50px] md:h-[60px] p-3 text-[#B5B5B5] text-[16px] font-normal leading-[24px] appearance-none pr-10"
+                  >
+                    {field.options.map((option, optionIndex) => (
+                      <option key={optionIndex} value={option}>
+                        {option}
+                      </option>
+                    ))}
+                  </select>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#B5B5B5"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 pointer-events-none"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
               );
             }
 
@@ -41,13 +57,13 @@ const ServiceInquiryForm = ({ imageSrc, formTitle, fields }) => {
                 key={index}
                 type={field.type}
                 placeholder={field.placeholder}
-                className="block mx-auto bg-white  border-[#003638] rounded-[10px] w-full md:w-[400px] h-[50px] md:h-[60px] p-3 border-[0.5px]"
+                className="block mx-auto bg-white  border-[#003638] rounded-[10px] w-full  md:h-[60px] p-3 border-[0.5px]"
               />
             );
           })}
           <button
             type="submit"
-            className="block mx-auto mt-6 md:mt-11 text-[#007477] border border-[#007477] bg-transparent py-3 px-4 rounded-[8px] shadow-[0px_2px_7px_0px_#00000040] w-full md:w-[400px] h-[50px]"
+            className="block mx-auto mt-6 md:mt-11 text-[#007477] border border-[#007477] bg-transparent py-3 px-4 rounded-[8px] shadow-[0px_2px_7px_0px_#00000040] w-full  h-[50px] hover:bg-[#009A9F] hover:text-white"
           >
             BOOK NOW
           </button>

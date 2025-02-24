@@ -52,7 +52,7 @@ const Home_Visit = () => {
                 alt="Care at Home"
                 width={791}
                 height={508}
-                className="rounded-lg shadow-lg"
+                className="rounded-lg"
               />
             </div>
           </div>
