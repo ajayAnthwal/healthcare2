@@ -8,7 +8,6 @@ import vaccines from "@/assets/images/book/image1.png";
 import Link from "next/link";
 import { FiShare2 } from "react-icons/fi"; // Share icon
 
-
 const ProductDetailVaccines = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -49,33 +48,33 @@ const ProductDetailVaccines = () => {
 
             {/* Share Icon */}
             <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-md cursor-pointer hover:scale-105 transition-all">
-            <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <mask
-            id="mask0_4671_17783"
-            style={{ maskType: "luminance" }}
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="24"
-            height="24"
-          >
-            <path d="M0 0H24V24H0V0Z" fill="white" />
-          </mask>
-          <g mask="url(#mask0_4671_17783)">
-            <path
-              d="M0.703125 24V19.3137C0.703125 12.0648 6.57919 6.1882 13.8281 6.1875V1.5L22.8967 9L13.8281 16.5V11.8125H12.8906C6.15966 11.8125 0.703125 17.269 0.703125 24Z"
-              stroke="#009A9F"
-              strokeWidth="1.40625"
-              strokeMiterlimit="10"
-            />
-          </g>
-        </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <mask
+                  id="mask0_4671_17783"
+                  style={{ maskType: "luminance" }}
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="24"
+                  height="24"
+                >
+                  <path d="M0 0H24V24H0V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_4671_17783)">
+                  <path
+                    d="M0.703125 24V19.3137C0.703125 12.0648 6.57919 6.1882 13.8281 6.1875V1.5L22.8967 9L13.8281 16.5V11.8125H12.8906C6.15966 11.8125 0.703125 17.269 0.703125 24Z"
+                    stroke="#009A9F"
+                    strokeWidth="1.40625"
+                    strokeMiterlimit="10"
+                  />
+                </g>
+              </svg>
             </div>
           </div>
           <div className="flex mt-4 space-x-2 overflow-x-auto">
@@ -185,8 +184,8 @@ const ProductDetailVaccines = () => {
                           Close
                         </button>
                       </div>
-                      <div className="flex">
-                        <div className="w-1/2 border-r p-4">
+                      <div className="flex flex-col md:flex-row">
+                        <div className="w-full md:w-1/2 border-r p-4">
                           <p className="font-semibold mb-2">Month 2000</p>
                           <div className="grid grid-cols-7 gap-2 text-center">
                             {[
@@ -219,7 +218,7 @@ const ProductDetailVaccines = () => {
                             ))}
                           </div>
                         </div>
-                        <div className="w-1/2 p-4">
+                        <div className="w-full md:w-1/2  p-4">
                           <p className="font-semibold mb-2">Slot</p>
                           {["Slot 1", "Slot 2", "Slot 3", "Slot 4"].map(
                             (slot, index) => (
