@@ -41,57 +41,31 @@ export default function Contact() {
           <h1 className="text-[32px] font-semibold text-[#031432] leading-normal text-center font-poppins">
             Contact us
           </h1>
-          <ul className="flex justify-center items-center space-x-8 flex-wrap gap-4 md:flex-nowrap">
-            <Link href="#">
-              <li className="flex items-center justify-center gap-2 p-[10px_20px] rounded-[10px] bg-[#009A9F] text-white text-center font-poppins text-[16px] font-semibold leading-normal cursor-pointer hover:underline">
-                HYDERBAD
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                KOLKATA
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                DELHI NCR
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                CHENNAI
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                BANGALORE
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                PUNE
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                MADURAI
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                INDORE
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                MUMBAI
-              </li>
-            </Link>
-            <Link href="#">
-              <li className="text-[#009A9F]  text-[16px] font-normal leading-[120%] cursor-pointer hover:underline">
-                GUWAHATI
-              </li>
-            </Link>
+          <ul className="flex justify-center space-x-4 px-3 flex-wrap gap-4">
+            {[
+              "HYDERABAD",
+              "KOLKATA",
+              "DELHI NCR",
+              "CHENNAI",
+              "BANGALORE",
+              "PUNE",
+              "MADURAI",
+              "INDORE",
+              "MUMBAI",
+              "GUWAHATI",
+            ].map((city, index) => (
+              <Link key={index} href="#">
+                <li
+                  className={`flex items-center justify-center gap-2 p-[10px_20px] rounded-[10px] text-[16px] font-semibold leading-normal cursor-pointer hover:underline ${
+                    city === "HYDERABAD"
+                      ? "bg-[#009A9F] text-white"
+                      : "text-[#009A9F] font-normal"
+                  }`}
+                >
+                  {city}
+                </li>
+              </Link>
+            ))}
           </ul>
         </nav>
       </div>
