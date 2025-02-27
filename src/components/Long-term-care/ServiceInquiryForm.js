@@ -23,7 +23,7 @@ const ServiceInquiryForm = ({ imageSrc, formTitle, fields }) => {
           {fields.map((field, index) => {
             if (field.type === "select") {
               return (
-                <div className="relative w-full">
+                <div className="relative w-full" key={index}>
                   <select
                     key={index}
                     className="block mx-auto bg-white border border-[#003638] rounded-[10px] w-full h-[50px] md:h-[60px] p-3 text-[#B5B5B5] text-[16px] font-normal leading-[24px] appearance-none pr-10"
