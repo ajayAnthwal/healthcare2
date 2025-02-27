@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FiPhone, FiMail } from "react-icons/fi";
 import { SiWhatsapp } from "react-icons/si";
 import { motion } from "framer-motion";
-import whatspp from "@/assets/images/footer/whatspp.png";
+import whatspp from "@/assets/images/homepage/whatspp-icons.png";
 import Image from "next/image";
 
 const FloatingContactWidget = () => {
@@ -19,13 +19,15 @@ const FloatingContactWidget = () => {
 
   return (
     <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end space-y-3 widget-1">
-      <Image
-        src={whatspp}
-        alt="WhatsApp Icon"
-        width={40}
-        height={40}
-        priority
-      />
+      <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[15px] bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A]">
+        <Image
+          src={whatspp}
+          alt="WhatsApp Icon"
+          width={40}
+          height={40}
+          priority
+        />
+      </div>
 
       <button
         className="flex items-center gap-2 px-4 py-2 text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] shadow-lg rounded-full cursor-pointer"
