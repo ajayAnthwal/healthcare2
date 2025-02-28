@@ -38,7 +38,7 @@ const BlogPage = () => {
         </div>
       </div>
 
-      <div className="flex md:flex-row gap-6 px-4 py-10 flex-col">
+      <div className="flex md:flex-row gap-6 px-4 py-10 flex-col  max-w-7xl mx-auto">
         <div className=" hidden md:flex flex-col gap-4">
           <div className="flex items-center gap-2 cursor-pointer">
             <svg
@@ -165,10 +165,10 @@ const BlogPage = () => {
             </div>
             <div>
               <p className="text-[20px] text-gray-600">Written by:</p>
-              <h4 className="text-[24px] font-semibold text-black">
+              <h1 className="text-[24px] font-semibold text-black">
                 Apollo Homecare
-              </h4>
-              <p className="text-[24px] text-black leading-relaxed mt-2">
+              </h1>
+              <p className="text-[20px] text-gray-600 text-justify leading-relaxed mt-2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -191,10 +191,12 @@ const BlogPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="group bg-[#EAF7F7] p-6 rounded-2xl shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
-                  <span className="text-gray-500 text-sm">Next post</span>
-                  <div className="flex items-center gap-3 font-bold text-[#002D26] text-lg leading-snug">
-                    <span>
+                <div className="group bg-[#EAF7F7] p-6 rounded-2xl text-right shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02]">
+                  <span className="text-gray-500 text-sm text-right">
+                    Next post
+                  </span>
+                  <div className="flex items-center gap-3 font-bold text-[#002D26] text-lg leading-snug text-right">
+                    <span className="text-right">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit
                     </span>
                     <div className="transition-transform duration-300 group-hover:translate-x-1">

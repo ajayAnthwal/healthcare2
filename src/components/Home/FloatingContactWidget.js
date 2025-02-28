@@ -19,18 +19,18 @@ const FloatingContactWidget = () => {
 
   return (
     <div className="fixed bottom-10 right-10 z-50 flex flex-col items-end space-y-3 widget-1">
-      <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[15px] bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A]">
-        <Image
+      <div className="w-[80px] h-[80px] flex items-center justify-center rounded-[15px] bg-[#42C452]">
+      <Image
           src={whatspp}
           alt="WhatsApp Icon"
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           priority
         />
       </div>
 
       <button
-        className="flex items-center gap-2 px-4 py-2 text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] shadow-lg rounded-full cursor-pointer"
+        className="flex items-center gap-2 px-4 py-4 text-white bg-gradient-to-r from-[#1AE2E9] via-[#019196] to-[#03676A] shadow-lg rounded-full cursor-pointer"
         style={{ boxShadow: "0px 8px 23px rgba(65, 132, 247, 0.24)" }}
         onClick={openPopup}
       >
