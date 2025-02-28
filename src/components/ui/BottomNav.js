@@ -39,7 +39,7 @@ const BottomNav = () => {
   };
 
   return (
-    <div className="md:hidden block fixed bottom-0 left-0 w-full">
+    <div className="md:hidden block fixed bottom-0 left-0 w-full z-50">
       <div className=" py-3 flex justify-center items-center bg-[#009A9F]">
         <button
           className="rounded-[40.608px] bg-[#003638] px-[15px] py-[6.497px] text-[10.182px] font-semibold leading-[120%] text-white shadow-[0px_3.249px_9.34px_0px_rgba(65,132,247,0.24)]"

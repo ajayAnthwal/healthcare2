@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* Banner Section */}
-      <div className="relative w-full flex flex-col md:flex-row items-center overflow-hidden bg-[#B0E0E1]">
+      <div className="relative w-full flex flex-col md:flex-row items-center overflow-hidden bg-[#B0E0E1] z-30">
         <div className="md:w-1/2 relative">
           <div className="absolute inset-0 bg-[#B0E0E1] rotate-6 rounded-lg "></div>
           <Image
@@ -21,7 +21,7 @@ export default function Contact() {
             Location
           </h2>
 
-          <h1 className="text-5xl font-semibold text-[#484848] font-[Poppins]">
+          <h1 className="text-3xl  md:text-5xl font-semibold text-[#484848] font-[Poppins]">
             Delhi
           </h1>
 
@@ -29,7 +29,7 @@ export default function Contact() {
             DESCRIPTION
           </h3>
 
-          <p className="mt-2 text-[#767676]  text-base font-normal">
+          <p className="mt-2 text-[#767676] md:text-[#767676]  text-base font-normal">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
             duis ultrices sollicitudin aliquam sem...
           </p>
