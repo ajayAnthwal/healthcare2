@@ -180,7 +180,7 @@ export default async function Footer() {
             CONTACT US:
           </h1>
         </div>
-        <div className="flex flex-wrap gap-1.5 md:gap-0">
+        <div className="flex flex-wrap gap-[2px] md:gap-0 mt-1">
           {cities.map((item, index) => (
             <>
               <p key={index} className="text-sm sm:text-[14px] font-[300]">
@@ -189,7 +189,7 @@ export default async function Footer() {
               {index !== cities.length - 1 && (
                 <hr
                   style={{
-                    borderWidth: ".5px",
+                   
                     height: "auto",
                     opacity: ".28",
                   }}
